@@ -313,7 +313,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Git
 # =============================================================== #
 alias bfg="java -jar $HOME/Jumis/tools/bfg-1.12.13.jar"
-
+alias ag="python $HOME/Jumis/tools/anamna/auto_git.py"
 alias gits="git status"
 alias gita="git add -vA"
 alias gitc="git commit -m"
