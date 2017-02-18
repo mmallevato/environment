@@ -215,17 +215,17 @@ PS1="(\W) > "
 # added by Anaconda3 4.2.0 installer
 export PATH="/home/cyborg/tools/anaconda/bin:$PATH"
 
-export PATH="$HOME/Jumis/bin:$PATH"
+export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
-alias picard="java -Xmx10g -jar $HOME/Jumis/picard.jar"
-alias snpeff="java -Xmx8g -jar $HOME/Jumis/snpEff/snpEff.jar"
-alias snpsift="java -Xmx4g -jar $HOME/Jumis/snpEff/SnpSift.jar"
-alias gsea="java -jar -Xmx12g -Xms1g $HOME/Jumis/gsea2-2.2.3.jar"
+alias picard="java -Xmx10g -jar $HOME/Jumis/tools/picard.jar"
+alias snpeff="java -Xmx8g -jar $HOME/Jumis/tools/snpEff/snpEff.jar"
+alias snpsift="java -Xmx4g -jar $HOME/Jumis/tools/snpEff/SnpSift.jar"
+alias gsea="java -jar -Xmx12g -Xms1g $HOME/Jumis/tools/gsea2-2.2.3.jar"
 
-source "$HOME/CompBio/guardiome/path.sh"
+source "$HOME/Jumis/guardiome/path.sh"
 
-alias install_locally="make && make prefix=$HOME/Jumis install"
+alias install_locally="make && make prefix=$HOME/Jumis/tools install"
 
 # Jupyter
 alias jp="jupyter notebook ~"
@@ -312,7 +312,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # =============================================================== #
 # Git
 # =============================================================== #
-alias bfg="java -jar $HOME/Jumis/bfg-1.12.13.jar"
+alias bfg="java -jar $HOME/Jumis/tools/bfg-1.12.13.jar"
 
 alias gits="git status"
 alias gita="git add -vA"
