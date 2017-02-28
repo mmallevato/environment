@@ -212,9 +212,7 @@ PS1="(\W) > "
 # =============================================================== #
 # Environment
 # =============================================================== #
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/cyborg/tools/anaconda/bin:$PATH"
-
+export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
