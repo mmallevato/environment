@@ -212,65 +212,49 @@ PS1="(\W) > "
 # =============================================================== #
 # Environment
 # =============================================================== #
+export PATH="$HOME/Jumis/tools/node-v7.7.1-linux-x64/bin:$PATH"
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
-export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
-alias picard="java -Xmx10g -jar $HOME/Jumis/tools/picard.jar"
-alias snpeff="java -Xmx8g -jar $HOME/Jumis/tools/snpEff/snpEff.jar"
-alias snpsift="java -Xmx4g -jar $HOME/Jumis/tools/snpEff/SnpSift.jar"
 alias gsea="java -jar -Xmx12g -Xms1g $HOME/Jumis/tools/gsea2-2.2.3.jar"
-
-source "$HOME/Jumis/guardiome/path.sh"
-
-alias install_locally="make && make prefix=$HOME/Jumis/tools install"
 
 # Jupyter
 alias jp="jupyter notebook ~"
-alias ipyset="ipython notebook --no-browser --port=9000"
-alias ipyget="ssh -N -f -L localhost:9999:localhost:9000"
+alias jpset="ipython notebook --no-browser --port=9000"
+alias jpget="ssh -N -f -L localhost:9999:localhost:9000"
 
 
 # =============================================================== #
 # Aliases and functions
 # =============================================================== #
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
-alias ls='ls -FhG'
+alias ls='ls -FhG --color=auto'
 alias la='ls -Fla'          #  Show hidden files.
 alias lx='ls -FlXB'         #  Sort by extension. (does not work on OSX)
 alias lk='ls -FlSr'         #  Sort by size, biggest last.
 alias lt='ls -Fltr'         #  Sort by date, most recent last.
 alias lc='ls -Fltcr'        #  Sort by/show change time, most recent last.
 alias lu='ls -Fltur'        #  Sort by/show access time, most recent last.
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -vp'
-alias time="/usr/bin/time"
 alias df='df -Th'
 alias h='history'
 alias j='jobs -l'
-alias which='type -a'
 
 
 # =============================================================== #
 # Sanitize
 # =============================================================== #
 alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
-
 alias rmdsstore="sudo find / -name .DS_Store -delete"
-
 alias sanitize_all="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find . -not -path '*/.*' -type d -exec chmod 755 {} \;"
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
-
 alias chownu="sudo chown -vR $USER ."
-
 alias rmemp="find . -type f -size 0 -exec rm -f '{}' +"
 
 
