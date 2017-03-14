@@ -27,6 +27,7 @@ Install software
       autocomplete-python
       linter-pycodestyle
       linter-eslint
+  caffein
 Set up
   Remove nautilus shortcuts
     $ vi ~/.config/user-dirs.dirs
