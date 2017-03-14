@@ -32,6 +32,7 @@ Set up
   Remove nautilus shortcuts
     $ vi ~/.config/user-dirs.dirs
   Trim launcher
+  Autohide launcher
   Increase typing speed
   Set vi as the default text editor
     $ sudo update-alternatives --config editor
