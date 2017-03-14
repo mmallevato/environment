@@ -1,0 +1,44 @@
+Install Ubuntu 16.04 LTS
+  Update BIOS using Internet cable
+  Set UEFI
+    Legacy Mode = Off (default)
+    Secure Boot = Off
+    Graphics = Discrete
+    Port security = Off (for the dock)
+  Install Ubuntu 16.04 LTS and update software
+  Remove software
+  Remove nautilus shortcuts
+    $ vi ~/.config/user-dirs.dirs
+  Trim launcher
+  Auto-hide launcher
+  Increase typing speed
+  Set vi as the default text editor
+    $ sudo update-alternatives --config editor
+
+Install
+  .bashrc from ./bashrc
+  tree
+  GParted
+  Anaconda
+    Update
+      $ conda update --all
+    Create Python2.7 environment
+      $ conda create -n py2.7 python=2.7 anaconda
+      $ conda update --all -n py2.7
+    Set up Bioconda
+    $ conda install gcc java-jdk r htslib samtools bcftools hisat2 freebayes
+  Python
+    $ pip install rpy2 pycodestyle autopep8 plotly biopython pytabix
+  Jupyter VIM binding: https://github.com/lambdalisue/jupyter-vim-binding
+  Node.js
+  Atom
+    Install packages
+      vim-mode-plus
+      vim-mode-plus-ex-mode
+      git-plus
+      atom-beautify
+      autocomplete-python
+      linter-pycodestyle
+      linter-eslint
+  caffein
+  Chrome
