@@ -212,7 +212,7 @@ PS1="(\W) > "
 # =============================================================== #
 # Environment
 # =============================================================== #
-export PATH="$HOME/Jumis/tools/node-v7.7.1-linux-x64/bin:$PATH"
+export PATH="$HOME/Jumis/tools/node-v7.7.2-linux-x64/bin:$PATH"
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 
 alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
