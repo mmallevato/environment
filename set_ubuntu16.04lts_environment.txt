@@ -1,0 +1,35 @@
+Update BIOS using Internet cable
+Set UEFI
+  Legacy Mode = Off (default)
+  Secure Boot = Off
+  Graphics = Discrete
+  Port security = Off (for the dock)
+Install Ubuntu 16.04LTS and update software after the installation
+Remove software
+Install software
+  tree
+  GParted
+  Anaconda
+    Update
+      $ conda update --all
+    Create Python2.7 environment
+      $ conda create -n py2.7 python=2.7 anaconda
+      $ conda update --all -n py27
+    Set up Bioconda
+  Node.js
+  Chrome
+  Atom
+    Install packages
+      vim-mode-plus
+      vim-mode-plus-ex-mode
+      git-plus
+      atom-beautify
+      autocomplete-python
+      linter-pycodestyle
+      linter-eslint
+Set up
+  Remove nautilus shortcuts: http://askubuntu.com/questions/79150/how-to-remove-bookmarks-from-the-nautilus-sidebar
+  Trim launcher
+  Increase typing speed
+  Set vi as the default text editor
+    $ sudo update-alternatives --config editor
