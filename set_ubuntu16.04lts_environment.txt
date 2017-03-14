@@ -6,6 +6,7 @@ Set UEFI
   Port security = Off (for the dock)
 Install Ubuntu 16.04LTS and update software after the installation
 Remove software
+
 Install software
   tree
   GParted
@@ -36,3 +37,4 @@ Set up
   Increase typing speed
   Set vi as the default text editor
     $ sudo update-alternatives --config editor
+  Get Jupyter VIM binding: https://github.com/lambdalisue/jupyter-vim-binding
