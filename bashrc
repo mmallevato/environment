@@ -250,12 +250,11 @@ alias j='jobs -l'
 # =============================================================== #
 # Sanitize
 # =============================================================== #
-alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
-alias rmdsstore="sudo find / -name .DS_Store -delete"
-alias sanitize_all="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find . -not -path '*/.*' -type d -exec chmod 755 {} \;"
-function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
+alias chmodall="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find . -not -path '*/.*' -type d -exec chmod 755 {} \;"
 alias chownu="sudo chown -vR $USER ."
 alias rmemp="find . -type f -size 0 -exec rm -f '{}' +"
+alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
+alias rmdsstore="sudo find / -name .DS_Store -delete"
 
 
 # =============================================================== #
