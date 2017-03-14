@@ -1,0 +1,1 @@
+Anamna (Kazakh)
