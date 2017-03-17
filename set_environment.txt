@@ -48,7 +48,7 @@ Setup environment
     Set up Bioconda
     Get programs: $conda install gcc java-jdk r htslib samtools bcftools hisat2 freebayes
 
-  Get Python packages: $ pip install rpy2 plotly biopython pytabix
+  Get Python packages: $ pip install rpy2 plotly biopython pytabix GEOparse
 
   Get Jupyter VIM binding extension
 
@@ -65,4 +65,5 @@ Setup environment
       linter-python
       vim-mode-plus
       vim-mode-plus-ex-mode
+
   Get Caffein
