@@ -1,45 +1,68 @@
-Install Ubuntu 16.04 LTS
+Get Ubuntu 16.04 LTS
+
   Update BIOS using Internet cable
+
   Set UEFI
     Legacy Mode = Off (default)
     Secure Boot = Off
     Graphics = Discrete
     Port security = Off (for the dock)
-  Install Ubuntu 16.04 LTS and update software
-  Remove software
-  Remove nautilus shortcuts
-    $ vi ~/.config/user-dirs.dirs
+
+  Install Ubuntu 16.04 LTS
+
+  Remove softwares
+
+  Update softwares
+
   Trim launcher
-  Auto-hide launcher
+
   Increase typing speed
-  Set vi as the default text editor
-    $ sudo update-alternatives --config editor
+
   Set File view
 
-Install
-  .bashrc from ./bashrc
-  tree
-  GParted
-  Anaconda
-    Update
-      $ conda update --all
-    Create Python2.7 environment
-      $ conda create -n py2.7 python=2.7 anaconda
-      $ conda update --all -n py2.7
+  Hide launcher
+
+  Remove nautilus shortcuts
+    $ vi ~/.config/user-dirs.dirs
+
+  Set vi as the default text editor
+    $ sudo update-alternatives --config editor
+
+
+Setup environment
+
+  Get Chrome
+
+  Get ~/.bashrc from ./bashrc
+
+  Get screen
+
+  Get tree
+
+  Get GParted
+
+  Get & setup Anaconda
+    Get Anaconda
+    Update Anaconda: $conda update --all
+    Create Python2.7 environment: $conda create -n py2.7 python=2.7 anaconda && conda update --all -n py2.7
     Set up Bioconda
-    $ conda install gcc java-jdk r htslib samtools bcftools hisat2 freebayes
-  Python
-    $ pip install rpy2 pycodestyle autopep8 plotly biopython pytabix
-  Jupyter VIM binding: https://github.com/lambdalisue/jupyter-vim-binding
-  Node.js
-  Atom
-    Install packages
-      vim-mode-plus
-      vim-mode-plus-ex-mode
-      git-plus
+    Get programs: $conda install gcc java-jdk r htslib samtools bcftools hisat2 freebayes
+
+  Get Python packages: $ pip install rpy2 plotly biopython pytabix
+
+  Get Jupyter VIM binding extension
+
+  Get Node.js
+
+  Get & setup Atom
+    Get Atom
+    Get packages:
       atom-beautify
       autocomplete-python
-      linter-pycodestyle
+      color-picker
+      git-plus
       linter-eslint
-  caffein
-  Chrome
+      linter-python
+      vim-mode-plus
+      vim-mode-plus-ex-mode
+  Get Caffein
