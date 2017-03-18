@@ -63,6 +63,7 @@ Setup environment
       git-plus
       linter-eslint
       linter-python
+      python-tools
       vim-mode-plus
       vim-mode-plus-ex-mode
 
