@@ -61,6 +61,7 @@ Setup environment
       autocomplete-python
       color-picker
       git-plus
+      git-time-machine
       linter-eslint
       linter-python
       python-tools
