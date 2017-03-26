@@ -69,3 +69,4 @@ Setup environment
       vim-mode-plus-ex-mode
 
   Get Caffein
+  Get VPN: $ sudo apt-get install network-manager-vpnc network-manager-vpnc-gnome
