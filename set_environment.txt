@@ -1,8 +1,8 @@
 Get Ubuntu 16.04 LTS
 
   Update BIOS using Internet cable
-
-  Set UEFI
+  
+  (Set UEFI)
     Legacy Mode = Off (default)
     Secure Boot = Off
     Graphics = Discrete
@@ -15,12 +15,12 @@ Get Ubuntu 16.04 LTS
   Update softwares
 
   Trim launcher
+  
+  Hide launcher
 
   Increase typing speed
 
-  Set File view
-
-  Hide launcher
+  Set file view (Files --> Edit --> Preferences)
 
   Remove nautilus shortcuts
     $ vi ~/.config/user-dirs.dirs
@@ -35,11 +35,8 @@ Setup environment
 
   Get ~/.bashrc from ./bashrc
 
-  Get screen
-
-  Get tree
-
-  Get GParted
+  Get softwares
+    $ apt install screen tree gparted
 
   Get & setup Anaconda
     Get Anaconda
@@ -56,6 +53,8 @@ Setup environment
 
   Get & setup Atom
     Get Atom
+      $ sudo add-apt-repository ppa:webupd8team/atom
+      $ sudo apt update; sudo apt install atom
     Get packages:
       atom-beautify
       autocomplete-python
@@ -70,3 +69,6 @@ Setup environment
 
   Get Caffein
   Get VPN: $ sudo apt-get install network-manager-vpnc network-manager-vpnc-gnome
+  
+  Finalize launcher
+  
