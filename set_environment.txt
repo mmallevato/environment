@@ -28,7 +28,6 @@ Get Ubuntu 16.04 LTS
   Set vi as the default text editor
     $ sudo update-alternatives --config editor
 
-
 Setup environment
 
   Get Chrome
