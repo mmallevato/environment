@@ -300,8 +300,6 @@ alias gita="git add -vA"
 alias gitc="git commit -m"
 alias gitps="git push"
 alias gitpl="git pull"
-alias gitm="git merge --stat --verbose"
-alias gitr="git config --global credential.helper 'cache --timeout=604800'"
 
 function gitnow()
 {
