@@ -1,7 +1,7 @@
 Get Ubuntu 16.04 LTS
 
   Update BIOS using Internet cable
-  
+
   (Set UEFI)
     Legacy Mode = Off (default)
     Secure Boot = Off
@@ -10,13 +10,11 @@ Get Ubuntu 16.04 LTS
 
   Install Ubuntu 16.04 LTS
 
+  Trim launcher
+
   Remove softwares
 
   Update softwares
-
-  Trim launcher
-  
-  Hide launcher
 
   Increase typing speed
 
@@ -28,6 +26,7 @@ Get Ubuntu 16.04 LTS
   Set vi as the default text editor
     $ sudo update-alternatives --config editor
 
+
 Setup environment
 
   Get Chrome
@@ -35,16 +34,21 @@ Setup environment
   Get ~/.bashrc from ./bashrc
 
   Get softwares
-    $ apt install screen tree gparted
+    $ sudo apt install screen tree exfat-utils exfat-fuse
 
   Get & setup Anaconda
     Get Anaconda
-    Update Anaconda: $conda update --all
-    Create Python2.7 environment: $conda create -n py2.7 python=2.7 anaconda && conda update --all -n py2.7
+    Update Anaconda
+      $ conda update --all
+    Create Python2.7 environment
+      $ conda create -n py2.7 python=2.7 anaconda && conda update --all -n py2.7
     Set up Bioconda
-    Get programs: $conda install gcc java-jdk r htslib samtools bcftools hisat2 freebayes
-
-  Get Python packages: $ pip install rpy2 plotly biopython pytabix GEOparse
+      $ conda config --add channels conda-forge
+      $ conda config --add channels defaults
+      $ conda config --add channels r
+      $ conda config --add channels bioconda
+    Get programs
+      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes rpy2 plotly biopython pytabix
 
   Get Jupyter VIM binding extension
 
@@ -54,7 +58,7 @@ Setup environment
     Get Atom
       $ sudo add-apt-repository ppa:webupd8team/atom
       $ sudo apt update; sudo apt install atom
-    Get packages:
+    Get packages
       atom-beautify
       autocomplete-python
       color-picker
@@ -66,8 +70,9 @@ Setup environment
       vim-mode-plus
       vim-mode-plus-ex-mode
 
-  Get Caffein
-  Get VPN: $ sudo apt-get install network-manager-vpnc network-manager-vpnc-gnome
-  
-  Finalize launcher
-  
+  (Get Caffein)
+
+  Get VPN
+    $ sudo apt-get install network-manager-vpnc network-manager-vpnc-gnome
+
+  Finalize and hide launcher
