@@ -69,6 +69,7 @@ Setup environment
       python-tools
       vim-mode-plus
       vim-mode-plus-ex-mode
+      react
 
   (Get Caffein)
 
