@@ -1,0 +1,45 @@
+"*":
+  "atom-beautify":
+    js:
+      default_beautifier: "Pretty Diff"
+      indent_with_tabs: true
+      jslint_happy: true
+      space_before_conditional: false
+    json:
+      default_beautifier: "Pretty Diff"
+      indent_with_tabs: true
+      jslint_happy: true
+      space_before_conditional: false
+    jsx:
+      indent_with_tabs: true
+      jslint_happy: true
+      space_before_conditional: false
+    python:
+      default_beautifier: "yapf"
+      formater: "yapf"
+      sort_imports: true
+  "color-picker":
+    automaticReplace: true
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
+  core:
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    telemetryConsent: "no"
+  editor:
+    showCursorOnSelection: false
+    showIndentGuide: true
+    tabLength: 4
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    lintHtmlFiles: true
+  "linter-ui-default":
+    panelHeight: 152
+    showPanel: true
+  react:
+    enabledForAllJavascriptFiles: true
+  welcome:
+    showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    autoIndentOnPaste: true
