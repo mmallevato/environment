@@ -301,6 +301,7 @@ alias gitc="git commit -m"
 alias gitps="git push"
 alias gitpl="git pull"
 alias gitl="git log"
+alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=3600'"
 
 function gitnow()
 {
