@@ -300,6 +300,7 @@ alias gita="git add -vA"
 alias gitc="git commit -m"
 alias gitps="git push"
 alias gitpl="git pull"
+alias gitl="git log"
 
 function gitnow()
 {
