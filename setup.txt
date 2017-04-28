@@ -71,9 +71,4 @@ Setup environment
       vim-mode-plus-ex-mode
       react
 
-  (Get Caffein)
-
-  Get VPN
-    $ sudo apt-get install network-manager-vpnc network-manager-vpnc-gnome
-
   Finalize and hide launcher
