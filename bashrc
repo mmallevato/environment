@@ -293,30 +293,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # =============================================================== #
 # Git
 # =============================================================== #
-alias bfg="java -jar $HOME/Jumis/tools/bfg-1.12.13.jar"
-alias ag="python $HOME/Jumis/tools/anamna/auto_git.py"
-alias gits="git status"
-alias gita="git add -vA"
-alias gitc="git commit -m"
-alias gitps="git push"
-alias gitpl="git pull"
-alias gitl="git log"
-alias gitb="git branch"
-alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=3600'"
-
-function gitnow()
-{
-    git pull
-    git add -A 
-    git commit -m "$1"
-    if [ $# -eq 1 ] ; then
-        git push
-    elif [ $# -eq 2 ]; then
-        git push origin "$2"
-      
-    fi
-}
-
+alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
 function gittrunc()
 {
     git checkout --orphan temp $1
