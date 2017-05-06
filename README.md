@@ -1,2 +1,2 @@
-# environment
+# Environment
 :bathtub::wine_glass:
