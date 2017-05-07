@@ -213,7 +213,7 @@ PS1="(\W) > "
 # Environment
 # =============================================================== #
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
-export PATH="$HOME/Jumis/tools/node-v7.9.0-linux-x64/bin:$PATH"
+export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
 alias gsea="java -jar -Xmx12g -Xms1g $HOME/Jumis/tools/gsea2-2.2.3.jar"
