@@ -184,7 +184,7 @@ On_IWhite='\x1B[0;107m'   # White
 
 
 # =============================================================== #
-# Greet 
+# Greet
 # =============================================================== #
 printf "${IBlue}****************************\n${NC}"
 printf "${IWhite}"
@@ -215,13 +215,10 @@ PS1="(\W) > "
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 export PATH="$HOME/Jumis/tools/bin:$PATH"
 
-alias unmask="awk '{ if ($0 !~ /^>/) $0=toupper($0); print $0 }'"
-alias gsea="java -jar -Xmx12g -Xms1g $HOME/Jumis/tools/gsea2-2.2.3.jar"
-
 # Jupyter
 alias jp="jupyter notebook ~"
-alias jpset="ipython notebook --no-browser --port=9000"
-alias jpget="ssh -N -f -L localhost:9999:localhost:9000"
+alias jpserver="ipython notebook --no-browser --port=9000"
+alias jpclient="ssh -N -f -L localhost:9999:localhost:9000"
 
 
 # =============================================================== #
@@ -302,4 +299,3 @@ function gittrunc()
     git checkout master
     git branch -D temp
 }
-
