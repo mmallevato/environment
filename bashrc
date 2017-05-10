@@ -291,6 +291,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Git
 # =============================================================== #
 alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
+
 function gittrunc()
 {
     git checkout --orphan temp $1
@@ -298,4 +299,28 @@ function gittrunc()
     git rebase --onto temp $1 master
     git checkout master
     git branch -D temp
+}
+
+function gitsub()
+{
+    for d in $1/*
+    do
+        if [ -d $d ]; then
+            printf '\n\n\n\n\n***************************** %s *******************************\n' $d
+
+            cd $d
+            git status
+            git submodule foreach 'git stash'
+            git submodule update --recursive --remote --init
+            git add -A
+            git commit -m 'Updated submodule'
+            git pull
+            git push
+
+            printf '********************************************************************************\n'
+
+            cd ..
+
+        fi
+    done
 }
