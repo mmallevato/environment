@@ -320,7 +320,7 @@ function gitsub()
             printf '\n********** git submodule update --remote --recursive **********\n'
             git submodule update --remote --recursive
 
-            printf '\n********** git add -A **********n'
+            printf '\n********** git add -A **********\n'
             git add -A
 
             printf "\n********** git commit -m 'Auto-updated submodules' **********\n"
