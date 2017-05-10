@@ -301,7 +301,7 @@ function gittrunc()
     git branch -D temp
 }
 
-function gitsub()
+function gitsync()
 {
     for d in *
     do
