@@ -310,20 +310,28 @@ function gitsub()
             printf ' %s\n' $d
             printf '********************************************************************************\n'
             cd $d
-            printf '\n***************************** stat *******************************\n'
+
+            printf '\n********** git status **********\n'
             git status
-            printf '\n***************************** stash *******************************\n'
+
+            printf "\n********** git submodule foreach 'git stash' **********\n"
             git submodule foreach 'git stash'
-            printf '\n***************************** update *******************************\n'
-            git submodule update --recursive --remote --init
-            printf '\n***************************** add *******************************\n'
+
+            printf '\n********** git submodule update --remote --recursive **********\n'
+            git submodule update --remote --recursive
+
+            printf '\n********** git add -A **********n'
             git add -A
-            printf '\n***************************** commit *******************************\n'
-            git commit -m 'Updated submodule'
-            printf '\n***************************** pull *******************************\n'
+
+            printf "\n********** git commit -m 'Auto-updated submodules' **********\n"
+            git commit -m 'Auto-updated submodules'
+
+            printf '\n********** git pull **********\n'
             git pull
-            printf '\n***************************** push *******************************\n'
+
+            printf '\n********** git push **********\n'
             git push
+
             cd ..
             printf '\n********************************************************************************\n'
         fi
