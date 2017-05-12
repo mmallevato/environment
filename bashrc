@@ -322,6 +322,9 @@ function gitsync()
             printf '\n********** git submodule update --remote --recursive **********\n'
             git submodule update --remote --recursive
 
+            printf '\n********** git diff --submodule **********\n'
+            git diff --submodule
+
             printf '\n********** git add -A **********\n'
             git add -A
 
