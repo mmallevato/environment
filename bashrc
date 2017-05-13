@@ -328,8 +328,8 @@ function gitsync()
             printf '\n********** git add -A **********\n'
             git add -A
 
-            printf "\n********** git commit -m 'Auto-updated submodules' **********\n"
-            git commit -m 'Auto-updated submodules'
+            printf "\n********** git commit -m $1' **********\n"
+            git commit -m $1
 
             printf '\n********** git pull **********\n'
             git pull
