@@ -328,7 +328,7 @@ function gitsync()
             printf '\n********** git add -A **********\n'
             git add -A
 
-            printf "\n********** git commit -m $1' **********\n"
+            printf "\n********** git commit -m $1 **********\n"
             git commit -m $1
 
             printf '\n********** git pull **********\n'
