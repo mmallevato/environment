@@ -329,7 +329,7 @@ function gitsync()
             git add -A
 
             printf "\n********** git commit -m $1 **********\n"
-            git commit -m $1
+            git commit -m "$1"
 
             printf '\n********** git pull **********\n'
             git pull
