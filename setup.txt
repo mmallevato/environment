@@ -48,7 +48,7 @@ Setup environment
       $ conda config --add channels r
       $ conda config --add channels bioconda
     Get softwares
-      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes rpy2 plotly biopython pyfaidx yapf
+      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf
       $ pip install pylama pytabix
 
   Get Jupyter VIM binding extension
