@@ -306,7 +306,7 @@ function gitsync()
     for d in *
     do
         if [ -d $d ]; then
-            printf '\n\n\n\n\n********************************************************************************\n'
+            printf '\n\n\n\n\n\n\n\n\n\n********************************************************************************\n'
             printf '%s\n' $d
             printf '********************************************************************************\n'
             cd $d
@@ -317,8 +317,8 @@ function gitsync()
             printf "\n********** git submodule foreach 'git stash' **********\n"
             git submodule foreach 'git stash'
 
-            printf '\n********** git submodule update --remote --init --recursive **********\n'
-            git submodule update --remote --init --recursive
+            printf '\n********** git submodule update --init --remote --recursive **********\n'
+            git submodule update --init --remote --recursive
 
             printf '\n********** git diff --submodule **********\n'
             git diff --submodule
