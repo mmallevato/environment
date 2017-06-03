@@ -186,18 +186,12 @@ On_IWhite='\x1B[0;107m'   # White
 # =============================================================== #
 # Greet
 # =============================================================== #
-printf "${IBlue}********************************************************************************\n${NC}"
-printf "${IWhite}"
 date
-printf "${IBlue}********************************************************************************\n${NC}"
 screen -ls
 
 function _exit()
 {
-    printf "${IBlue}********************************************************************************\n${NC}"
-    printf "${IWhite}"
     date
-    printf "${IBlue}********************************************************************************\n${NC}"
 }
 trap _exit EXIT
 
@@ -216,9 +210,9 @@ export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 # Jupyter
-alias jp="jupyter notebook ~"
-alias jpserver="ipython notebook --no-browser --port=9000"
-alias jpclient="ssh -N -f -L localhost:9999:localhost:9000"
+alias nb="jupyter notebook ~"
+alias nbserver="ipython notebook --no-browser --port=9000"
+alias nbclient="ssh -N -f -L localhost:9999:localhost:9000"
 
 
 # =============================================================== #
@@ -337,7 +331,6 @@ function gitsync()
 
             cd ..
             printf '\n********************************************************************************\n'
-            printf '********************************************************************************\n'
             printf '********************************************************************************\n'
         fi
     done
