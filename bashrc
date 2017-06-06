@@ -335,3 +335,34 @@ function gitsync()
         fi
     done
 }
+
+function git-clone-all ()
+{
+    git clone --recursive https://github.com/KwatME/ccal;
+    git clone --recursive https://github.com/KwatME/mutationalsignature;
+    git clone --recursive https://github.com/KwatME/gsea;
+    git clone --recursive https://github.com/KwatME/skew;
+    git clone --recursive https://github.com/KwatME/oncogps;
+    git clone --recursive https://github.com/KwatME/match;
+    git clone --recursive https://github.com/KwatME/linearmodel;
+    git clone --recursive https://github.com/KwatME/feature;
+    git clone --recursive https://github.com/KwatME/variant;
+    git clone --recursive https://github.com/KwatME/sequence;
+    git clone --recursive https://github.com/KwatME/hdf5;
+    git clone --recursive https://github.com/KwatME/dnaexecution;
+    git clone --recursive https://github.com/KwatME/network;
+    git clone --recursive https://github.com/KwatME/tcga;
+    git clone --recursive https://github.com/KwatME/plot;
+    git clone --recursive https://github.com/KwatME/file;
+    git clone --recursive https://github.com/KwatME/clustering;
+    git clone --recursive https://github.com/KwatME/classification;
+    git clone --recursive https://github.com/KwatME/regression;
+    git clone --recursive https://github.com/KwatME/matrixdecomposition;
+    git clone --recursive https://github.com/KwatME/linearalgebra;
+    git clone --recursive https://github.com/KwatME/dimensionreduction;
+    git clone --recursive https://github.com/KwatME/bayesian;
+    git clone --recursive https://github.com/KwatME/information;
+    git clone --recursive https://github.com/KwatME/dataplay;
+    git clone --recursive https://github.com/KwatME/helper;
+    git clone --recursive https://github.com/KwatME/environment
+}
