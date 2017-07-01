@@ -222,7 +222,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias ls='ls -FhG --color=auto'
+alias ls='ls -FhG'
 alias la='ls -Fla'          #  Show hidden files.
 alias lx='ls -FlXB'         #  Sort by extension. (does not work on OSX)
 alias lk='ls -FlSr'         #  Sort by size, biggest last.
