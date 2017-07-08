@@ -14,7 +14,7 @@ Get Ubuntu 16.04 LTS
 
   Remove softwares
 
-  Update softwares
+  Update softwares & install additional drivers ()
 
   Increase typing speed
 
@@ -40,8 +40,6 @@ Setup environment
     Get Anaconda
     Update Anaconda
       $ conda update --all
-    Create Python2.7 environment
-      $ conda create -n py2.7 python=2.7 anaconda && conda update --all -n py2.7
     Set up Bioconda
       $ conda config --add channels conda-forge
       $ conda config --add channels defaults
