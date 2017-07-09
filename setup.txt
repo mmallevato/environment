@@ -34,7 +34,7 @@ Setup environment
   Get ~/.bashrc from ./bashrc
 
   Get softwares
-    $ sudo apt install screen tree exfat-utils exfat-fuse
+    $ sudo apt install screen tree gparted exfat-utils exfat-fuse
 
   Get & setup Anaconda
     Get Anaconda
@@ -69,5 +69,6 @@ Setup environment
       vim-mode-plus
       vim-mode-plus-ex-mode
       react
+      markdown-preview-plus
 
   Finalize and hide launcher
