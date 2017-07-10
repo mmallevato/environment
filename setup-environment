@@ -1,0 +1,41 @@
+Get softwares
+  Chrome
+  Atom
+
+Set up environment
+  ./bashrc
+
+Get & set up Anaconda
+    Get Anaconda
+
+    Update Anaconda
+      $ conda update --all
+
+    Set up Bioconda
+      $ conda config --add channels conda-forge
+      $ conda config --add channels defaults
+      $ conda config --add channels r
+      $ conda config --add channels bioconda
+
+    Get libraries
+      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf
+      $ pip install pylama pytabix
+
+Get Jupyter VIM binding extension
+
+Get Node.js
+
+Setup Atom
+  Get packages
+    atom-beautify
+    autocomplete-python
+    color-picker
+    git-plus
+    git-time-machine
+    linter-eslint
+    linter-python
+    markdown-preview-plus
+    python-tools
+    vim-mode-plus
+    vim-mode-plus-ex-mode
+    react

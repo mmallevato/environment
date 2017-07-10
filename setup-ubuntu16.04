@@ -1,0 +1,33 @@
+Update BIOS using Internet cable
+
+(Set UEFI)
+  Legacy Mode = Off (default)
+  Secure Boot = Off
+  Graphics = Discrete
+  Port security = Off (for the dock)
+
+Install Ubuntu 16.04 LTS
+
+Trim launcher
+
+Remove softwares
+
+Update softwares & install additional drivers (Software Updater)
+
+Add repositories
+  $ sudo apt-add-repository ppa:git-core/ppa
+  $ sudo add-apt-repository ppa:webupd8team/atom
+
+Install softwares
+  $ sudo apt install screen tree gparted exfat-utils exfat-fuse atom git
+
+Increase typing speed
+
+Set File view (Edit --> Preferences)
+
+Remove nautilus shortcuts
+  $ vi ~/.config/user-dirs.dirs
+  Use $HOME/Anamna/ instead of the media directories
+
+Set vi as the default text editor
+  $ sudo update-alternatives --config editor
