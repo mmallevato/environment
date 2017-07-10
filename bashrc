@@ -25,7 +25,6 @@ export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 # Jupyter
-alias nb="jupyter notebook ~"
 alias nbserver="ipython notebook --no-browser --port=9000"
 alias nbclient="ssh -N -f -L localhost:9999:localhost:9000"
 
