@@ -10,9 +10,9 @@ Get & set up Anaconda
     Update Anaconda
       $ conda update --all
     Set up Bioconda
-      $ conda config --add channels conda-forge
-      $ conda config --add channels defaults
       $ conda config --add channels r
+      $ conda config --add channels defaults
+      $ conda config --add channels conda-forge
       $ conda config --add channels bioconda
     Get libraries
       $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf
