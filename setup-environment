@@ -27,12 +27,12 @@ Setup Atom
     atom-beautify
     autocomplete-python
     color-picker
+    ex-mode
     git-plus
     git-time-machine
+    hydrogen
     linter-eslint
     linter-python
-    markdown-preview-plus
     python-tools
     vim-mode-plus
-    vim-mode-plus-ex-mode
-    react
+    react-snippets
