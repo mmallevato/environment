@@ -16,8 +16,8 @@ Get & set up Anaconda
       $ conda config --add channels conda-forge
       $ conda config --add channels bioconda
     Get libraries
-      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf
-      $ pip install pylama pytabix
+      $ conda install plotly yapf pylama biopython pytabix pyfaidx rpy2
+      $ conda install htslib samtools bcftools hisat2 freebayes snpeff
 
 Get Jupyter VIM binding extension
 
