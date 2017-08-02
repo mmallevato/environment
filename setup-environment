@@ -16,7 +16,7 @@ Get & set up Anaconda
       $ conda config --add channels bioconda
     Get libraries
       $ conda install plotly yapf pylama biopython pytabix pyfaidx rpy2
-      $ conda install htslib samtools bcftools hisat2 freebayes snpeff
+      $ conda install htslib samtools bcftools hisat2 freebayes
 
 Get Jupyter VIM binding extension
 
