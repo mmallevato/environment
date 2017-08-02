@@ -7,8 +7,6 @@ Set up environment
 
 Get & set up Anaconda
     Get Anaconda
-    Update Anaconda
-      $ conda update --all
     Set up Bioconda
       $ conda config --add channels r
       $ conda config --add channels defaults
@@ -17,6 +15,8 @@ Get & set up Anaconda
     Get libraries
       $ conda install plotly yapf pylama biopython pytabix pyfaidx rpy2
       $ conda install htslib samtools bcftools hisat2 freebayes
+    Update Anaconda
+      $ conda update --all
 
 Get Jupyter VIM binding extension
 
