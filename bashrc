@@ -114,38 +114,38 @@ function gitsync()
     for d in *
     do
         if [ -d $d ]; then
-            printf '\n\n\n\n\n\n\n\n\n\n********************************************************************************\n'
+            printf '\n\n\n\n\n\n\n\nvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
             printf '%s\n' $d
-            printf '********************************************************************************\n'
+            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
             cd $d
 
-            printf '\n********** git status **********\n'
+            printf '\n******** git status ********\n'
             git status
 
-            printf "\n********** git submodule foreach 'git stash' **********\n"
-            git submodule foreach 'git stash'
+            printf "\n******** git submodule foreach \"git submodule foreach 'git stash'\" ********\n"
+            git submodule foreach "git submodule foreach 'git stash'"
 
-            printf '\n********** git submodule update --init --remote --recursive **********\n'
+            printf '\n******** git submodule update --init --remote --recursive ********\n'
             git submodule update --init --remote --recursive
 
-            printf '\n********** git diff --submodule **********\n'
+            printf '\n******** git diff --submodule ********\n'
             git diff --submodule
 
-            printf '\n********** git add -A **********\n'
+            printf '\n******** git add -A ********\n'
             git add -A
 
-            printf "\n********** git commit -m $1 **********\n"
+            printf "\n******** git commit -m $1 ********\n"
             git commit -m "$1"
 
-            printf '\n********** git pull **********\n'
+            printf '\n******** git pull ********\n'
             git pull
 
-            printf '\n********** git push **********\n'
+            printf '\n******** git push ********\n'
             git push
 
             cd ..
-            printf '\n********************************************************************************\n'
-            printf '********************************************************************************\n'
+            printf '\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+            printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
         fi
     done
 }
