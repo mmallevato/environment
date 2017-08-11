@@ -162,6 +162,7 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/environment;
     git clone --recursive https://github.com/KwatME/feature;
     git clone --recursive https://github.com/KwatME/file;
+    git clone --recursive https://github.com/KwatME/firebrowse;
     git clone --recursive https://github.com/KwatME/gsea;
     git clone --recursive https://github.com/KwatME/hdf5;
     git clone --recursive https://github.com/KwatME/helper;
