@@ -125,6 +125,9 @@ function gitsync()
             printf "\n******** git submodule foreach \"git submodule foreach 'git stash'\" ********\n"
             git submodule foreach "git submodule foreach 'git stash'"
 
+            printf "\n******** git submodule foreach 'git stash' ********\n"
+            git submodule foreach 'git stash'
+
             printf '\n******** git submodule update --init --remote --recursive ********\n'
             git submodule update --init --remote --recursive
 
