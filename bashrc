@@ -163,7 +163,6 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/dnaexecution;
     git clone --recursive https://github.com/KwatME/encryption;
     git clone --recursive https://github.com/KwatME/environment;
-    git clone --recursive https://github.com/KwatME/feature;
     git clone --recursive https://github.com/KwatME/file;
     git clone --recursive https://github.com/KwatME/firebrowse;
     git clone --recursive https://github.com/KwatME/gsea;
@@ -184,5 +183,4 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/sequence;
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
-    git clone --recursive https://github.com/KwatME/variant;
 }
