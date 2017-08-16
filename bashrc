@@ -122,11 +122,11 @@ function gitsync()
             printf '\n******** git status ********\n'
             git status
 
-            printf "\n******** git submodule foreach \"git submodule foreach 'git stash'\" ********\n"
-            git submodule foreach "git submodule foreach 'git stash'"
+            printf "\n******** git submodule foreach 'git reset --hard' ********\n"
+            git submodule foreach 'git reset --hard'
 
-            printf "\n******** git submodule foreach 'git stash' ********\n"
-            git submodule foreach 'git stash'
+            printf "\n******** git submodule foreach 'git clean -fd' ********\n"
+            git submodule foreach 'git clean -fd'
 
             printf '\n******** git submodule update --init --remote --recursive ********\n'
             git submodule update --init --remote --recursive
@@ -180,7 +180,6 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/oncogps;
     git clone --recursive https://github.com/KwatME/plot;
     git clone --recursive https://github.com/KwatME/regression;
-    git clone --recursive https://github.com/KwatME/sequence;
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
 }
