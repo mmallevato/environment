@@ -100,14 +100,14 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # =============================================================== #
 alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
 
-function gittrunc()
+
+function gitacp()
 {
-    git checkout --orphan temp $1
-    git commit -m "Truncated history"
-    git rebase --onto temp $1 master
-    git checkout master
-    git branch -D temp
+    git add -A;
+    git commit -m '$s';
+    git push;
 }
+
 
 function gitsync()
 {
@@ -152,6 +152,17 @@ function gitsync()
     done
 }
 
+
+function gittrunc()
+{
+    git checkout --orphan temp $1
+    git commit -m "Truncated history"
+    git rebase --onto temp $1 master
+    git checkout master
+    git branch -D temp
+}
+
+
 function git-clone-kwatme ()
 {
     git clone --recursive https://github.com/KwatME/bayesian;
@@ -180,6 +191,7 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/oncogps;
     git clone --recursive https://github.com/KwatME/plot;
     git clone --recursive https://github.com/KwatME/regression;
+    git clone --recursive https://github.com/KwatME/sequence;
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
 }
