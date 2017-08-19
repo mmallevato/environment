@@ -109,7 +109,12 @@ function gittrunc()
     git branch -D temp
 }
 
-function gitsync()
+function gitacp()
+{
+  git add -A; git commit -m $1; git push
+}
+
+function gitall()
 {
     for d in *
     do
@@ -160,7 +165,6 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/clustering;
     git clone --recursive https://github.com/KwatME/dataplay;
     git clone --recursive https://github.com/KwatME/dimensionreduction;
-    git clone --recursive https://github.com/KwatME/dnaexecution;
     git clone --recursive https://github.com/KwatME/encryption;
     git clone --recursive https://github.com/KwatME/environment;
     git clone --recursive https://github.com/KwatME/file;
@@ -179,6 +183,7 @@ function git-clone-kwatme ()
     git clone --recursive https://github.com/KwatME/network;
     git clone --recursive https://github.com/KwatME/oncogps;
     git clone --recursive https://github.com/KwatME/plot;
+    git clone --recursive https://github.com/KwatME/processing;
     git clone --recursive https://github.com/KwatME/regression;
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
