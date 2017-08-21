@@ -163,7 +163,7 @@ function gittrunc()
 }
 
 
-function git-clone-kwatme ()
+function gitclonekwatme ()
 {
     git clone --recursive https://github.com/KwatME/bayesian;
     git clone --recursive https://github.com/KwatME/ccal;
