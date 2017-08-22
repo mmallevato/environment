@@ -101,14 +101,6 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 alias gitcch="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
 
 
-function gitacp()
-{
-    git add -A
-    git commit -m '$1'
-    git push
-}
-
-
 function gitsync()
 {
     for d in *
