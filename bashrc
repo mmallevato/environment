@@ -50,7 +50,7 @@ alias mkdir='mkdir -vp'
 alias df='df -Th'
 alias h='history'
 alias j='jobs -l'
-
+alias rsync='rsync --verbose --recursive --links --perms --times --delete --delete-excluded --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
 # =============================================================== #
 # Sanitize
