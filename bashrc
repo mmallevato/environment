@@ -54,6 +54,8 @@ alias mkdir='mkdir -vp'
 
 alias rsync='rsync --verbose --recursive --links --perms --times --delete --delete-excluded --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
+alias du='du -hs'
+
 
 # =============================================================== #
 # Sanitize
@@ -192,3 +194,4 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
 }
+
