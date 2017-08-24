@@ -4,6 +4,7 @@
 date
 screen -ls
 
+
 function _exit()
 {
     date
@@ -14,7 +15,6 @@ trap _exit EXIT
 # =============================================================== #
 # Shell Prompt
 # =============================================================== #
-PROMPT_COMMAND="history -a"
 PS1="(\W) > "
 
 
@@ -22,11 +22,10 @@ PS1="(\W) > "
 # Environment
 # =============================================================== #
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
-export PATH="$HOME/Jumis/tools/bin:$PATH"
 
 # Jupyter
-alias nbserver="ipython notebook --no-browser --port=9000"
-alias nbclient="ssh -N -f -L localhost:9999:localhost:9000"
+alias nbserver="ipython notebook --no-browser --port=8000"
+alias nbclient="ssh -N -f -L localhost:9999:localhost:8000"
 
 
 # =============================================================== #
@@ -36,6 +35,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
 alias ls='ls -FhG --color=auto'
 alias la='ls -Fla'          #  Show hidden files.
 alias lx='ls -FlXB'         #  Sort by extension. (does not work on OSX)
@@ -43,14 +43,17 @@ alias lk='ls -FlSr'         #  Sort by size, biggest last.
 alias lt='ls -Fltr'         #  Sort by date, most recent last.
 alias lc='ls -Fltcr'        #  Sort by/show change time, most recent last.
 alias lu='ls -Fltur'        #  Sort by/show access time, most recent last.
+
 alias rm='rm -i'
+
 alias cp='cp -i'
+
 alias mv='mv -i'
+
 alias mkdir='mkdir -vp'
-alias df='df -Th'
-alias h='history'
-alias j='jobs -l'
+
 alias rsync='rsync --verbose --recursive --links --perms --times --delete --delete-excluded --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
+
 
 # =============================================================== #
 # Sanitize
@@ -63,7 +66,7 @@ alias rmdsstore="sudo find / -name .DS_Store -delete"
 
 
 # =============================================================== #
-# Compression
+# Compress
 # =============================================================== #
 function extract()      # Handy Extract Program
 {
@@ -88,8 +91,10 @@ function extract()      # Handy Extract Program
     fi
 }
 
+
 # Creates an archive (*.tar.gz) from given directory.
 function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+
 
 # Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
