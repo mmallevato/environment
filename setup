@@ -15,8 +15,8 @@ Get & set up Anaconda
     Update Anaconda
       $ conda update --all
     Get libraries
-      $ conda install java-jdk r htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf
-      $ pip install pylama pytabix
+      $ conda install htslib samtools bcftools hisat2 freebayes snpeff rpy2 plotly biopython pyfaidx yapf pylama
+      $ pip install pytabix
 
 Get Jupyter VIM binding extension
 
