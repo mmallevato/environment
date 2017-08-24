@@ -1,6 +1,6 @@
 Update BIOS using Internet cable
 
-(Set UEFI)
+Set UEFI
   Legacy Mode = Off (default)
   Secure Boot = Off
   Graphics = Discrete
@@ -19,7 +19,7 @@ Add repositories
   $ sudo add-apt-repository ppa:webupd8team/atom
 
 Install softwares
-  $ sudo apt install screen tree gparted exfat-utils exfat-fuse atom git
+  $ sudo apt install screen tree gparted exfat-utils exfat-fuse git atom
 
 Increase typing speed
 
