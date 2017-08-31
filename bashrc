@@ -64,7 +64,7 @@ alias chmodall="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find .
 alias chownu="sudo chown -vR $USER ."
 alias rmemp="find . -type f -size 0 -exec rm -f '{}' +"
 alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
-alias rmdsstore="sudo find / -name .DS_Store -delete"
+alias rmdsstore="sudo find . -name .DS_Store -delete"
 
 
 # =============================================================== #
@@ -194,4 +194,3 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
 }
-
