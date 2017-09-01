@@ -141,8 +141,8 @@ PS1="(\W) > "
 export PATH="$HOME/Jumis/tools/anaconda/bin:$PATH"
 
 # Jupyter
-alias nbserver="ipython notebook --no-browser --port=8000"
-alias nbclient="ssh -N -f -L localhost:9999:localhost:8000"
+alias nbserver="jupyter notebook --no-browser --port=8888"
+alias nbclient="ssh -N -f -L localhost:8889:localhost:8888"
 
 
 # =============================================================== #
