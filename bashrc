@@ -314,3 +314,16 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/tcga;
 }
 
+function gitcloneguardiome ()
+{
+    git clone --recursive https://github.com/Guardiome/create-genome-app;
+    git clone --recursive https://github.com/Guardiome/feature;
+    git clone --recursive https://github.com/Guardiome/g2p;
+    git clone --recursive https://github.com/Guardiome/genome;
+    git clone --recursive https://github.com/Guardiome/genome-ai;
+    git clone --recursive https://github.com/Guardiome/genome-ai-server;
+    git clone --recursive https://github.com/Guardiome/genome-ai-ui;
+    git clone --recursive https://github.com/Guardiome/genomeapptools;
+    git clone --recursive https://github.com/Guardiome/raspberrypi;
+    git clone --recursive https://github.com/Guardiome/variant;
+}
