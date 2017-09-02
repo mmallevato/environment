@@ -323,6 +323,5 @@ function gitcloneguardiome ()
     git clone --recursive https://github.com/Guardiome/genome-ai-server;
     git clone --recursive https://github.com/Guardiome/genome-ai-ui;
     git clone --recursive https://github.com/Guardiome/genomeapptools;
-    git clone --recursive https://github.com/Guardiome/raspberrypi;
     git clone --recursive https://github.com/Guardiome/variant;
 }
