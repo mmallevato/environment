@@ -180,9 +180,8 @@ alias du='du -hs'
 # =============================================================== #
 alias chmodall="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find . -not -path '*/.*' -type d -exec chmod 755 {} \;"
 alias chownu="sudo chown -vR $USER ."
-alias rmemp="find . -type f -size 0 -exec rm -f '{}' +"
 alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
-alias rmdsstore="sudo find . -name .DS_Store -delete"
+alias rmdsstore="find . -name .DS_Store -delete"
 
 
 # =============================================================== #
