@@ -230,40 +230,65 @@ function gitsync()
     for d in *
     do
         if [ -d $d ]; then
-            printf '\n\n\n\n\n\n\n\nvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
-            printf '%s\n' $d
-            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
+            printf '\n\n\n\n\n\n\n\n'
+
+            printf '================================================================================'
+            printf '\n'
+
+            printf '%s' $d
+            printf '\n'
+
+            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf '\n'
+
             cd $d
 
-            printf '\n******** git status ********\n'
+            printf '>>>>>>> git status <<<<<<<<'
+            printf '\n'
             git status
 
-            printf "\n******** git submodule foreach 'git reset --hard' ********\n"
+            printf ">>>>>>>> git submodule foreach 'git stash' <<<<<<<<"
+            printf '\n'
+            git submodule foreach 'git stash'
+
+            printf ">>>>>>>> git submodule foreach 'git reset --hard' <<<<<<<<"
+            printf '\n'
             git submodule foreach 'git reset --hard'
 
-            printf "\n******** git submodule foreach 'git clean -fd' ********\n"
+            printf ">>>>>>>> git submodule foreach 'git clean -fd' <<<<<<<<"
+            printf '\n'
             git submodule foreach 'git clean -fd'
 
-            printf '\n******** git submodule update --init --remote --recursive ********\n'
+            printf '>>>>>>>> git submodule update --init --remote --recursive <<<<<<<<'
+            printf '\n'
             git submodule update --init --remote --recursive
 
-            printf '\n******** git diff --submodule ********\n'
+            printf '>>>>>>>> git diff --submodule <<<<<<<<'
+            printf '\n'
             git diff --submodule
 
-            printf '\n******** git add -A ********\n'
+            printf '>>>>>>>> git add -A <<<<<<<<'
+            printf '\n'
             git add -A
 
-            printf "\n******** git commit -m $1 ********\n"
+            printf '>>>>>>>> git commit -m $1 <<<<<<<<'
+            printf '\n'
             git commit -m "$1"
 
-            printf '\n******** git pull ********\n'
+            printf '>>>>>>> git pull <<<<<<<<'
+            printf '\n'
             git pull
 
-            printf '\n******** git push ********\n'
+            printf '>>>>>>> git push <<<<<<<<'
+            printf '\n'
             git push
 
             cd ..
-            printf '\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf '\n'
+
+            printf '================================================================================'
+            printf '\n'
         fi
     done
 }
@@ -272,7 +297,7 @@ function gitsync()
 function gittrunc()
 {
     git checkout --orphan temp $1
-    git commit -m "Truncated history"
+    git commit -m 'Truncated history'
     git rebase --onto temp $1 master
     git checkout master
     git branch -D temp
