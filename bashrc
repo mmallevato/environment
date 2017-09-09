@@ -305,7 +305,7 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/network;
     git clone --recursive https://github.com/KwatME/oncogps;
     git clone --recursive https://github.com/KwatME/plot;
-    git clone --recursive https://github.com/KwatME/processing;
+    git clone --recursive https://github.com/KwatME/process-dna-sequences;
     git clone --recursive https://github.com/KwatME/regression;
     git clone --recursive https://github.com/KwatME/sequence;
     git clone --recursive https://github.com/KwatME/skew;
