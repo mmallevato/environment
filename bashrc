@@ -301,10 +301,14 @@ function gitsync()
         if [ -d $d ]; then
             printf '\n\n\n\n\n\n\n\n'
 
+            printf $White
             printf '================================================================================'
+            printf $NC
             printf '\n'
 
-            printf "${IWhite}%s${NC}" $d
+            printf $IWhite
+            printf '%s' $d
+            printf $NC
             printf '\n'
 
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
