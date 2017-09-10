@@ -306,7 +306,7 @@ function gitsync()
             printf $NC
             printf '\n'
 
-            printf $IWhite
+            printf $IBWhite
             printf '%s' $d
             printf $NC
             printf '\n'
@@ -318,7 +318,7 @@ function gitsync()
 
             cd $d
 
-            printf $IBlue
+            printf $IPurple
             printf '>>> git status <<<'
             printf $NC
             printf '\n'
@@ -330,7 +330,7 @@ function gitsync()
             printf '\n'
             git submodule foreach 'git stash'
 
-            printf $IBlue
+            printf $IPurple
             printf ">>> git submodule foreach 'git reset --hard' <<<"
             printf $NC
             printf '\n'
@@ -342,7 +342,7 @@ function gitsync()
             printf '\n'
             git submodule foreach 'git clean -fd'
 
-            printf $IBlue
+            printf $IPurple
             printf '>>> git submodule update --init --remote --recursive <<<'
             printf $NC
             printf '\n'
@@ -354,7 +354,7 @@ function gitsync()
             printf '\n'
             git diff --submodule
 
-            printf $IBlue
+            printf $IPurple
             printf '>>> git add -A <<<'
             printf $NC
             printf '\n'
@@ -366,7 +366,7 @@ function gitsync()
             printf '\n'
             git commit -m "$1"
 
-            printf $IBlue
+            printf $IPurple
             printf '>>> git pull <<<'
             printf $NC
             printf '\n'
