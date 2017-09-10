@@ -301,7 +301,7 @@ function gitsync()
         if [ -d $d ]; then
             printf '\n\n\n\n\n\n\n\n'
 
-            printf $IPurple
+            printf $IGreen
             printf '================================================================================'
             printf $NC
             printf '\n'
@@ -311,7 +311,7 @@ function gitsync()
             printf $NC
             printf '\n'
 
-            printf $IPurple
+            printf $Green
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
             printf $NC
             printf '\n'
@@ -380,12 +380,12 @@ function gitsync()
 
             cd ..
 
-            printf $IPurple
+            printf $Green
             printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
             printf $NC
             printf '\n'
 
-            printf $IPurple
+            printf $IGreen
             printf '================================================================================'
             printf $NC
             printf '\n'
