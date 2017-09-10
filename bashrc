@@ -380,12 +380,12 @@ function gitsync()
 
             cd ..
 
-            printf $Green
+            printf $IBlack
             printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
             printf $NC
             printf '\n'
 
-            printf $BIGreen
+            printf $BBlack
             printf '================================================================================'
             printf $NC
             printf '\n'
