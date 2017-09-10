@@ -303,6 +303,9 @@ function gitsync()
 
             printf $IPurple
             printf '================================================================================'
+            printf $NC
+
+            printf $IBWhite
             printf $d
             printf $NC
             printf '\n'
