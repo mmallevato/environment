@@ -311,7 +311,7 @@ function gitsync()
             printf $NC
             printf '\n'
 
-            printf $Green
+            printf $White
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
             printf $NC
             printf '\n'
@@ -380,7 +380,7 @@ function gitsync()
 
             cd ..
 
-            printf $Green
+            printf $White
             printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
             printf $NC
             printf '\n'
