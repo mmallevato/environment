@@ -319,61 +319,61 @@ function gitsync()
             cd $d
 
             printf $IYellow
-            printf '>>> git status <<<'
+            printf 'git status'
             printf $NC
             printf '\n'
             git status
 
             printf $ICyan
-            printf ">>> git submodule foreach 'git stash' <<<"
+            printf "git submodule foreach 'git stash'"
             printf $NC
             printf '\n'
             git submodule foreach 'git stash'
 
             printf $IYellow
-            printf ">>> git submodule foreach 'git reset --hard' <<<"
+            printf "git submodule foreach 'git reset --hard'"
             printf $NC
             printf '\n'
             git submodule foreach 'git reset --hard'
 
             printf $ICyan
-            printf ">>> git submodule foreach 'git clean -fd' <<<"
+            printf "git submodule foreach 'git clean -fd'"
             printf $NC
             printf '\n'
             git submodule foreach 'git clean -fd'
 
             printf $IYellow
-            printf '>>> git submodule update --init --remote --recursive <<<'
+            printf 'git submodule update --init --remote --recursive'
             printf $NC
             printf '\n'
             git submodule update --init --remote --recursive
 
             printf $ICyan
-            printf '>>> git diff --submodule <<<'
+            printf 'git diff --submodule'
             printf $NC
             printf '\n'
             git diff --submodule
 
             printf $IYellow
-            printf '>>> git add -A <<<'
+            printf 'git add -A'
             printf $NC
             printf '\n'
             git add -A
 
             printf $ICyan
-            printf '>>> git commit -m $1 <<<'
+            printf 'git commit -m $1'
             printf $NC
             printf '\n'
             git commit -m "$1"
 
             printf $IYellow
-            printf '>>> git pull <<<'
+            printf 'git pull'
             printf $NC
             printf '\n'
             git pull
 
             printf $ICyan
-            printf '>>> git push <<<'
+            printf 'git push'
             printf $NC
             printf '\n'
             git push
