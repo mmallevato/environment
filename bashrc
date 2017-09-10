@@ -307,7 +307,6 @@ function gitsync()
             printf '\n'
 
             printf $IBWhite
-            printf $d
             printf $NC
             printf '\n'
 
