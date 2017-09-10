@@ -303,12 +303,11 @@ function gitsync()
 
             printf $IPurple
             printf '================================================================================'
-            printf '\n'
+            printf $NC
 
             printf $IBWhite
             printf $d
             printf $NC
-            printf '\n'
 
             printf $IPurple
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
