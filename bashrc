@@ -320,50 +320,73 @@ function gitsync()
 
             printf $IBlue
             printf '>>> git status <<<'
+            printf $NC
             printf '\n'
             git status
 
+            printf $IBlue
             printf ">>> git submodule foreach 'git stash' <<<"
+            printf $NC
             printf '\n'
             git submodule foreach 'git stash'
 
+            printf $IBlue
             printf ">>> git submodule foreach 'git reset --hard' <<<"
+            printf $NC
             printf '\n'
             git submodule foreach 'git reset --hard'
 
+            printf $IBlue
             printf ">>> git submodule foreach 'git clean -fd' <<<"
+            printf $NC
             printf '\n'
             git submodule foreach 'git clean -fd'
 
+            printf $IBlue
             printf '>>> git submodule update --init --remote --recursive <<<'
+            printf $NC
             printf '\n'
             git submodule update --init --remote --recursive
 
+            printf $IBlue
             printf '>>> git diff --submodule <<<'
+            printf $NC
             printf '\n'
             git diff --submodule
 
+            printf $IBlue
             printf '>>> git add -A <<<'
+            printf $NC
             printf '\n'
             git add -A
 
+            printf $IBlue
             printf '>>> git commit -m $1 <<<'
+            printf $NC
             printf '\n'
             git commit -m "$1"
 
+            printf $IBlue
             printf '>>> git pull <<<'
+            printf $NC
             printf '\n'
             git pull
 
+            printf $IBlue
             printf '>>> git push <<<'
+            printf $NC
             printf '\n'
             git push
 
             cd ..
+            printf $IBlack
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf $NC
             printf '\n'
 
+            printf $IBlack
             printf '================================================================================'
+            printf $NC
             printf '\n'
         fi
     done
