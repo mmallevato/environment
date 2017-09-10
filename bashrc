@@ -318,7 +318,7 @@ function gitsync()
 
             cd $d
 
-            printf $IPurple
+            printf $IYellow
             printf '>>> git status <<<'
             printf $NC
             printf '\n'
@@ -330,7 +330,7 @@ function gitsync()
             printf '\n'
             git submodule foreach 'git stash'
 
-            printf $IPurple
+            printf $IYellow
             printf ">>> git submodule foreach 'git reset --hard' <<<"
             printf $NC
             printf '\n'
@@ -342,7 +342,7 @@ function gitsync()
             printf '\n'
             git submodule foreach 'git clean -fd'
 
-            printf $IPurple
+            printf $IYellow
             printf '>>> git submodule update --init --remote --recursive <<<'
             printf $NC
             printf '\n'
@@ -354,7 +354,7 @@ function gitsync()
             printf '\n'
             git diff --submodule
 
-            printf $IPurple
+            printf $IYellow
             printf '>>> git add -A <<<'
             printf $NC
             printf '\n'
@@ -366,7 +366,7 @@ function gitsync()
             printf '\n'
             git commit -m "$1"
 
-            printf $IPurple
+            printf $IYellow
             printf '>>> git pull <<<'
             printf $NC
             printf '\n'
