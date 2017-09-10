@@ -318,61 +318,61 @@ function gitsync()
 
             cd $d
 
-            printf $IYellow
+            printf $BIYellow
             printf 'git status'
             printf $NC
             printf '\n'
             git status
 
-            printf $ICyan
+            printf $BICyan
             printf "git submodule foreach 'git stash'"
             printf $NC
             printf '\n'
             git submodule foreach 'git stash'
 
-            printf $IYellow
+            printf $BIYellow
             printf "git submodule foreach 'git reset --hard'"
             printf $NC
             printf '\n'
             git submodule foreach 'git reset --hard'
 
-            printf $ICyan
+            printf $BICyan
             printf "git submodule foreach 'git clean -fd'"
             printf $NC
             printf '\n'
             git submodule foreach 'git clean -fd'
 
-            printf $IYellow
+            printf $BIYellow
             printf 'git submodule update --init --remote --recursive'
             printf $NC
             printf '\n'
             git submodule update --init --remote --recursive
 
-            printf $ICyan
+            printf $BICyan
             printf 'git diff --submodule'
             printf $NC
             printf '\n'
             git diff --submodule
 
-            printf $IYellow
+            printf $BIYellow
             printf 'git add -A'
             printf $NC
             printf '\n'
             git add -A
 
-            printf $ICyan
+            printf $BICyan
             printf 'git commit -m $1'
             printf $NC
             printf '\n'
             git commit -m "$1"
 
-            printf $IYellow
+            printf $BIYellow
             printf 'git pull'
             printf $NC
             printf '\n'
             git pull
 
-            printf $ICyan
+            printf $BICyan
             printf 'git push'
             printf $NC
             printf '\n'
