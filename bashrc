@@ -379,6 +379,7 @@ function gitsync()
             git push
 
             cd ..
+
             printf $IPurple
             printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
             printf $NC
