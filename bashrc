@@ -301,7 +301,7 @@ function gitsync()
         if [ -d $d ]; then
             printf '\n\n\n\n\n\n\n\n'
 
-            printf $White
+            printf $IBlack
             printf '================================================================================'
             printf $NC
             printf '\n'
@@ -311,11 +311,14 @@ function gitsync()
             printf $NC
             printf '\n'
 
+            printf $IBlack
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf $NC
             printf '\n'
 
             cd $d
 
+            printf $IBlue
             printf '>>> git status <<<'
             printf '\n'
             git status
