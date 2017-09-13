@@ -410,8 +410,10 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/dataplay;
     git clone --recursive https://github.com/KwatME/dimensionreduction;
     git clone --recursive https://github.com/KwatME/environment;
+    git clone --recursive https://github.com/KwatME/feature;
     git clone --recursive https://github.com/KwatME/file;
     git clone --recursive https://github.com/KwatME/firebrowse;
+    git clone --recursive https://github.com/KwatME/get_grch;
     git clone --recursive https://github.com/KwatME/gsea;
     git clone --recursive https://github.com/KwatME/hdf5;
     git clone --recursive https://github.com/KwatME/helper;
@@ -426,9 +428,10 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/network;
     git clone --recursive https://github.com/KwatME/oncogps;
     git clone --recursive https://github.com/KwatME/plot;
-    git clone --recursive https://github.com/KwatME/process-dna-sequences;
+    git clone --recursive https://github.com/KwatME/process_dna_sequences;
     git clone --recursive https://github.com/KwatME/regression;
     git clone --recursive https://github.com/KwatME/sequence;
     git clone --recursive https://github.com/KwatME/skew;
     git clone --recursive https://github.com/KwatME/tcga;
+    git clone --recursive https://github.com/KwatME/variant;
 }
