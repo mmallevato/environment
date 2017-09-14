@@ -402,38 +402,37 @@ function gittrunc()
 
 function gitclonekwatme ()
 {
-    git clone --recursive https://github.com/KwatME/bayesian;
-    git clone --recursive https://github.com/KwatME/classification;
-    git clone --recursive https://github.com/KwatME/clustering;
-    git clone --recursive https://github.com/KwatME/cryptograph;
-    git clone --recursive https://github.com/KwatME/array_nd;
-    git clone --recursive https://github.com/KwatME/dimension_reduction;
-    git clone --recursive https://github.com/KwatME/environment;
-    git clone --recursive https://github.com/KwatME/feature;
-    git clone --recursive https://github.com/KwatME/file;
-    git clone --recursive https://github.com/KwatME/grch;
-    git clone --recursive https://github.com/KwatME/gsea;
-    git clone --recursive https://github.com/KwatME/hdf5;
-    git clone --recursive https://github.com/KwatME/help;
-    git clone --recursive https://github.com/KwatME/information;
-    git clone --recursive https://github.com/KwatME/jupyter_gui;
-    git clone --recursive https://github.com/KwatME/kde;
-    git clone --recursive https://github.com/KwatME/linear_algebra;
-    git clone --recursive https://github.com/KwatME/linear_model;
-    git clone --recursive https://github.com/KwatME/match;
-    git clone --recursive https://github.com/KwatME/matrix_decomposition;
-    git clone --recursive https://github.com/KwatME/mutational_signature;
-    git clone --recursive https://github.com/KwatME/network;
-    git clone --recursive https://github.com/KwatME/onco_gps;
-    git clone --recursive https://github.com/KwatME/plot;
-    git clone --recursive https://github.com/KwatME/regression;
-    git clone --recursive https://github.com/KwatME/sequence;
-    git clone --recursive https://github.com/KwatME/sequencing_process;
-    git clone --recursive https://github.com/KwatME/skew;
-    git clone --recursive https://github.com/KwatME/tcga;
-    git clone --recursive https://github.com/KwatME/variant
+    git clone --recursive https://github.com/kwatme/bayesian;
+    git clone --recursive https://github.com/kwatme/classification;
+    git clone --recursive https://github.com/kwatme/cluster;
+    git clone --recursive https://github.com/kwatme/cryptograph;
+    git clone --recursive https://github.com/kwatme/array_nd;
+    git clone --recursive https://github.com/kwatme/dimension_reduction;
+    git clone --recursive https://github.com/kwatme/environment;
+    git clone --recursive https://github.com/kwatme/feature;
+    git clone --recursive https://github.com/kwatme/file;
+    git clone --recursive https://github.com/kwatme/grch;
+    git clone --recursive https://github.com/kwatme/gsea;
+    git clone --recursive https://github.com/kwatme/hdf5;
+    git clone --recursive https://github.com/kwatme/information;
+    git clone --recursive https://github.com/kwatme/jupyter_gui;
+    git clone --recursive https://github.com/kwatme/kernel_density;
+    git clone --recursive https://github.com/kwatme/linear_algebra;
+    git clone --recursive https://github.com/kwatme/linear_model;
+    git clone --recursive https://github.com/kwatme/match;
+    git clone --recursive https://github.com/kwatme/matrix_decomposition;
+    git clone --recursive https://github.com/kwatme/mutational_signature;
+    git clone --recursive https://github.com/kwatme/network;
+    git clone --recursive https://github.com/kwatme/onco_gps;
+    git clone --recursive https://github.com/kwatme/plot;
+    git clone --recursive https://github.com/kwatme/regression;
+    git clone --recursive https://github.com/kwatme/sequence;
+    git clone --recursive https://github.com/kwatme/sequencing_process;
+    git clone --recursive https://github.com/kwatme/skew;
+    git clone --recursive https://github.com/kwatme/support;
+    git clone --recursive https://github.com/kwatme/tcga;
+    git clone --recursive https://github.com/kwatme/variant
 }
-
 
 
 function gitcloneguardiome()
@@ -442,9 +441,9 @@ function gitcloneguardiome()
     git clone --recursive https://github.com/guardiome/g2p;
     git clone --recursive https://github.com/guardiome/genome;
     git clone --recursive https://github.com/guardiome/genome_ai;
-    git clone --recursive https://github.com/guardiome/genome_app_tools;
-    git clone --recursive https://github.com/guardiome/genome_apps;
-    git clone --recursive https://github.com/guardiome/pipelines;
+    git clone --recursive https://github.com/guardiome/genome_app;
+    git clone --recursive https://github.com/guardiome/genome_apps_for_genome_ai;
+    git clone --recursive https://github.com/guardiome/pipeline;
     git clone --recursive https://github.com/guardiome/server;
     git clone --recursive https://github.com/guardiome/ui;
 }
