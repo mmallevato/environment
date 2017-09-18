@@ -402,11 +402,11 @@ function gittrunc()
 
 function gitclonekwatme ()
 {
+    git clone --recursive https://github.com/kwatme/array_nd;
     git clone --recursive https://github.com/kwatme/bayesian;
     git clone --recursive https://github.com/kwatme/classification;
     git clone --recursive https://github.com/kwatme/cluster;
     git clone --recursive https://github.com/kwatme/cryptograph;
-    git clone --recursive https://github.com/kwatme/array_nd;
     git clone --recursive https://github.com/kwatme/dimension_reduction;
     git clone --recursive https://github.com/kwatme/environment;
     git clone --recursive https://github.com/kwatme/feature;
