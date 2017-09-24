@@ -431,7 +431,8 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/skew;
     git clone --recursive https://github.com/kwatme/support;
     git clone --recursive https://github.com/kwatme/tcga;
-    git clone --recursive https://github.com/kwatme/variant
+    git clone --recursive https://github.com/kwatme/variant;
+    git clone --recursive https://github.com/ucsd-ccal/ccal;
 }
 
 
