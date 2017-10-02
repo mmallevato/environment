@@ -1,36 +1,37 @@
 Get softwares
-  Chrome
-  Atom
+	Chrome
+	Atom
 
-Set up environment
-    ./bashrc
+Set up environment    
+    $ cp bashrc ~/.bashrc
+    $ cp vimrc ~/.vimrc
 
 Get & set up Anaconda
     Get Anaconda
     
     Set up Bioconda
-      $ conda config --add channels r
-      $ conda config --add channels defaults
-      $ conda config --add channels conda-forge
-      $ conda config --add channels bioconda
+      	$ conda config --add channels r
+      	$ conda config --add channels defaults
+      	$ conda config --add channels conda-forge
+      	$ conda config --add channels bioconda
     
     Update Anaconda
-      $ conda update --all
+      	$ conda update --all
     
     Get libraries
-      $ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
-      $ pip install pytabix fastqp
+      	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
+      	$ pip install pytabix fastqp
 
 Get Jupyter VIM binding extension
 
 Get Node.js
 
 Setup Atom
-  Get packages
-    atom-beautify
-    autocomplete-python
-    ex-mode
-    git-plus
-    linter-python
-    python-tools
-    vim-mode-plus
+  	Get packages
+    	atom-beautify
+	    autocomplete-python
+    	ex-mode
+	    git-plus
+	    linter-python
+	    python-tools
+	    vim-mode-plus
