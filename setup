@@ -3,17 +3,20 @@ Get softwares
   Atom
 
 Set up environment
-  ./bashrc
+    ./bashrc
 
 Get & set up Anaconda
     Get Anaconda
+    
     Set up Bioconda
       $ conda config --add channels r
       $ conda config --add channels defaults
       $ conda config --add channels conda-forge
       $ conda config --add channels bioconda
+    
     Update Anaconda
       $ conda update --all
+    
     Get libraries
       $ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
       $ pip install pytabix fastqp
@@ -26,13 +29,8 @@ Setup Atom
   Get packages
     atom-beautify
     autocomplete-python
-    color-picker
     ex-mode
     git-plus
-    git-time-machine
-    hydrogen
-    linter-eslint
     linter-python
     python-tools
     vim-mode-plus
-    react-snippets
