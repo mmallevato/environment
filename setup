@@ -1,4 +1,4 @@
-Set up environment    
+Set up bashrc and vimrc    
     $ cp bashrc ~/.bashrc
     $ cp vimrc ~/.vimrc
 
