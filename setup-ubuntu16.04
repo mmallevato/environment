@@ -1,10 +1,13 @@
-Update BIOS using Internet cable
+Update BIOS
 
-Set UEFI
-  Legacy Mode = Off (default)
+Set BIOS
+  UEFI = On
+  Legacy Mode = Off
   Secure Boot = Off
-  Graphics = Discrete
-  Port security = Off (for the dock)
+  Optional
+    Port security = Off (for docking)
+    Thunderbolt = On
+    Intel XXX = On
 
 Install Ubuntu 16.04 LTS
 
@@ -12,30 +15,38 @@ Trim launcher
 
 Remove softwares
 
-Update softwares & install additional drivers (Software Updater)
+Get softwares
+  Update softwares with Software Updater
+  Get from Software Center
+    GParted
+  Get from developer website
+    Chrome
+    Atom
+  Get with command line
+    $ sudo apt install screen tree exfat-utils exfat-fuse git
 
-Add repositories
-  $ sudo apt-add-repository ppa:git-core/ppa
-  $ sudo add-apt-repository ppa:webupd8team/atom
-
-Install softwares
-  $ sudo apt install screen tree gparted exfat-utils exfat-fuse git atom
-
-Increase typing speed
-
-Set File view (Edit --> Preferences)
-
-Remove nautilus shortcuts
-  $ vi ~/.config/user-dirs.dirs
-  Use $HOME/Anamna/ instead of the media directories
+Set System Settings
+  Auto-hide launcher
+  Add show desktop icon to the launcher
+  Decrease typing delay (t)
+  Increase typing speed (maximum)
+  Enable natural scrolling
+  Show weekday
+  Show date and month
+  Use 24-hour time
+  Show seconds
 
 Set vi as the default text editor
   $ sudo update-alternatives --config editor
 
-Enable SSH
-  $ sudo apt-get install openssh-server
-  $ sudo service ssh status
+Optional
 
-Configure SSH
-  $ sudo vi /etc/ssh/sshd_config
-  $ sudo service ssh restart
+  Set File view (Edit --> Preferences)
+
+  Enable SSH
+    $ sudo apt-get install openssh-server
+    $ sudo service ssh status
+
+  Configure SSH
+    $ sudo vi /etc/ssh/sshd_config
+    $ sudo service ssh restart
