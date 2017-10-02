@@ -1,13 +1,23 @@
 Update BIOS
 
 Set BIOS
-  UEFI = On
-  Legacy Mode = Off
+    
+  SATA Controller Mode = AHCI
+  Power beep = Off
+  Intel Virtual Technology = On
+  BIOS back flash = Off
+  HotKey = On
+  Always on USB = On
+  Thunderbolt = On
+  Thermal control = Performance
+  
+  Intel Platform Trust Technology = On
+  Intel SGX = Software controlled
   Secure Boot = Off
-  Optional
-    Port security = Off (for docking)
-    Thunderbolt = On
-    Intel XXX = On
+  Boot mode = UEFI
+  Legacy Mode = Off
+
+  Port security = Off (for docking)
 
 Install Ubuntu 16.04 LTS
 
