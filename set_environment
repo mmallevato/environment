@@ -2,7 +2,7 @@
 	Get xCode
 	Get brew
 
-Set up bashrc and vimrc    
+Get bashrc and vimrc    
     $ cp bashrc ~/.bashrc
     $ cp vimrc ~/.vimrc
 
