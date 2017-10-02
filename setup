@@ -1,7 +1,3 @@
-Get softwares
-	Chrome
-	Atom
-
 Set up environment    
     $ cp bashrc ~/.bashrc
     $ cp vimrc ~/.vimrc
@@ -9,18 +5,19 @@ Set up environment
 Get & set up Anaconda
     Get Anaconda
     
-    Set up Bioconda
-      	$ conda config --add channels r
+    Set up channels
       	$ conda config --add channels defaults
       	$ conda config --add channels conda-forge
       	$ conda config --add channels bioconda
     
-    Update Anaconda
+    Update
       	$ conda update --all
     
-    Get libraries
-      	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
-      	$ pip install pytabix fastqp
+Get softwares
+	Chrome
+	Atom
+	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
+	$ pip install pytabix fastqp
 
 Get Jupyter VIM binding extension
 
