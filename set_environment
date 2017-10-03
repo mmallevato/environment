@@ -5,15 +5,10 @@
 Get bashrc and vimrc    
     $ cp bashrc ~/.bashrc
     $ cp vimrc ~/.vimrc
+    $ cp condarc ~/.condarc
 
 Get & set up Anaconda
     Get Anaconda
-    
-    Set up channels
-      	$ conda config --add channels defaults
-      	$ conda config --add channels conda-forge
-      	$ conda config --add channels bioconda
-    
     Update
       	$ conda update --all
     
