@@ -23,7 +23,13 @@ Get softwares
 	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
 	$ pip install pytabix fastqp
 
-Get Jupyter VIM binding extension
+Get Jupyter Notebook extensions
+	# http://jupyter-contrib-nbextensions.readthedocs.io/
+	$ conda install -c conda-forge jupyter_contrib_nbextensions
+	# https://github.com/lambdalisue/jupyter-vim-binding
+	$ cd $(jupyter --data-dir)/nbextensions
+	$ git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+	$ jupyter nbextension enable vim_binding/vim_binding
 
 Get Node.js
 
