@@ -15,7 +15,10 @@ Get & set up Anaconda
 Get softwares
 	Chrome
 	Atom
-	$ conda install java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix fastqp
+	$ conda install bfg java-jdk nodejs pyinstaller htslib fqtools fastqp samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix
+
+Get node packages
+	$ npm install -g electron electron-packager
 
 Get Jupyter Notebook extensions
 	# http://jupyter-contrib-nbextensions.readthedocs.io/
