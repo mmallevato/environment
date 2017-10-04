@@ -2,7 +2,7 @@
 	Get xCode
 	Get brew
 
-Get bashrc and vimrc    
+Get bashrc and vimrc
     $ cp bashrc ~/.bashrc
     $ cp vimrc ~/.vimrc
     $ cp condarc ~/.condarc
@@ -11,12 +11,11 @@ Get & set up Anaconda
     Get Anaconda
     Update
       	$ conda update --all
-    
+
 Get softwares
 	Chrome
 	Atom
-	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama
-	$ pip install pytabix fastqp
+	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix fastqp
 
 Get Jupyter Notebook extensions
 	# http://jupyter-contrib-nbextensions.readthedocs.io/
