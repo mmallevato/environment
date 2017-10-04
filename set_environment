@@ -15,7 +15,7 @@ Get & set up Anaconda
 Get softwares
 	Chrome
 	Atom
-	$ conda install java-jdk htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix fastqp
+	$ conda install java-jdk nodejs htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix fastqp
 
 Get Jupyter Notebook extensions
 	# http://jupyter-contrib-nbextensions.readthedocs.io/
@@ -24,8 +24,6 @@ Get Jupyter Notebook extensions
 	$ cd $(jupyter --data-dir)/nbextensions
 	$ git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
 	$ jupyter nbextension enable vim_binding/vim_binding
-
-Get Node.js
 
 Setup Atom
   	Get packages
