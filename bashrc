@@ -297,94 +297,87 @@ function gitsync()
         if [ -d $d ]; then
             printf '\n\n\n\n\n\n\n\n'
 
-            printf $BBlack
+            printf $Purple
             printf '================================================================================'
-            printf $NC
             printf '\n'
-
-            printf $BIGreen
+            printf $Blue
             printf $d
-            printf $NC
+            printf $Purple
             printf '\n'
-
-            printf $BIBlack
             printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-            printf $NC
             printf '\n'
+            printf $NC
 
             cd $d
 
-            printf $BIYellow
+            printf $Yellow
             printf 'git status'
-            printf $NC
             printf '\n'
+            printf $NC
             git status
 
-            printf $BICyan
+            printf $Cyan
             printf "git submodule foreach 'git stash'"
-            printf $NC
             printf '\n'
+            printf $NC
             git submodule foreach 'git stash'
 
-            printf $BIYellow
+            printf $Yellow
             printf "git submodule foreach 'git reset --hard'"
-            printf $NC
             printf '\n'
+            printf $NC
             git submodule foreach 'git reset --hard'
 
-            printf $BICyan
+            printf $Cyan
             printf "git submodule foreach 'git clean -fd'"
-            printf $NC
             printf '\n'
+            printf $NC
             git submodule foreach 'git clean -fd'
 
-            printf $BIYellow
+            printf $Yellow
             printf 'git submodule update --init --remote --recursive'
-            printf $NC
             printf '\n'
+            printf $NC
             git submodule update --init --remote --recursive
 
-            printf $BICyan
+            printf $Cyan
             printf 'git diff --submodule'
-            printf $NC
             printf '\n'
+            printf $NC
             git diff --submodule
 
-            printf $BIYellow
+            printf $Yellow
             printf 'git add -A'
-            printf $NC
             printf '\n'
+            printf $NC
             git add -A
 
-            printf $BICyan
+            printf $Cyan
             printf 'git commit -m $1'
-            printf $NC
             printf '\n'
+            printf $NC
             git commit -m "$1"
 
-            printf $BIYellow
+            printf $Yellow
             printf 'git pull'
-            printf $NC
             printf '\n'
+            printf $NC
             git pull
 
-            printf $BICyan
+            printf $Cyan
             printf 'git push'
-            printf $NC
             printf '\n'
+            printf $NC
             git push
 
             cd ..
 
-            printf $BIBlack
+            printf $Purple
             printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-            printf $NC
             printf '\n'
-
-            printf $BBlack
             printf '================================================================================'
-            printf $NC
             printf '\n'
+            printf $NC
         fi
     done
 }
