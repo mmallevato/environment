@@ -2,25 +2,29 @@ Update BIOS
 
 Set BIOS
 
-    Configuration
-        Wireless LAN = Enabled
-        SATA Controller Mode = AHCI
-        Power Beep = Disabled
-        Intel Virtual Technology = Enabled
-        BIOS Back Flash = Disabled
-        HotKey = Enabled
-        Always on USB = Enabled
-        Thunderbolt Device Boot Support = Enabled
-        Thermal Control = Performanced
-        Port Security = Disabled
+    HP Zbook G3
+        TODO: write
         
-    Security
-        Intel Platform Trust Technology = Enabled
-        Intel SGX = Software Controlled
-        Secure Boot = Disabled
-        
-    Boot
-        Boot Mode = UEFI (Legacy Mode = Disabled)
+    Lenovo Yoga 720
+        Configuration
+            Wireless LAN = Enabled
+            SATA Controller Mode = AHCI
+            Power Beep = Disabled
+            Intel Virtual Technology = Enabled
+            BIOS Back Flash = Disabled
+            HotKey = Enabled
+            Always on USB = Enabled
+            Thunderbolt Device Boot Support = Enabled
+            Thermal Control = Performanced
+            Port Security = Disabled
+
+        Security
+            Intel Platform Trust Technology = Enabled
+            Intel SGX = Software Controlled
+            Secure Boot = Disabled
+
+        Boot
+            Boot Mode = UEFI (Legacy Mode = Disabled)
 
 Install Ubuntu 16.04 LTS
 
