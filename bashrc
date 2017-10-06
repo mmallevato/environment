@@ -335,7 +335,7 @@ function gitsync()
             git submodule foreach 'git clean -fd'
 
             printf $Yellow
-            printf 'git submodule update --init --remote --recursive'
+            printf 'git submodule update --init --remote'# --recursive'
             printf '\n'
             printf $NC
             git submodule update --init --remote --recursive
