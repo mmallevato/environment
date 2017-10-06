@@ -16,6 +16,7 @@ Get softwares
 	Chrome
 	Atom
 	$ conda install bfg java-jdk nodejs pyinstaller htslib fqtools fastqp samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix
+	$ pip install beautysh
 
 Get node packages
 	$ npm install -g electron electron-packager
