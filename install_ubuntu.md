@@ -20,7 +20,7 @@
 ```bash
 $ sudo apt update; sudo apt upgrade
 $ sudo apt install exfat-utils exfat-fuse gparted screen tree git
-$ sudo apt autoremove
+$ sudo apt clean; sudo apt autoremove
 ```
 
 ## Configure System Settings
