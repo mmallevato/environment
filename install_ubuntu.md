@@ -32,6 +32,7 @@ $ sudo apt clean; sudo apt autoremove
 - Enable natural scrolling
 - Show weekday
 - Show date and month
+- Show year
 - Use 24-hour time
 - Show seconds
 
