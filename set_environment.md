@@ -15,7 +15,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```bash
 Get Anaconda
 conda update --all
-conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix asciinema
+conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix
 pip install beautysh asciinema fastqp
 ```
 
@@ -38,7 +38,15 @@ npm install -g electron electron-packager
 - Shotcut
 - VLC media player
 
-## Get Jupyter Notebook extensions
+## Set Jupyter password
+
+```bash
+jupyter notebook --generate-config
+ls -a ~/.jupyter
+jupyter notebook password
+```
+
+## Get Jupyter extensions
 
 ```bash
 # http://jupyter-contrib-nbextensions.readthedocs.io/
