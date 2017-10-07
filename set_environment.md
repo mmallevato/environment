@@ -3,26 +3,26 @@
 ## Get `~/.*rc`s
 
 ```bash
-$ cp rcs/bashrc ~/.bashrc
-$ cp rcs/condarc ~/.condarc
+cp rcs/bashrc ~/.bashrc
+cp rcs/condarc ~/.condarc
 # https://github.com/amix/vimrc
-$ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-$ sh ~/.vim_runtime/install_awesome_vimrc.sh
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
 ## Get Anaconda
 
 ```bash
 Get Anaconda
-$ conda update --all
-$ conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix asciinema
-$ pip install beautysh asciinema fastqp
+conda update --all
+conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix asciinema
+pip install beautysh asciinema fastqp
 ```
 
 ## Get node packages
 
 ```bash
-$ npm install -g electron electron-packager
+npm install -g electron electron-packager
 ```
 
 ## Get other softwares
@@ -42,11 +42,11 @@ $ npm install -g electron electron-packager
 
 ```bash
 # http://jupyter-contrib-nbextensions.readthedocs.io/
-$ conda install -c conda-forge jupyter_contrib_nbextensions
+conda install -c conda-forge jupyter_contrib_nbextensions
 # https://github.com/lambdalisue/jupyter-vim-binding
-$ cd $(jupyter --data-dir)/nbextensions
-$ git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
-$ jupyter nbextension enable vim_binding/vim_binding
+cd $(jupyter --data-dir)/nbextensions
+git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+jupyter nbextension enable vim_binding/vim_binding
 ```
 
 ## Get Atom packages

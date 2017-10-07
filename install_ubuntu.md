@@ -18,9 +18,9 @@
 ## Get softwares
 
 ```bash
-$ sudo apt update; sudo apt upgrade
-$ sudo apt install gparted exfat-fuse fat-utils screen vim git tree
-$ sudo apt clean; sudo apt autoremove
+sudo apt update; sudo apt upgrade
+sudo apt install gparted exfat-fuse fat-utils screen vim git tree
+sudo apt clean; sudo apt autoremove
 ```
 
 ## Configure System Settings
@@ -39,7 +39,7 @@ $ sudo apt clean; sudo apt autoremove
 # Set vi as the default text editor
 
 ```bash
-$ sudo update-alternatives --config editor
+sudo update-alternatives --config editor
 ```
 
 ## Configure File view (Edit --> Preferences)
