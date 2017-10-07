@@ -19,7 +19,7 @@
 
 ```bash
 $ sudo apt update; sudo apt upgrade
-$ sudo apt install gparted exfat-fuse fat-utils screen git tree
+$ sudo apt install gparted exfat-fuse fat-utils screen vim git tree
 $ sudo apt clean; sudo apt autoremove
 ```
 
