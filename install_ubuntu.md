@@ -45,3 +45,12 @@ sudo update-alternatives --config editor
 ## Configure File view (Edit --> Preferences)
 
 ## [set_environment.md](set_environment.md)
+
+## Set up SSH
+
+```bash
+sudo apt-get install openssh-server
+sudo service ssh status
+#sudo vi /etc/ssh/sshd_config
+#sudo service ssh restart
+```
