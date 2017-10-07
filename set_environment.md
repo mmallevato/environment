@@ -13,7 +13,7 @@ $ cp rcs/condarc ~/.condarc
 ```bash
 Get Anaconda
 $ conda update --all
-$ conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 plotly biopython pyfaidx yapf pylama pytabix asciinema
+$ conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix asciinema
 $ pip install beautysh asciinema fastqp
 ```
 
