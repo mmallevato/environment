@@ -15,8 +15,8 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```bash
 Get Anaconda
 conda update --all
-conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama pytabix
-pip install beautysh asciinema fastqp
+conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama
+pip install pytabix fastqp beautysh asciinema
 ```
 
 ## Get node packages
@@ -33,8 +33,11 @@ npm install -g electron electron-packager
   - Get brew
 
 - Chrome
+
 - Atom
+
 - hugo
+
 - Shotcut
 - VLC media player
 
