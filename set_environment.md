@@ -15,7 +15,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```bash
 Get Anaconda
 conda update --all
-conda install twine bfg java-jdk nodejs pyinstaller htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama
+conda install twine bfg java-jdk nodejs pyinstaller picard htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama
 pip install pytabix fastqp beautysh asciinema
 ```
 
@@ -39,6 +39,7 @@ npm install -g electron electron-packager
 - hugo
 
 - Shotcut
+
 - VLC media player
 
 ## Set Jupyter password
