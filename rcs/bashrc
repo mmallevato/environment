@@ -2,8 +2,8 @@
 # Return if not running interactively
 # ==============================================================================
 case $- in
-  *i*) ;;
-  *) return;;
+    *i*) ;;
+    *) return;;
 esac
 
 # ==============================================================================
@@ -112,15 +112,15 @@ shopt -s checkwinsize
 # Enable color support of ls and also add handy aliases
 # ==============================================================================
 if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls -Fh --color=auto'
-  alias dir='dir --color=auto'
-  alias vdir='vdir --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls -Fh --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 else
-  alias ls='ls -FhG'
+    alias ls='ls -FhG'
 fi
 
 # ==============================================================================
@@ -132,11 +132,11 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Enable programmable completion features
 # ==============================================================================
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 # ==============================================================================
@@ -175,7 +175,7 @@ alias du='du -hs'
 alias vi=vim
 
 function sshport(){
-  ssh -N -f -L localhost:$3:localhost:$2 $1
+    ssh -N -f -L localhost:$3:localhost:$2 $1
 }
 
 alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python setup.py bdist_wheel; twine upload dist/*"
@@ -194,25 +194,25 @@ alias rmdsstore="find . -name .DS_Store -delete"
 # ==============================================================================
 function extract()      # Handy Extract Program
 {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xvjf $1     ;;
-      *.tar.gz)    tar xvzf $1     ;;
-      *.bz2)       bzip2 -dk $1    ;;
-      *.rar)       unrar x $1      ;;
-      *.bz2)       bzip2 -dk $1    ;;
-      *.gz)        gunzip $1       ;;
-      *.tar)       tar xvf $1      ;;
-      *.tbz2)      tar xvjf $1     ;;
-      *.tgz)       tar xvzf $1     ;;
-      *.zip)       unzip $1        ;;
-      *.Z)         uncompress $1   ;;
-      *.7z)        7z x $1         ;;
-      *)           echo "'$1' cannot be extracted via >extract<" ;;
-    esac
-  else
-    echo "'$1' is not a valid file!"
-  fi
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1     ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bzip2 -dk $1    ;;
+            *.rar)       unrar x $1      ;;
+            *.bz2)       bzip2 -dk $1    ;;
+            *.gz)        gunzip $1       ;;
+            *.tar)       tar xvf $1      ;;
+            *.tbz2)      tar xvjf $1     ;;
+            *.tgz)       tar xvzf $1     ;;
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
 }
 
 
@@ -231,139 +231,153 @@ alias gitcache="git config --global credential.helper cache; git config --global
 
 function gitsync()
 {
-  for d in *
-  do
-    if [ -d $d ]; then
-      printf '\n\n\n\n\n\n\n\n'
+    for d in *
+    do
+        if [ -d $d ]; then
+            printf '\n\n\n\n\n\n\n\n'
 
-      printf $Purple
-      printf '================================================================================'
-      printf '\n'
-      printf $Blue
-      printf $d
-      printf $Purple
-      printf '\n'
-      printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-      printf '\n'
-      printf $NC
+            printf $Purple
+            printf '================================================================================'
+            printf '\n'
+            printf $Blue
+            printf $d
+            printf $Purple
+            printf '\n'
+            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf '\n'
+            printf $NC
 
-      cd $d
+            cd $d
 
-      printf $Yellow
-      printf 'git status'
-      printf '\n'
-      printf $NC
-      git status
+            printf $Yellow
+            printf 'git status'
+            printf '\n'
+            printf $NC
+            git status
 
-      printf $Cyan
-      printf "git submodule foreach 'git stash'"
-      printf '\n'
-      printf $NC
-      git submodule foreach 'git stash'
+            printf $Cyan
+            printf "git submodule foreach 'git stash'"
+            printf '\n'
+            printf $NC
+            git submodule foreach 'git stash'
 
-      printf $Yellow
-      printf "git submodule foreach 'git reset --hard'"
-      printf '\n'
-      printf $NC
-      git submodule foreach 'git reset --hard'
+            printf $Yellow
+            printf "git submodule foreach 'git reset --hard'"
+            printf '\n'
+            printf $NC
+            git submodule foreach 'git reset --hard'
 
-      printf $Cyan
-      printf "git submodule foreach 'git clean -fd'"
-      printf '\n'
-      printf $NC
-      git submodule foreach 'git clean -fd'
+            printf $Cyan
+            printf "git submodule foreach 'git clean -fd'"
+            printf '\n'
+            printf $NC
+            git submodule foreach 'git clean -fd'
 
-      printf $Yellow
-      printf 'git submodule update --init --remote --recursive'
-      printf '\n'
-      printf $NC
-      git submodule update --init --remote --recursive
+            printf $Yellow
+            printf 'git submodule update --init --remote --recursive'
+            printf '\n'
+            printf $NC
+            git submodule update --init --remote --recursive
 
-      printf $Cyan
-      printf 'git diff --submodule'
-      printf '\n'
-      printf $NC
-      git diff --submodule
+            printf $Cyan
+            printf 'git diff --submodule'
+            printf '\n'
+            printf $NC
+            git diff --submodule
 
-      printf $Yellow
-      printf 'git add -A'
-      printf '\n'
-      printf $NC
-      git add -A
+            printf $Yellow
+            printf 'git add -A'
+            printf '\n'
+            printf $NC
+            git add -A
 
-      printf $Cyan printf 'git commit -m $1'
-      printf '\n'
-      printf $NC
-      git commit -m "$1"
+            printf $Cyan printf 'git commit -m $1'
+            printf '\n'
+            printf $NC
+            git commit -m "$1"
 
-      printf $Yellow
-      printf 'git pull'
-      printf '\n'
-      printf $NC
-      git pull
+            printf $Yellow
+            printf 'git pull'
+            printf '\n'
+            printf $NC
+            git pull
 
-      printf $Cyan
-      printf 'git push'
-      printf '\n'
-      printf $NC
-      git push
+            printf $Cyan
+            printf 'git push'
+            printf '\n'
+            printf $NC
+            git push
 
-      cd ..
+            cd ..
 
-      printf $Purple
-      printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-      printf '\n'
-      printf '================================================================================'
-      printf '\n'
-      printf $NC
-    fi
-  done
+            printf $Purple
+            printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+            printf '\n'
+            printf '================================================================================'
+            printf '\n'
+            printf $NC
+        fi
+    done
 }
 
 
 function gittrunc()
 {
-  git checkout --orphan temp $1
-  git commit -m 'Truncated history'
-  git rebase --onto temp $1 master
-  git checkout master
-  git branch -D temp
+    git checkout --orphan temp $1
+    git commit -m 'Truncated history'
+    git rebase --onto temp $1 master
+    git checkout master
+    git branch -D temp
 }
 
 
 function gitclonekwatme ()
 {
-  git clone --recursive https://github.com/kwatme/classification;
-  git clone --recursive https://github.com/kwatme/cluster;
-  git clone --recursive https://github.com/kwatme/cryptograph;
-  git clone --recursive https://github.com/kwatme/dimension_reduction;
-  git clone --recursive https://github.com/kwatme/environment;
-  git clone --recursive https://github.com/kwatme/feature;
-  git clone --recursive https://github.com/kwatme/file;
-  git clone --recursive https://github.com/kwatme/grch;
-  git clone --recursive https://github.com/kwatme/gsea;
-  git clone --recursive https://github.com/kwatme/hdf5;
-  git clone --recursive https://github.com/kwatme/information;
-  git clone --recursive https://github.com/kwatme/jupyter_gui;
-  git clone --recursive https://github.com/kwatme/kernel_density;
-  git clone --recursive https://github.com/kwatme/linear_algebra;
-  git clone --recursive https://github.com/kwatme/linear_model;
-  git clone --recursive https://github.com/kwatme/match;
-  git clone --recursive https://github.com/kwatme/matrix_decomposition;
-  git clone --recursive https://github.com/kwatme/mutational_signature;
-  git clone --recursive https://github.com/kwatme/nd_array;
-  git clone --recursive https://github.com/kwatme/network;
-  git clone --recursive https://github.com/kwatme/onco_gps;
-  git clone --recursive https://github.com/kwatme/plot;
-  git clone --recursive https://github.com/kwatme/probability;
-  git clone --recursive https://github.com/kwatme/regression;
-  git clone --recursive https://github.com/kwatme/sequence;
-  git clone --recursive https://github.com/kwatme/sequencing_process;
-  git clone --recursive https://github.com/kwatme/skew;
-  git clone --recursive https://github.com/kwatme/support;
-  git clone --recursive https://github.com/kwatme/tcga;
-  git clone --recursive https://github.com/kwatme/variant;
-  git clone --recursive https://github.com/ucsd-ccal/ccal;
+    git clone --recursive https://github.com/ucsd-ccal/ccal;
+    git clone --recursive https://github.com/kwatme/classification;
+    git clone --recursive https://github.com/kwatme/cluster;
+    git clone --recursive https://github.com/kwatme/cryptograph;
+    git clone --recursive https://github.com/kwatme/dimension_reduction;
+    git clone --recursive https://github.com/kwatme/environment;
+    git clone --recursive https://github.com/kwatme/feature;
+    git clone --recursive https://github.com/kwatme/file;
+    git clone --recursive https://github.com/kwatme/grch;
+    git clone --recursive https://github.com/kwatme/gsea;
+    git clone --recursive https://github.com/kwatme/hdf5;
+    git clone --recursive https://github.com/kwatme/information;
+    git clone --recursive https://github.com/kwatme/jupyter_gui;
+    git clone --recursive https://github.com/kwatme/kernel_density;
+    git clone --recursive https://github.com/kwatme/linear_algebra;
+    git clone --recursive https://github.com/kwatme/linear_model;
+    git clone --recursive https://github.com/kwatme/match;
+    git clone --recursive https://github.com/kwatme/matrix_decomposition;
+    git clone --recursive https://github.com/kwatme/mutational_signature;
+    git clone --recursive https://github.com/kwatme/nd_array;
+    git clone --recursive https://github.com/kwatme/network;
+    git clone --recursive https://github.com/kwatme/onco_gps;
+    git clone --recursive https://github.com/kwatme/plot;
+    git clone --recursive https://github.com/kwatme/probability;
+    git clone --recursive https://github.com/kwatme/regression;
+    git clone --recursive https://github.com/kwatme/sequence;
+    git clone --recursive https://github.com/kwatme/sequencing_process;
+    git clone --recursive https://github.com/kwatme/skew;
+    git clone --recursive https://github.com/kwatme/support;
+    git clone --recursive https://github.com/kwatme/tcga;
+    git clone --recursive https://github.com/kwatme/variant;
+}
+
+function gitcloneguardiome()
+{
+    git clone --recursive https://github.com/guardiome/g2p;
+    git clone --recursive https://github.com/guardiome/genome;
+    git clone --recursive https://github.com/guardiome/genome_ai;
+    git clone --recursive https://github.com/guardiome/genome_ai_server;
+    git clone --recursive https://github.com/guardiome/genome_ai_ui;
+    git clone --recursive https://github.com/guardiome/genome_app;
+    git clone --recursive https://github.com/guardiome/genome_apps_for_genome_ai;
+    git clone --recursive https://github.com/guardiome/genome_apps_server;
+    git clone --recursive https://github.com/guardiome/kwat;
+    git clone --recursive https://github.com/guardiome/pipeline;
 }
 
 # ==============================================================================
