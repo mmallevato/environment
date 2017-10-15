@@ -370,12 +370,11 @@ function gitcloneguardiome()
 {
     git clone --recursive https://github.com/guardiome/cloud_server;
     git clone --recursive https://github.com/guardiome/g2p;
+    git clone --recursive https://github.com/guardiome/gaga;
     git clone --recursive https://github.com/guardiome/genome;
     git clone --recursive https://github.com/guardiome/genome_ai;
     git clone --recursive https://github.com/guardiome/genome_ai_server;
     git clone --recursive https://github.com/guardiome/genome_ai_ui;
-    git clone --recursive https://github.com/guardiome/genome_app;
-    git clone --recursive https://github.com/guardiome/kwat;
     git clone --recursive https://github.com/guardiome/pipeline;
 }
 
