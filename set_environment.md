@@ -33,14 +33,14 @@ conda install --name ccal --yes ipykernel yapf pandas scikit-learn scipy statsmo
 conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```
 
-### Set up binf environment
+### Set up sp environment
 
 ```sh
-conda create --name binf --yes
+conda create --name sp --yes
 
-conda install --name binf --channel bioconda --yes ipykernel yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
+conda install --name sp --channel bioconda --yes ipykernel yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
 
-conda install --name binf --channel auto --yes fastqp
+conda install --name sp --channel auto --yes fastqp
 ```
 
 ### Set up nodejs environment
