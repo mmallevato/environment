@@ -28,7 +28,7 @@ pip install asciinema beautysh
 ```sh
 conda create --name ccal --yes
 
-conda install --name ccal --yes ipykernel yapf pandas scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+conda install --name ccal --yes ipykernel yapf pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
 conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```
