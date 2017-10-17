@@ -2,7 +2,7 @@
 
 ## Get `~/.*rc`
 
-```bash
+```sh
 cp rcs/bashrc ~/.bashrc
 
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -15,7 +15,7 @@ cp rcs/condarc ~/.condarc
 
 ### Set up global environment
 
-```bash
+```sh
 conda update --all --yes
 
 conda install --yes jupyter nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
@@ -25,7 +25,7 @@ pip install asciinema beautysh
 
 ### Set up ccal environment
 
-```bash
+```sh
 conda create --name ccal --yes
 
 conda install --name ccal --yes ipykernel yapf pandas scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
@@ -35,7 +35,7 @@ conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 
 ### Set up binf environment
 
-```bash
+```sh
 conda create --name binf --yes
 
 conda install --name binf --channel bioconda --yes ipykernel yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
@@ -45,7 +45,7 @@ conda install --name binf --channel auto --yes fastqp
 
 ### Set up nodejs environment
 
-```bash
+```sh
 conda create --name nodejs --yes
 
 conda install --channel nodejs --yes nodejs
@@ -72,7 +72,7 @@ npm install --global electron electron-packager
 
 ## Set Jupyter password (for deploying notebook on server)
 
-```bash
+```sh
 jupyter notebook --generate-config
 ls -a ~/.jupyter
 jupyter notebook password
@@ -80,7 +80,7 @@ jupyter notebook password
 
 ## Get Jupyter VIM binder
 
-```bash
+```sh
 cd $(jupyter --data-dir)/nbextensions
 
 git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding

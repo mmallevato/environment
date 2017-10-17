@@ -17,7 +17,7 @@
 
 ## Get softwares
 
-```bash
+```sh
 sudo apt update; sudo apt upgrade
 sudo apt install gparted exfat-fuse fat-utils screen vim git tree
 sudo apt clean; sudo apt autoremove
@@ -38,7 +38,7 @@ sudo apt clean; sudo apt autoremove
 
 # Set vi as the default text editor
 
-```bash
+```sh
 sudo update-alternatives --config editor
 ```
 
@@ -48,7 +48,7 @@ sudo update-alternatives --config editor
 
 ## Set up SSH
 
-```bash
+```sh
 sudo apt-get install openssh-server
 sudo service ssh status
 #sudo vi /etc/ssh/sshd_config
