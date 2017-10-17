@@ -1,28 +1,56 @@
 # Set up environment
 
-## Get `~/.*rc`s
+## Get `~/.*rc`
 
 ```bash
 cp rcs/bashrc ~/.bashrc
-cp rcs/condarc ~/.condarc
-# https://github.com/amix/vimrc
+
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+cp rcs/condarc ~/.condarc
 ```
 
-## Get Anaconda
+## Set up conda environments
+
+### Set up global environment
 
 ```bash
-Get Anaconda
-conda update --all
-conda install twine bfg java-jdk nodejs pyinstaller picard htslib fqtools samtools hisat2 freebayes bcftools snpeff rpy2 bcrypt pycrypto plotly biopython pyfaidx yapf pylama
-pip install pytabix fastqp beautysh asciinema
+conda update --all --yes
+
+conda install --yes jupyter jupyter_contrib_nbextensions yapf pylama twine pyinstaller git-lfs bfg
+
+pip install asciinema beautysh
 ```
 
-## Get node packages
+### Set up ccal environment
 
 ```bash
-npm install -g electron electron-packager
+conda create --name ccal --yes
+
+conda install --name ccal --yes pandas scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+
+conda install --name ccal --channel bioconda --yes pyfaidx pytabix
+```
+
+### Set up binf environment
+
+```bash
+conda create --name binf --yes
+
+conda install --name binf --channel bioconda --yes htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
+
+conda install --name binf --channel auto --yes fastqp
+```
+
+### Set up nodejs environment
+
+```bash
+conda create --name nodejs --yes
+
+conda install --channel nodejs --yes nodejs
+
+npm install --global electron electron-packager
 ```
 
 ## Get other softwares
@@ -38,19 +66,11 @@ npm install -g electron electron-packager
 
 - hugo
 
-- Shotcut
-
 - VLC media player
 
-## Set up Git Large File Storage
+- Shotcut
 
-```bash
-#https://github.com/git-lfs/git-lfs/wiki/Installation
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-sudo apt-get install git-lfs
-```
-
-## Set Jupyter password
+## Set Jupyter password (for deploying notebook on server)
 
 ```bash
 jupyter notebook --generate-config
@@ -58,14 +78,13 @@ ls -a ~/.jupyter
 jupyter notebook password
 ```
 
-## Get Jupyter extensions
+## Get Jupyter VIM binder
 
 ```bash
-# http://jupyter-contrib-nbextensions.readthedocs.io/
-conda install -c conda-forge jupyter_contrib_nbextensions
-# https://github.com/lambdalisue/jupyter-vim-binding
 cd $(jupyter --data-dir)/nbextensions
+
 git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+
 jupyter nbextension enable vim_binding/vim_binding
 ```
 
