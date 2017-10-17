@@ -18,7 +18,7 @@ cp rcs/condarc ~/.condarc
 ```bash
 conda update --all --yes
 
-conda install --yes jupyter jupyter_contrib_nbextensions yapf pylama twine pyinstaller git-lfs bfg
+conda install --yes jupyter nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
 
 pip install asciinema beautysh
 ```
@@ -28,7 +28,7 @@ pip install asciinema beautysh
 ```bash
 conda create --name ccal --yes
 
-conda install --name ccal --yes pandas scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+conda install --name ccal --yes ipykernel yapf pandas scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
 conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```
@@ -38,7 +38,7 @@ conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```bash
 conda create --name binf --yes
 
-conda install --name binf --channel bioconda --yes htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
+conda install --name binf --channel bioconda --yes ipykernel yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
 
 conda install --name binf --channel auto --yes fastqp
 ```
