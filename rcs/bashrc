@@ -147,6 +147,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+alias ll='ls -Fhl'
 # Show hidden files
 alias la='ls -Fhla'
 # Sort by extension
@@ -347,6 +348,7 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/information;
     git clone --recursive https://github.com/kwatme/jupyter_gui;
     git clone --recursive https://github.com/kwatme/kernel_density;
+    git clone --recursive https://github.com/kwatme/kwatme.com;
     git clone --recursive https://github.com/kwatme/linear_algebra;
     git clone --recursive https://github.com/kwatme/linear_model;
     git clone --recursive https://github.com/kwatme/match;
@@ -357,6 +359,7 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/onco_gps;
     git clone --recursive https://github.com/kwatme/plot;
     git clone --recursive https://github.com/kwatme/probability;
+    git clone --recursive https://github.com/kwatme/pypro;
     git clone --recursive https://github.com/kwatme/regression;
     git clone --recursive https://github.com/kwatme/sequence;
     git clone --recursive https://github.com/kwatme/sequencing_process;
@@ -368,14 +371,16 @@ function gitclonekwatme ()
 
 function gitcloneguardiome()
 {
-    git clone --recursive https://github.com/guardiome/cloud_server;
+    git clone --recursive https://github.com/guardiome/code_genome_app;
     git clone --recursive https://github.com/guardiome/g2p;
-    git clone --recursive https://github.com/guardiome/gaga;
     git clone --recursive https://github.com/guardiome/genome;
     git clone --recursive https://github.com/guardiome/genome_ai;
     git clone --recursive https://github.com/guardiome/genome_ai_server;
     git clone --recursive https://github.com/guardiome/genome_ai_ui;
+    git clone --recursive https://github.com/guardiome/genome_app;
+    git clone --recursive https://github.com/guardiome/genomeapps.io;
     git clone --recursive https://github.com/guardiome/pipeline;
+    git clone --recursive https://github.com/guardiome/simple_genome_app;
 }
 
 # ==============================================================================
