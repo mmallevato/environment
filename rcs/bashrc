@@ -175,6 +175,9 @@ alias du='du -hs'
 
 alias vi=vim
 
+alias sa='source activate'
+alias sd='source deactivate'
+
 function sshport(){
     ssh -N -f -L localhost:$3:localhost:$2 $1
 }
@@ -334,7 +337,6 @@ function gittrunc()
 
 function gitclonekwatme ()
 {
-    git clone --recursive https://github.com/ucsd-ccal/ccal;
     git clone --recursive https://github.com/kwatme/classification;
     git clone --recursive https://github.com/kwatme/cluster;
     git clone --recursive https://github.com/kwatme/cryptograph;
@@ -359,14 +361,15 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/onco_gps;
     git clone --recursive https://github.com/kwatme/plot;
     git clone --recursive https://github.com/kwatme/probability;
-    git clone --recursive https://github.com/kwatme/pypro;
     git clone --recursive https://github.com/kwatme/regression;
     git clone --recursive https://github.com/kwatme/sequence;
     git clone --recursive https://github.com/kwatme/sequencing_process;
     git clone --recursive https://github.com/kwatme/skew;
+    git clone --recursive https://github.com/kwatme/spro;
     git clone --recursive https://github.com/kwatme/support;
     git clone --recursive https://github.com/kwatme/tcga;
     git clone --recursive https://github.com/kwatme/variant;
+    git clone --recursive https://github.com/ucsd-ccal/ccal;
 }
 
 function gitcloneguardiome()
