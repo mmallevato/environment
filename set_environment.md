@@ -43,12 +43,12 @@ conda install --name sp --channel bioconda --yes ipykernel yapf htslib picard fq
 conda install --name sp --channel auto --yes fastqp
 ```
 
-### Set up nodejs environment
+### Set up node environment
 
 ```sh
-conda create --name nodejs --yes
+conda create --name node --yes
 
-conda install --channel nodejs --yes nodejs
+conda install --channel node --yes nodejs
 
 npm install --global electron electron-packager
 ```
