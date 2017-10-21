@@ -395,4 +395,3 @@ PS1='(\h) [ \w ] > '
 # Set paths
 # ==============================================================================
 export PATH="$HOME/Jumis/tools/conda/bin:$PATH"
-alias spro="python $HOME/Jumis/tools/repositories/spro/spro.py"
