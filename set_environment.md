@@ -18,7 +18,7 @@ cp rcs/condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --yes conda-build jupyter jupyter_contrib_nbextensions nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
+conda install --yes conda-build anaconda-client jupyter jupyter_contrib_nbextensions nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
 
 pip install asciinema beautysh
 ```
@@ -49,6 +49,8 @@ conda install --name sp --channel auto --yes fastqp
 conda create --name spro --yes
 
 conda install --name spro --yes click requests
+
+conda install --name spro --channel kwatme -yes spro
 ```
 
 ### Set up node environment
