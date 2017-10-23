@@ -48,7 +48,7 @@ conda install --name sp --channel auto --yes fastqp
 ```sh
 conda create --name spro --yes
 
-conda install --name spro channel --yes click requests
+conda install --name spro --yes click requests
 ```
 
 ### Set up node environment
