@@ -28,7 +28,7 @@ pip install asciinema beautysh
 ```sh
 conda create --name ccal --yes
 
-conda install --name ccal --yes ipykernel yapf pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+conda install --name ccal --yes jupyter yapf pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
 conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```
@@ -38,7 +38,7 @@ conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```sh
 conda create --name sp --yes
 
-conda install --name sp --channel bioconda --yes ipykernel yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
+conda install --name sp --channel bioconda --yes jupyter yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
 
 conda install --name sp --channel auto --yes fastqp
 ```
