@@ -43,6 +43,14 @@ conda install --name sp --channel bioconda --yes jupyter yapf htslib picard fqto
 conda install --name sp --channel auto --yes fastqp
 ```
 
+### Set up spro environment
+
+```sh
+conda create --name spro --yes
+
+conda install --name spro channel --yes click requests
+```
+
 ### Set up node environment
 
 ```sh
