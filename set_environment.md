@@ -28,7 +28,7 @@ pip install asciinema beautysh
 ```sh
 conda create --name ccal --yes
 
-conda install --name ccal --yes jupyter yapf pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+conda install --name ccal --yes jupyter yapf click pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
 conda install --name ccal --channel bioconda --yes pyfaidx pytabix
 ```
@@ -50,7 +50,7 @@ conda create --name spro --yes
 
 conda install --name spro --yes click requests
 
-conda install --name spro --channel kwatme --yes spro
+# conda install --name spro --channel kwatme --yes spro
 ```
 
 ### Set up node environment
