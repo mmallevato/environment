@@ -50,7 +50,7 @@ conda create --name spro --yes
 
 conda install --name spro --yes click requests
 
-conda install --name spro --channel kwatme -yes spro
+conda install --name spro --channel kwatme --yes spro
 ```
 
 ### Set up node environment
