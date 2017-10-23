@@ -13,12 +13,12 @@ cp rcs/condarc ~/.condarc
 
 ## Set up conda environments
 
-### Set up global environment
+### Set up root environment
 
 ```sh
 conda update --all --yes
 
-conda install --yes jupyter jupyter_contrib_nbextensions nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
+conda install --yes conda-build jupyter jupyter_contrib_nbextensions nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
 
 pip install asciinema beautysh
 ```
