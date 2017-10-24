@@ -30,7 +30,11 @@ conda create --name ccal --yes
 
 conda install --name ccal --yes jupyter yapf click pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
-conda install --name ccal --channel bioconda --yes pyfaidx pytabix
+conda install --name ccal --channel bioconda --yes pyfaidx
+
+source activate ccal
+pip install pytabix
+source deactivate
 ```
 
 ### Set up sp environment
@@ -41,16 +45,6 @@ conda create --name sp --yes
 conda install --name sp --channel bioconda --yes jupyter yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
 
 conda install --name sp --channel auto --yes fastqp
-```
-
-### Set up spro environment
-
-```sh
-conda create --name spro --yes
-
-conda install --name spro --yes click requests
-
-# conda install --name spro --channel kwatme --yes spro
 ```
 
 ### Set up node environment
