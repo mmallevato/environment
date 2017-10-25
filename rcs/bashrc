@@ -347,7 +347,6 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/grch;
     git clone --recursive https://github.com/kwatme/gsea;
     git clone --recursive https://github.com/kwatme/hdf5;
-    git clone --recursive https://github.com/kwatme/hugo_elegant_documentation_theme;
     git clone --recursive https://github.com/kwatme/information;
     git clone --recursive https://github.com/kwatme/jupyter_gui;
     git clone --recursive https://github.com/kwatme/kernel_density;
