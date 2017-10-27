@@ -18,7 +18,7 @@ cp rcs/condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --yes conda-build anaconda-client jupyter jupyter_contrib_nbextensions nb_conda yapf isort pylama twine pyinstaller git-lfs bfg
+conda install --yes conda-build anaconda-client jupyter jupyter_contrib_nbextensions nb_conda yapf click requests isort pylama twine pyinstaller git-lfs bfg
 
 pip install asciinema beautysh
 ```
@@ -59,20 +59,20 @@ npm install --global electron electron-packager
 
 ## Get other softwares
 
-- macOS only
+-   macOS only
 
-  - Get xCode
-  - Get brew
+    -   Get xCode
+    -   Get brew
 
-- Chrome
+-   Chrome
 
-- Atom
+-   Atom
 
-- hugo
+-   hugo
 
-- VLC media player
+-   VLC media player
 
-- Shotcut
+-   Shotcut
 
 ## Set Jupyter password (for deploying notebook on server)
 
@@ -94,9 +94,9 @@ jupyter nbextension enable vim_binding/vim_binding
 
 ## Get Atom packages
 
-- atom-beautify
-- autocomplete-python
-- ex-mode
-- git-plus
-- linter-python
-- vim-mode-plus
+-   atom-beautify
+-   autocomplete-python
+-   ex-mode
+-   git-plus
+-   linter-python
+-   vim-mode-plus
