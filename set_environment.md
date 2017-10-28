@@ -18,9 +18,9 @@ cp rcs/condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --yes conda-build anaconda-client jupyter jupyter_contrib_nbextensions nb_conda yapf click requests isort pylama twine pyinstaller git-lfs bfg
+conda install --yes jupyter jupyter_contrib_nbextensions nb_conda yapf pylama twine conda-build anaconda-client pyinstaller git-lfs bfg
 
-pip install asciinema beautysh
+pip install spro asciinema beautysh
 ```
 
 ### Set up ccal environment
@@ -28,7 +28,7 @@ pip install asciinema beautysh
 ```sh
 conda create --name ccal --yes
 
-conda install --name ccal --yes jupyter yapf click pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+conda install --name ccal --yes jupyter yapf click requests pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
 
 conda install --name ccal --channel bioconda --yes pyfaidx
 
