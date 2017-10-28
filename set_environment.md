@@ -47,6 +47,14 @@ conda install --name sp --channel bioconda --yes jupyter yapf htslib picard fqto
 conda install --name sp --channel auto --yes fastqp
 ```
 
+### Set up flask environment
+
+```sh
+conda create --name flask --yes
+
+conda install --name flask --yes flask flask-cors
+```
+
 ### Set up node environment
 
 ```sh
