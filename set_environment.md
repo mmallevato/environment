@@ -18,7 +18,7 @@ cp rcs/condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --yes jupyter jupyter_contrib_nbextensions nb_conda isort yapf pylama twine conda-build anaconda-client pyinstaller git-lfs bfg
+conda install --yes jupyter jupyter_contrib_nbextensions nb_conda isort yapf pylama twine conda-build anaconda-client pyinstaller git git-lfs bfg
 
 pip install spro asciinema beautysh
 ```
