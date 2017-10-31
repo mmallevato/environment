@@ -372,6 +372,13 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/ucsd-ccal/ccal;
 }
 
+
+function gitclonegenomeapps ()
+{
+    git clone --recursive https://github.com/kwatme/tumor_suppressor;
+}
+
+
 function gitcloneguardiome()
 {
     git clone --recursive https://github.com/guardiome/code_genome_app;
@@ -381,10 +388,12 @@ function gitcloneguardiome()
     git clone --recursive https://github.com/guardiome/genome_ai_server;
     git clone --recursive https://github.com/guardiome/genome_ai_ui;
     git clone --recursive https://github.com/guardiome/genome_app;
+    git clone --recursive https://github.com/guardiome/genome_apps_for_genome_ai;
     git clone --recursive https://github.com/guardiome/genomeapps.io;
     git clone --recursive https://github.com/guardiome/pipeline;
     git clone --recursive https://github.com/guardiome/simple_genome_app;
 }
+
 
 # ==============================================================================
 # Style shell prompt
