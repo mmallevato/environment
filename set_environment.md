@@ -65,6 +65,20 @@ conda install --channel node --yes nodejs
 npm install --global electron electron-packager
 ```
 
+### Set up g environment
+
+```sh
+conda create --name g --yes
+
+conda install --name g --yes jupyter yapf click requests pytables pycrypto bcrypt biopython 
+
+conda install --name g --yes --channel bioconda pyfaidx htslib
+
+source activate g
+pip install pytabix
+source deactivate
+```
+
 ## Get other softwares
 
 -   macOS only
