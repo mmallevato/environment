@@ -70,7 +70,7 @@ npm install --global electron electron-packager
 ```sh
 conda create --name g --yes
 
-conda install --name g --yes jupyter yapf click requests pytables pycrypto bcrypt biopython 
+conda install --name g --yes jupyter yapf spro pytables biopython
 
 conda install --name g --yes --channel bioconda pyfaidx htslib
 
