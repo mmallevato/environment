@@ -403,4 +403,4 @@ PS1='[ \w ] '
 # ==============================================================================
 # Make conda path visible
 # ==============================================================================
-export PATH="$HOME/Jumis/tools/conda/bin:$PATH"
+export PATH="$HOME/Jumis/conda/bin:$PATH"
