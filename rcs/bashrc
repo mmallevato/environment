@@ -345,6 +345,8 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/kwatme/environment;
     git clone --recursive https://github.com/kwatme/feature;
     git clone --recursive https://github.com/kwatme/file;
+    git clone --recursive https://github.com/kwatme/genome;
+    git clone --recursive https://github.com/kwatme/gpg;
     git clone --recursive https://github.com/kwatme/grch;
     git clone --recursive https://github.com/kwatme/gsea;
     git clone --recursive https://github.com/kwatme/hdf5;
@@ -383,14 +385,13 @@ function gitclonegenomeapps ()
 function gitcloneguardiome()
 {
     git clone --recursive https://github.com/guardiome/code_genome_app;
-    git clone --recursive https://github.com/guardiome/g2p;
-    git clone --recursive https://github.com/guardiome/genome;
     git clone --recursive https://github.com/guardiome/genome_ai;
     git clone --recursive https://github.com/guardiome/genome_ai_server;
     git clone --recursive https://github.com/guardiome/genome_ai_ui;
     git clone --recursive https://github.com/guardiome/genome_app;
     git clone --recursive https://github.com/guardiome/genome_apps_for_genome_ai;
     git clone --recursive https://github.com/guardiome/genomeapps.io;
+    git clone --recursive https://github.com/guardiome/genotype_to_phenotype;
     git clone --recursive https://github.com/guardiome/pipeline;
     git clone --recursive https://github.com/guardiome/simple_genome_app;
 }

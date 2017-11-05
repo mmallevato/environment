@@ -65,16 +65,16 @@ conda install --channel node --yes nodejs
 npm install --global electron electron-packager
 ```
 
-### Set up g environment
+### Set up guardiome environment
 
 ```sh
-conda create --name g --yes
+conda create --name guardiome --yes
 
-conda install --name g --yes jupyter yapf spro pytables biopython
+conda install --name guardiome --yes jupyter yapf spro pytables biopython
 
-conda install --name g --yes --channel bioconda pyfaidx htslib
+conda install --name guardiome --yes --channel bioconda pyfaidx htslib
 
-source activate g
+source activate guardiome
 pip install pytabix
 source deactivate
 ```
