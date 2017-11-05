@@ -339,6 +339,7 @@ function gitclonekwatme ()
 {
     git clone --recursive https://github.com/kwatme/classification;
     git clone --recursive https://github.com/kwatme/cluster;
+    git clone --recursive https://github.com/kwatme/cross_validation;
     git clone --recursive https://github.com/kwatme/cryptograph;
     git clone --recursive https://github.com/kwatme/dimension_reduction;
     git clone --recursive https://github.com/kwatme/environment;
