@@ -70,7 +70,7 @@ npm install --global electron electron-packager
 ```sh
 conda create --name guardiome --yes
 
-conda install --name guardiome --yes jupyter yapf flask flask-cors spro pandas hdf5 pytables biopython genotype_to_phenotype
+conda install --name guardiome --yes jupyter yapf flask flask-cors spro pandas hdf5 pytables biopython genotype_to_phenotype markdown
 
 conda install --name guardiome --yes --channel bioconda pyfaidx
 
