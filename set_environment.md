@@ -5,9 +5,6 @@
 ```sh
 cp rcs/bashrc ~/.bashrc
 
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-
 cp rcs/condarc ~/.condarc
 ```
 
@@ -17,36 +14,36 @@ cp rcs/condarc ~/.condarc
 conda update --all --yes
 
 # For Jupyter
-conda install --yes jupyter jupyter_contrib_nbextensions nb_conda
+conda install --channel conda-forge --yes jupyter jupyter_contrib_nbextensions nb_conda
 
 # For coding
-conda install --yes yapf isort pylama
+conda install --channel conda-forge --yes yapf isort pylama
 pip install beautysh asciinema
 
 # For managing
-conda install --yes twine conda-build anaconda-client pyinstaller
+conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller
 pip install spro
 
 # For git
-conda install --yes git git-lfs bfg
+conda install --channel conda-forge --yes git git-lfs bfg
 
 # For computing
-conda install --yes numpy pandas hdf5 pytables scikit-learn scipy statsmodels
+conda install --channel conda-forge --yes numpy pandas hdf5 pytables scikit-learn scipy statsmodels
 
 # For plotting
-conda install --yes matplotlib seaborn plotly
+conda install --channel conda-forge --yes matplotlib seaborn plotly
 
 # For cryptography
-conda install --yes pycrypto bcrypt
+conda install --channel conda-forge --yes pycrypto bcrypt
 
 # For server
-conda install --yes click flask flask-cors requests
+conda install --channel conda-forge --yes click flask flask-cors requests
 
 # For R
-conda install --yes rpy2 r-mass
+conda install --channel conda-forge --yes rpy2 r-mass
 
 # For bioinformatics
-conda install --yes biopython
+conda install --channel conda-forge --yes biopython
 conda install --channel bioconda --yes pyfaidx
 pip install pytabix
 
@@ -59,7 +56,15 @@ conda install --channel node --yes nodejs
 npm install --global electron electron-packager
 
 # For Guardiome
-conda install --yes genotype_to_phenotype markdown
+conda install --channel conda-forge --yes markdown
+pip install genotype_to_phenotype
+```
+
+## Set up vim
+
+```sh
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
 ## Get other softwares
