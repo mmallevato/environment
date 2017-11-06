@@ -11,72 +11,55 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 cp rcs/condarc ~/.condarc
 ```
 
-## Set up conda environments
-
-### Set up root environment
+## Set up conda root environments
 
 ```sh
 conda update --all --yes
 
-conda install --yes jupyter jupyter_contrib_nbextensions nb_conda isort yapf pylama twine conda-build anaconda-client pyinstaller git git-lfs bfg
+# For Jupyter
+conda install --yes jupyter jupyter_contrib_nbextensions nb_conda
 
-pip install spro asciinema beautysh
-```
+# For coding
+conda install --yes yapf isort pylama
+pip install beautysh asciinema
 
-### Set up ccal environment
+# For managing
+conda install --yes twine conda-build anaconda-client pyinstaller
+pip install spro
 
-```sh
-conda create --name ccal --yes
+# For git
+conda install --yes git git-lfs bfg
 
-conda install --name ccal --yes jupyter yapf click requests pandas hdf5 pytables scikit-learn scipy statsmodels matplotlib seaborn plotly pycrypto bcrypt biopython rpy2 r-mass
+# For computing
+conda install --yes numpy pandas hdf5 pytables scikit-learn scipy statsmodels
 
-conda install --name ccal --channel bioconda --yes pyfaidx
+# For plotting
+conda install --yes matplotlib seaborn plotly
 
-source activate ccal
+# For cryptography
+conda install --yes pycrypto bcrypt
+
+# For server
+conda install --yes click flask flask-cors requests
+
+# For R
+conda install --yes rpy2 r-mass
+
+# For bioinformatics
+conda install --yes biopython
+conda install --channel bioconda --yes pyfaidx
 pip install pytabix
-source deactivate
-```
 
-### Set up sp environment
+# For sequencing process
+conda install --channel bioconda --yes htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
+conda install --channel auto --yes fastqp
 
-```sh
-conda create --name sp --yes
-
-conda install --name sp --channel bioconda --yes jupyter yapf htslib picard fqtools bwa hisat2 samtools freebayes bcftools snpeff
-
-conda install --name sp --channel auto --yes fastqp
-```
-
-### Set up flask environment
-
-```sh
-conda create --name flask --yes
-
-conda install --name flask --yes flask flask-cors
-```
-
-### Set up node environment
-
-```sh
-conda create --name node --yes
-
+# For node
 conda install --channel node --yes nodejs
-
 npm install --global electron electron-packager
-```
 
-### Set up guardiome environment
-
-```sh
-conda create --name guardiome --yes
-
-conda install --name guardiome --yes jupyter yapf flask flask-cors spro pandas hdf5 pytables biopython genotype_to_phenotype markdown
-
-conda install --name guardiome --yes --channel bioconda pyfaidx
-
-source activate guardiome
-pip install pytabix
-source deactivate
+# For Guardiome
+conda install --yes genotype_to_phenotype markdown
 ```
 
 ## Get other softwares
