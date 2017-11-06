@@ -2,8 +2,8 @@
 # Return if not running interactively
 # ==============================================================================
 case $- in
-    *i*) ;;
-    *) return;;
+  *i*) ;;
+  *) return ;;
 esac
 
 # ==============================================================================
@@ -12,6 +12,7 @@ esac
 # Reset
 Color_Off='\x1B[0m'       # Text Reset
 NC="\x1B[m"               # Color Reset
+
 # Regular Colors
 Black='\x1B[0;30m'        # Black
 Red='\x1B[0;31m'          # Red
@@ -21,6 +22,7 @@ Blue='\x1B[0;34m'         # Blue
 Purple='\x1B[0;35m'       # Purple
 Cyan='\x1B[0;36m'         # Cyan
 White='\x1B[0;37m'        # White
+
 # Bold
 BBlack='\x1B[1;30m'       # Black
 BRed='\x1B[1;31m'         # Red
@@ -30,6 +32,7 @@ BBlue='\x1B[1;34m'        # Blue
 BPurple='\x1B[1;35m'      # Purple
 BCyan='\x1B[1;36m'        # Cyan
 BWhite='\x1B[1;37m'       # White
+
 # Underline
 UBlack='\x1B[4;30m'       # Black
 URed='\x1B[4;31m'         # Red
@@ -39,6 +42,7 @@ UBlue='\x1B[4;34m'        # Blue
 UPurple='\x1B[4;35m'      # Purple
 UCyan='\x1B[4;36m'        # Cyan
 UWhite='\x1B[4;37m'       # White
+
 # High Intensity
 IBlack='\x1B[0;90m'       # Black
 IRed='\x1B[0;91m'         # Red
@@ -48,6 +52,7 @@ IBlue='\x1B[0;94m'        # Blue
 IPurple='\x1B[0;95m'      # Purple
 ICyan='\x1B[0;96m'        # Cyan
 IWhite='\x1B[0;97m'       # White
+
 # Bold High Intensity
 BIBlack='\x1B[1;90m'      # Black
 BIRed='\x1B[1;91m'        # Red
@@ -57,6 +62,7 @@ BIBlue='\x1B[1;94m'       # Blue
 BIPurple='\x1B[1;95m'     # Purple
 BICyan='\x1B[1;96m'       # Cyan
 BIWhite='\x1B[1;97m'      # White
+
 # Background
 On_Black='\x1B[40m'       # Black
 On_Red='\x1B[41m'         # Red
@@ -66,6 +72,7 @@ On_Blue='\x1B[44m'        # Blue
 On_Purple='\x1B[45m'      # Purple
 On_Cyan='\x1B[46m'        # Cyan
 On_White='\x1B[47m'       # White
+
 # High Intensity backgrounds
 On_IBlack='\x1B[0;100m'   # Black
 On_IRed='\x1B[0;101m'     # Red
@@ -178,11 +185,11 @@ alias vi=vim
 alias sa='source activate'
 alias sd='source deactivate'
 
+alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python setup.py bdist_wheel; twine upload dist/*"
+
 function sshport(){
     ssh -N -f -L localhost:$3:localhost:$2 $1
 }
-
-alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python setup.py bdist_wheel; twine upload dist/*"
 
 # ==============================================================================
 # Sanitize
@@ -191,7 +198,6 @@ alias chmodall="find . -not -path '*/.*' -type f -exec chmod 644 {} \; && find .
 alias chownu="sudo chown -vR $USER ."
 alias rmpyc="find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf"
 alias rmdsstore="find . -name .DS_Store -delete"
-
 
 # ==============================================================================
 # Compress
@@ -219,10 +225,8 @@ function extract()      # Handy Extract Program
     fi
 }
 
-
 # Creates an archive (*.tar.gz) from given directory.
 function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
-
 
 # Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
@@ -231,7 +235,6 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Git
 # ==============================================================================
 alias gitcache="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
-
 
 function gitsync()
 {
@@ -324,7 +327,6 @@ function gitsync()
     done
 }
 
-
 function gittrunc()
 {
     git checkout --orphan temp $1
@@ -333,7 +335,6 @@ function gittrunc()
     git checkout master
     git branch -D temp
 }
-
 
 function gitclonekwatme ()
 {
@@ -353,7 +354,6 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/KwatME/information;
     git clone --recursive https://github.com/KwatME/jupyter_gui;
     git clone --recursive https://github.com/KwatME/kernel_density;
-    git clone --recursive https://github.com/KwatME/KwatME.com;
     git clone --recursive https://github.com/KwatME/linear_algebra;
     git clone --recursive https://github.com/KwatME/linear_model;
     git clone --recursive https://github.com/KwatME/match;
@@ -375,12 +375,15 @@ function gitclonekwatme ()
     git clone --recursive https://github.com/ucsd-ccal/ccal;
 }
 
+function gitclonewebsite ()
+{
+    git clone --recursive https://github.com/KwatME/KwatME.com;
+}
 
-function gitclonegenomeapps ()
+function gitclonegenomeapp ()
 {
     git clone --recursive https://github.com/KwatME/tumor_suppressor;
 }
-
 
 function gitcloneguardiome()
 {
@@ -395,7 +398,6 @@ function gitcloneguardiome()
     git clone --recursive https://github.com/Guardiome/pipeline;
     git clone --recursive https://github.com/Guardiome/simple_genome_app;
 }
-
 
 # ==============================================================================
 # Style shell prompt
