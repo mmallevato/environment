@@ -377,7 +377,7 @@ function gitclonekwatme ()
 
 function gitclonewebsite ()
 {
-    git clone --recursive https://github.com/KwatME/KwatME.com;
+    git clone --recursive https://github.com/KwatME/kwatme.com;
 }
 
 function gitclonegenomeapp ()
