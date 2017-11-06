@@ -187,7 +187,8 @@ alias sd='source deactivate'
 
 alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python setup.py bdist_wheel; twine upload dist/*"
 
-function sshport(){
+function sshport()
+{
     ssh -N -f -L localhost:$3:localhost:$2 $1
 }
 
@@ -226,10 +227,16 @@ function extract()      # Handy Extract Program
 }
 
 # Creates an archive (*.tar.gz) from given directory.
-function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+function maketar()
+{
+  tar cvzf "${1%%/}.tar.gz"  "${1%%/}/";
+}
 
 # Create a ZIP archive of a file or folder.
-function makezip() { zip -r "${1%%/}.zip" "$1" ; }
+function makezip()
+{
+  zip -r "${1%%/}.zip" "$1" ;
+}
 
 # ==============================================================================
 # Git
@@ -336,7 +343,7 @@ function gittrunc()
     git branch -D temp
 }
 
-function gitclonekwatme ()
+function gitclonekwatme()
 {
     git clone --recursive https://github.com/KwatME/classification;
     git clone --recursive https://github.com/KwatME/cluster;
@@ -393,7 +400,7 @@ function gitcloneguardiome()
     git clone --recursive https://github.com/Guardiome/simple_genome_app;
 }
 
-function gitclonewebsite ()
+function gitclonewebsite()
 {
     git clone --recursive https://github.com/KwatME/kwatme.com;
     git clone --recursive https://github.com/Guardiome/genomeapps.io;
