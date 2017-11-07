@@ -336,7 +336,7 @@ function gitsync()
 
 function gitsyncs()
 {
-  for i in $(seq 8); do i=$((i-1)); echo $i; gitsync $i; done
+  for i in $(seq 8); do i=$((i-1)); printf $i; gitsync $i; done
 }
 
 function gittrunc()
