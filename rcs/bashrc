@@ -334,6 +334,11 @@ function gitsync()
     done
 }
 
+function gitsyncs()
+{
+  for i in $(seq 8); do i=$((i-1)); echo $i; gitsync $i; done
+}
+
 function gittrunc()
 {
     git checkout --orphan temp $1
