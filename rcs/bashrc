@@ -336,7 +336,7 @@ function gitsync()
 
 function gitsyncs()
 {
-  for i in $(seq 8); do i=$((i-1)); printf $i; gitsync $i; done
+    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; gitsync $i; done
 }
 
 function gittrunc()
