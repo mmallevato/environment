@@ -28,7 +28,7 @@ pip install spro
 conda install --channel conda-forge --yes git git-lfs bfg
 
 # For computing
-conda install --channel conda-forge --yes numpy pandas hdf5 pytables scikit-learn scipy statsmodels
+conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels
 
 # For plotting
 conda install --channel conda-forge --yes matplotlib seaborn plotly
