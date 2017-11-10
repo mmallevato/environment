@@ -170,7 +170,7 @@ alias lu='ls -Fhltur'
 
 alias rm='rm -i'
 
-alias rsync='rsync --verbose --recursive --links --perms --times --delete --delete-excluded --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
+alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
 alias cp='cp -i'
 
