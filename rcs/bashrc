@@ -189,7 +189,7 @@ alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python s
 
 function sshport()
 {
-    ssh -N -f -L localhost:$3:localhost:$2 $1
+    ssh $1 -f -N -L localhost:$2:localhost:$2
 }
 
 # ==============================================================================
