@@ -49,7 +49,7 @@ pip install pytabix
 
 # For sequencing process
 conda install --channel bioconda --yes htslib picard fqtools bwa hisat2 kallisto samtools freebayes bcftools snpeff
-conda install --channel auto --yes fastqp
+pip install fastqp
 
 # For node
 conda install --channel node --yes nodejs
