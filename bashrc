@@ -366,6 +366,7 @@ function gitclonekwatme()
     git clone --recursive https://github.com/KwatME/information;
     git clone --recursive https://github.com/KwatME/jupyter_gui;
     git clone --recursive https://github.com/KwatME/kernel_density;
+    git clone --recursive https://github.com/KwatME/kwatme.com;
     git clone --recursive https://github.com/KwatME/linear_algebra;
     git clone --recursive https://github.com/KwatME/linear_model;
     git clone --recursive https://github.com/KwatME/match;
@@ -400,15 +401,10 @@ function gitcloneguardiome()
     git clone --recursive https://github.com/Guardiome/genome_ai_ui;
     git clone --recursive https://github.com/Guardiome/genome_app;
     git clone --recursive https://github.com/Guardiome/genome_apps_for_genome_ai;
+    git clone --recursive https://github.com/Guardiome/genomeapps.io;
     git clone --recursive https://github.com/Guardiome/genotype_to_phenotype;
     git clone --recursive https://github.com/Guardiome/pipeline;
     git clone --recursive https://github.com/Guardiome/simple_genome_app;
-}
-
-function gitclonewebsite()
-{
-    git clone --recursive https://github.com/KwatME/kwatme.com;
-    git clone --recursive https://github.com/Guardiome/genomeapps.io;
 }
 
 # ==============================================================================

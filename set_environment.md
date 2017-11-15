@@ -3,9 +3,9 @@
 ## Get `~/.*rc`
 
 ```sh
-cp rcs/bashrc ~/.bashrc
+cp bashrc ~/.bashrc
 
-cp rcs/condarc ~/.condarc
+cp condarc ~/.condarc
 ```
 
 ## Set up conda root environments
