@@ -243,6 +243,11 @@ function makezip()
 # ==============================================================================
 alias gitcache="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
 
+function gitsyncs()
+{
+    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; gitsync $i; done
+}
+
 function gitsync()
 {
     for d in *
@@ -334,9 +339,48 @@ function gitsync()
     done
 }
 
-function gitsyncs()
+function gitpull()
 {
-    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; gitsync $i; done
+    for d in *
+    do
+        if [ -d $d ]; then
+            printf '\n\n\n\n\n\n\n\n'
+
+            printf $Purple
+            printf '================================================================================'
+            printf '\n'
+            printf $Blue
+            printf $d
+            printf $Purple
+            printf '\n'
+            printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+            printf '\n'
+            printf $NC
+
+            cd $d
+
+            printf $Yellow
+            printf 'git status'
+            printf '\n'
+            printf $NC
+            git status
+
+            printf $Yellow
+            printf 'git pull'
+            printf '\n'
+            printf $NC
+            git pull
+
+            cd ..
+
+            printf $Purple
+            printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+            printf '\n'
+            printf '================================================================================'
+            printf '\n'
+            printf $NC
+        fi
+    done
 }
 
 function gittrunc()
