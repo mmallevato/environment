@@ -187,7 +187,7 @@ alias sd='source deactivate'
 
 alias pippublish="rm -rf build/ *.egg-info dist; python setup.py sdist; python setup.py bdist_wheel; twine upload dist/*"
 
-function sshport()
+function ssh-port()
 {
     ssh $1 -f -N -L localhost:$2:localhost:$2
 }
@@ -227,13 +227,13 @@ function extract()      # Handy Extract Program
 }
 
 # Creates an archive (*.tar.gz) from given directory.
-function maketar()
+function make-tar()
 {
   tar cvzf "${1%%/}.tar.gz"  "${1%%/}/";
 }
 
 # Create a ZIP archive of a file or folder.
-function makezip()
+function make-zip()
 {
   zip -r "${1%%/}.zip" "$1" ;
 }
