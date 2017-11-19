@@ -243,12 +243,12 @@ function makezip()
 # ==============================================================================
 alias gitcache="git config --global credential.helper cache; git config --global credential.helper 'cache --timeout=36000'"
 
-function gitsyncs()
+function git-update-repositories-n-times()
 {
-    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; gitsync $i; done
+    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; update_repositories $i; done
 }
 
-function gitsync()
+function git-update-repositories()
 {
     for d in *
     do
@@ -339,7 +339,7 @@ function gitsync()
     done
 }
 
-function gitpull()
+function git-pull-repositories()
 {
     for d in *
     do
@@ -383,7 +383,7 @@ function gitpull()
     done
 }
 
-function gittrunc()
+function git-truncate-history()
 {
     git checkout --orphan temp $1
     git commit -m 'Truncated history'
@@ -392,7 +392,7 @@ function gittrunc()
     git branch -D temp
 }
 
-function gitclonekwatme()
+function git-clone-kwatme()
 {
     git clone --recursive https://github.com/KwatME/classification;
     git clone --recursive https://github.com/KwatME/cluster;
@@ -432,12 +432,7 @@ function gitclonekwatme()
     git clone --recursive https://github.com/UCSD-CCAL/ccal;
 }
 
-function gitclonegenomeapp()
-{
-    git clone --recursive https://github.com/KwatME/tumor_suppressor;
-}
-
-function gitcloneguardiome()
+function git-clone-guardiome()
 {
     git clone --recursive https://github.com/Guardiome/code_genome_app;
     git clone --recursive https://github.com/Guardiome/genome_ai;
