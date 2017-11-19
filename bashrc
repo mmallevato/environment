@@ -245,7 +245,7 @@ alias gitcache="git config --global credential.helper cache; git config --global
 
 function git-update-repositories-n-times()
 {
-    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; update_repositories $i; done
+    for i in $(seq $1); do i=$((i-1)); printf "$Yellow$i\n$NC"; git-update-repositories $i; done
 }
 
 function git-update-repositories()
