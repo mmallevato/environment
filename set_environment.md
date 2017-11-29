@@ -48,7 +48,7 @@ conda install --channel bioconda --yes pyfaidx
 pip install pytabix
 
 # For sequencing process
-conda install --channel bioconda --yes dwgsim htslib picard fqtools bwa hisat2 kallisto samtools freebayes bcftools snpeff
+conda install --channel bioconda --yes dwgsim art fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff #manta strekla
 pip install fastqp
 
 # For node
