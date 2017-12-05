@@ -363,6 +363,7 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/feature
   git clone --recursive https://github.com/KwatME/file
   git clone --recursive https://github.com/KwatME/genome
+  git clone --recursive https://github.com/KwatME/geo
   git clone --recursive https://github.com/KwatME/gpg
   git clone --recursive https://github.com/KwatME/grch
   git clone --recursive https://github.com/KwatME/gsea

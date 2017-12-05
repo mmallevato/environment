@@ -45,7 +45,7 @@ conda install --channel conda-forge --yes rpy2 r-mass
 # For bioinformatics
 conda install --channel conda-forge --yes biopython
 conda install --channel bioconda --yes pyfaidx
-pip install pytabix
+pip install pytabix geoparse
 
 # For sequencing process
 conda install --channel bioconda --yes dwgsim art fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff #manta strekla
@@ -69,20 +69,20 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 ## Get other softwares
 
--   macOS only
+- macOS only
 
-    -   Get xCode
-    -   Get brew
+  - Get xCode
+  - Get brew
 
--   Chrome
+- Chrome
 
--   Atom
+- Atom
 
--   hugo
+- hugo
 
--   VLC media player
+- VLC media player
 
--   Shotcut
+- Shotcut
 
 ## Set Jupyter password (for deploying notebook on server)
 
@@ -104,9 +104,9 @@ jupyter nbextension enable vim_binding/vim_binding
 
 ## Get Atom packages
 
--   atom-beautify
--   autocomplete-python
--   ex-mode
--   git-plus
--   linter-python
--   vim-mode-plus
+- atom-beautify
+- autocomplete-python
+- ex-mode
+- git-plus
+- linter-python
+- vim-mode-plus
