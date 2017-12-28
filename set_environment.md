@@ -108,5 +108,6 @@ jupyter nbextension enable vim_binding/vim_binding
 - autocomplete-python
 - ex-mode
 - git-plus
+- git-time-machine
 - linter-python
 - vim-mode-plus
