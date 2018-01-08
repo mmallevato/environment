@@ -395,16 +395,16 @@ function git-clone-kwatme()
 
 function git-clone-guardiome()
 {
-  git clone --recursive https://github.com/Guardiome/code_genome_app
   git clone --recursive https://github.com/Guardiome/genome_ai
   git clone --recursive https://github.com/Guardiome/genome_ai_server
   git clone --recursive https://github.com/Guardiome/genome_ai_ui
   git clone --recursive https://github.com/Guardiome/genome_app
+  git clone --recursive https://github.com/Guardiome/genome_app_template
   git clone --recursive https://github.com/Guardiome/genome_apps_for_genome_ai
   git clone --recursive https://github.com/Guardiome/genomeapps.io
   git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
   git clone --recursive https://github.com/Guardiome/pipeline
-  git clone --recursive https://github.com/Guardiome/simple_genome_app
+  git clone --recursive https://github.com/Guardiome/simple_genome_app_template
 }
 
 # ==============================================================================
