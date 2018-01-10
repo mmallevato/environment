@@ -11,52 +11,52 @@ cp condarc ~/.condarc
 ## Set up conda root environments
 
 ```sh
-conda update --all --yes
+conda update --all --yes &&
 
 # For Jupyter
-conda install --channel conda-forge --yes jupyter jupyter_contrib_nbextensions nb_conda
+conda install --channel conda-forge --yes jupyter jupyter_contrib_nbextensions nb_conda &&
 
 # For coding
-conda install --channel conda-forge --yes yapf isort pylama
-pip install beautysh asciinema
+conda install --channel conda-forge --yes yapf isort pylama &&
+pip install beautysh asciinema &&
 
 # For managing
-conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller
-pip install spro
+conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller &&
+pip install spro &&
 
 # For git
-conda install --channel conda-forge --yes git git-lfs bfg
+conda install --channel conda-forge --yes git git-lfs bfg &&
 
 # For computing
-conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels
+conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels &&
 
 # For plotting
-conda install --channel conda-forge --yes matplotlib seaborn plotly
+conda install --channel conda-forge --yes matplotlib seaborn plotly &&
 
 # For cryptography
-conda install --channel conda-forge --yes pycrypto bcrypt
+conda install --channel conda-forge --yes pycrypto bcrypt &&
 
 # For server
-conda install --channel conda-forge --yes click flask flask-cors requests
+conda install --channel conda-forge --yes click flask flask-cors requests &&
 
 # For R
-conda install --channel conda-forge --yes rpy2 r-mass
+conda install --channel conda-forge --yes rpy2 r-mass &&
 
 # For bioinformatics
-conda install --channel conda-forge --yes biopython
-conda install --channel bioconda --yes pyfaidx
-pip install pytabix geoparse
+conda install --channel conda-forge --yes biopython &&
+conda install --channel bioconda --yes pyfaidx &&
+pip install pytabix geoparse &&
 
 # For sequencing process
-conda install --channel bioconda --yes dwgsim art fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff #manta strekla
-pip install fastqp
+conda install --channel bioconda --yes dwgsim art fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff && #manta strekla
+pip install fastqp &&
 
 # For node
-conda install --channel node --yes nodejs
-npm install --global electron electron-packager
+conda install --channel node --yes nodejs &&
+npm install --global electron electron-packager &&
 
 # For Guardiome
-conda install --channel conda-forge --yes markdown
+conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
 
@@ -69,20 +69,20 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 ## Get other softwares
 
-- macOS only
+-   macOS only
 
-  - Get xCode
-  - Get brew
+    -   Get xCode
+    -   Get brew
 
-- Chrome
+-   Chrome
 
-- Atom
+-   Atom
 
-- hugo
+-   hugo
 
-- VLC media player
+-   VLC media player
 
-- Shotcut
+-   Shotcut
 
 ## Set Jupyter password (for deploying notebook on server)
 
@@ -104,10 +104,10 @@ jupyter nbextension enable vim_binding/vim_binding
 
 ## Get Atom packages
 
-- atom-beautify
-- autocomplete-python
-- ex-mode
-- git-plus
-- git-time-machine
-- linter-python
-- vim-mode-plus
+-   atom-beautify
+-   autocomplete-python
+-   ex-mode
+-   git-plus
+-   git-time-machine
+-   linter-python
+-   vim-mode-plus
