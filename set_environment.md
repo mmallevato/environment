@@ -109,5 +109,5 @@ jupyter nbextension enable vim_binding/vim_binding
 -   ex-mode
 -   git-plus
 -   git-time-machine
--   linter-python
+-   linter-pylama
 -   vim-mode-plus
