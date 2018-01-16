@@ -365,6 +365,7 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/genome
   git clone --recursive https://github.com/KwatME/geo
   git clone --recursive https://github.com/KwatME/gpg
+  git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/grch
   git clone --recursive https://github.com/KwatME/gsea
   git clone --recursive https://github.com/KwatME/hdf5
@@ -379,7 +380,6 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/mutational_signature
   git clone --recursive https://github.com/KwatME/nd_array
   git clone --recursive https://github.com/KwatME/network
-  git clone --recursive https://github.com/KwatME/onco_gps
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
   git clone --recursive https://github.com/KwatME/regression
