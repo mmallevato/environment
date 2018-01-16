@@ -110,4 +110,7 @@ jupyter nbextension enable vim_binding/vim_binding
 -   git-plus
 -   git-time-machine
 -   linter-pylama
+
+    Ignore in linter-pylama `C901,D100,D104,D202,D203,D205,D212,D400,E251,E125,E50`
+
 -   vim-mode-plus
