@@ -8,9 +8,16 @@ cp bashrc ~/.bashrc
 cp condarc ~/.condarc
 ```
 
+## Set up vim
+
+```sh
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+
 ## Set up conda root environments
 
-### Get miniconda from https://conda.io/miniconda.html and install
+### Get miniconda from <https://conda.io/miniconda.html> and install
 
 ### Install stuff
 
@@ -64,12 +71,15 @@ conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
 
-## Set up vim
+## Set Jupyter password (for deploying notebook on server)
 
 ```sh
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
+jupyter notebook --generate-config
+ls -a ~/.jupyter
+jupyter notebook password
 ```
+
+## Get Jupyter VIM binder from <https://github.com/lambdalisue/jupyter-vim-binding>
 
 ## Get other softwares
 
@@ -87,16 +97,6 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 -   VLC media player
 
 -   Shotcut
-
-## Set Jupyter password (for deploying notebook on server)
-
-```sh
-jupyter notebook --generate-config
-ls -a ~/.jupyter
-jupyter notebook password
-```
-
-## Get Jupyter VIM binder from https://github.com/lambdalisue/jupyter-vim-binding
 
 ## Get Atom packages
 
