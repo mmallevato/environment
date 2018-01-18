@@ -71,7 +71,7 @@ conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
 
-## Set Jupyter password (for deploying notebook on server)
+## Set Jupyter password
 
 ```sh
 jupyter notebook --generate-config
