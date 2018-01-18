@@ -10,7 +10,7 @@ cp condarc ~/.condarc
 
 ## Set up conda root environments
 
-### Get miniconda from https://conda.io/miniconda.html
+### Get miniconda from https://conda.io/miniconda.html and install
 
 ### Install stuff
 
