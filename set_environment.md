@@ -57,7 +57,6 @@ pip install fastqp &&
 
 # For node
 conda install --channel node --yes nodejs &&
-npm install --global electron electron-packager &&
 
 # For Guardiome
 conda install --channel conda-forge --yes markdown &&
