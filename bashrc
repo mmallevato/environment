@@ -386,6 +386,7 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/regression
   git clone --recursive https://github.com/KwatME/sequence
   git clone --recursive https://github.com/KwatME/sequencing_process
+  git clone --recursive https://github.com/KwatME/simulated_annealing
   git clone --recursive https://github.com/KwatME/spro
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
