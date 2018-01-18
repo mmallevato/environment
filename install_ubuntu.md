@@ -18,9 +18,9 @@
 ## Get softwares
 
 ```sh
-sudo apt update; sudo apt upgrade
+sudo apt update && sudo apt upgrade
 sudo apt install gparted exfat-fuse fat-utils screen vim tree
-sudo apt clean; sudo apt autoremove
+sudo apt clean && sudo apt autoremove
 ```
 
 ## Configure System Settings
