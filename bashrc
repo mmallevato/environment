@@ -356,6 +356,7 @@ function git-clone-kwatme()
 {
   git clone --recursive https://github.com/KwatME/classification
   git clone --recursive https://github.com/KwatME/cluster
+  git clone --recursive https://github.com/KwatME/context
   git clone --recursive https://github.com/KwatME/cross_validation
   git clone --recursive https://github.com/KwatME/cryptograph
   git clone --recursive https://github.com/KwatME/dimension_reduction
@@ -385,7 +386,6 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/regression
   git clone --recursive https://github.com/KwatME/sequence
   git clone --recursive https://github.com/KwatME/sequencing_process
-  git clone --recursive https://github.com/KwatME/skew
   git clone --recursive https://github.com/KwatME/spro
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
