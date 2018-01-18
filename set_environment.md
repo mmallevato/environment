@@ -10,6 +10,10 @@ cp condarc ~/.condarc
 
 ## Set up conda root environments
 
+### Get miniconda
+
+### Install stuff
+
 ```sh
 conda update --all --yes &&
 
