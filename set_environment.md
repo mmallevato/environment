@@ -49,6 +49,7 @@ conda install --channel conda-forge --yes rpy2 r-mass &&
 # For bioinformatics
 conda install --channel conda-forge --yes biopython &&
 conda install --channel bioconda --yes pyfaidx &&
+conda install --channel makman09 --yes pytabix &&
 pip install pytabix geoparse &&
 
 # For sequencing process
