@@ -71,6 +71,14 @@ conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
 
+## Set up git
+
+```sh
+git config --global user.name 'KwatME'
+git config --global user.email kwatme8@gmail.com
+git config --global credential.helper 'cache --timeout=86400'
+```
+
 ## Set Jupyter password
 
 ```sh
