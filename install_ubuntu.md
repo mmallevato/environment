@@ -19,7 +19,7 @@
 
 ```sh
 sudo apt update && sudo apt upgrade
-sudo apt install gparted exfat-fuse exfat-utils screen vim tree
+sudo apt install gparted exfat-fuse exfat-utils screen vim tree lm-sensors hddtemp
 sudo apt clean && sudo apt autoremove
 sudo reboot
 ```
