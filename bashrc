@@ -381,6 +381,7 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/mutational_signature
   git clone --recursive https://github.com/KwatME/nd_array
   git clone --recursive https://github.com/KwatME/network
+  git clone --recursive https://github.com/KwatME/nmf_map
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
   git clone --recursive https://github.com/KwatME/regression
