@@ -60,8 +60,14 @@ conda install --channel makman09 --yes pytabix &&
 pip install pytabix geoparse &&
 
 # For sequencing process
-conda install --channel bioconda --yes dwgsim art fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff && #manta strekla
+# conda create --name sequencing_process --yes &&
+
+conda install --channel bioconda --yes dwgsim skewer fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff &&
 pip install fastqp &&
+
+conda create --name sequencing_process_python2.7 --yes python=2.7 &&
+
+conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta canvas
 
 # For node
 conda install --channel node --yes nodejs &&
