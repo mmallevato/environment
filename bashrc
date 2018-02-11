@@ -397,8 +397,8 @@ function git-clone-kwatme()
 
 function git-clone-guardiome()
 {
-  git clone --recursive https://github.com/Guardiome/omics_ai_production
   git clone --recursive https://github.com/Guardiome/omics_ai
+  git clone --recursive https://github.com/Guardiome/omics_ai_production
   git clone --recursive https://github.com/Guardiome/omics_ai_ui
   git clone --recursive https://github.com/Guardiome/omics_ai_server
   git clone --recursive https://github.com/Guardiome/omics_app
