@@ -365,13 +365,11 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/KwatME/file
   git clone --recursive https://github.com/KwatME/genome
   git clone --recursive https://github.com/KwatME/geo
-  git clone --recursive https://github.com/KwatME/gpg
   git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/grch
   git clone --recursive https://github.com/KwatME/gsea
   git clone --recursive https://github.com/KwatME/hdf5
   git clone --recursive https://github.com/KwatME/information
-  git clone --recursive https://github.com/KwatME/jupyter_gui
   git clone --recursive https://github.com/KwatME/kernel_density
   git clone --recursive https://github.com/KwatME/kwatme.com
   git clone --recursive https://github.com/KwatME/linear_algebra
@@ -402,7 +400,6 @@ function git-clone-guardiome()
   git clone --recursive https://github.com/Guardiome/omics_ai_ui
   git clone --recursive https://github.com/Guardiome/omics_ai_server
   git clone --recursive https://github.com/Guardiome/omics_app
-  git clone --recursive https://github.com/Guardiome/omicsapps.io
   git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
   git clone --recursive https://github.com/Guardiome/omics_app_template
