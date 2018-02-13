@@ -67,7 +67,7 @@ pip install fastqp &&
 
 conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
-conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta canvas
+conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta &&  # canvas
 
 # For node
 conda install --channel node --yes nodejs &&
