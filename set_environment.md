@@ -121,6 +121,6 @@ jupyter notebook password
 -   git-time-machine
 -   linter-pylama
 
-    Ignore `C901,D100,D104,D202,D203,D205,D212,D400,E251,E125,E50`
+    Ignore `C901,D100,D104,D202,D203,D205,D212,D301,D400,E50,E125,E251`
 
 -   vim-mode-plus
