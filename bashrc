@@ -404,6 +404,14 @@ function git-clone-guardiome()
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
 }
 
+function git-clone-omics-apps()
+{
+  git clone --recursive https://github.com/KwatME/muscle_type
+  git clone --recursive https://github.com/KwatME/tumor_suppressor
+  git clone --recursive https://github.com/KwatME/random_genome_peek
+  git clone --recursive https://github.com/KwatME/hereditary-pancreatic-cancer
+}
+
 # ==============================================================================
 # Make conda path visible
 # ==============================================================================
