@@ -175,10 +175,7 @@ alias du='du -hs'
 
 alias vi=vim
 
-alias sa='source activate'
-alias sd='source deactivate'
-
-function pip-publish()
+function pip_publish()
 {
   rm -rf build/ *.egg-info dist
   python setup.py sdist
@@ -186,7 +183,7 @@ function pip-publish()
   twine upload dist/*
 }
 
-function ssh-port()
+function ssh_port()
 {
   ssh $1 -f -N -L localhost:$2:localhost:$2
 }
@@ -204,7 +201,7 @@ function remove_pyc()
   find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf
 }
 
-function chmodall()
+function chmod_all()
 {
   find . -not -path '*/.*' -type f -exec chmod 644 {} \;
   find . -not -path '*/.*' -type d -exec chmod 755 {} \;
@@ -237,13 +234,13 @@ function extract()
 }
 
 # Creates an archive (*.tar.gz) from a directory.
-function make-tar()
+function make_tar()
 {
   tar cvzf "${1%%/}.tar.gz" "${1%%/}/"
 }
 
 # Create a ZIP archive of a file or directory.
-function make-zip()
+function make_zip()
 {
   zip -r "${1%%/}.zip" "$1"
 }
@@ -251,23 +248,23 @@ function make-zip()
 # ==============================================================================
 # Git
 # ==============================================================================
-function git-cache()
+function git_cache()
 {
   git config --global credential.helper cache
   git config --global credential.helper "cache --timeout=$1"
 }
 
-function git-update-repositories-n-times()
+function git_update_repositories_n_times()
 {
   for i in $(seq $1);
     do
       i=$((i-1))
       printf "$Yellow$i\n$NC"
-      git-update-repositories $i
+      git_update_repositories $i
     done
 }
 
-function git-update-repositories()
+function git_update_repositories()
 {
   for d in *
     do
@@ -343,16 +340,7 @@ function git-update-repositories()
     done
 }
 
-function git-truncate-history()
-{
-  git checkout --orphan temp $1
-  git commit -m 'Truncated history'
-  git rebase --onto temp $1 master
-  git checkout master
-  git branch -D temp
-}
-
-function git-clone-kwatme()
+function git_clone_kwatme()
 {
   git clone --recursive https://github.com/KwatME/classification
   git clone --recursive https://github.com/KwatME/cluster
@@ -392,7 +380,7 @@ function git-clone-kwatme()
   git clone --recursive https://github.com/UCSD-CCAL/ccal
 }
 
-function git-clone-guardiome()
+function git_clone_guardiome()
 {
   git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
   git clone --recursive https://github.com/Guardiome/omics_ai
@@ -404,12 +392,21 @@ function git-clone-guardiome()
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
 }
 
-function git-clone-omics-apps()
+function git_clone_omics_apps()
 {
   git clone --recursive https://github.com/KwatME/muscle_type
   git clone --recursive https://github.com/KwatME/tumor_suppressor
   git clone --recursive https://github.com/KwatME/random_genome_peek
   git clone --recursive https://github.com/KwatME/hereditary-pancreatic-cancer
+}
+
+function git_truncate_history()
+{
+  git checkout --orphan temp $1
+  git commit -m 'Truncated history'
+  git rebase --onto temp $1 master
+  git checkout master
+  git branch -D temp
 }
 
 # ==============================================================================

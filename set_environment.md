@@ -24,56 +24,50 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```sh
 conda update --all --yes &&
 
-# For Jupyter
 conda install --channel conda-forge --yes jupyter jupyter_contrib_nbextensions nb_conda &&
 
-# For coding
 conda install --channel conda-forge --yes yapf isort pylama &&
-pip install beautysh asciinema &&
+pip install beautysh &&
 
-# For managing
 conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller &&
 pip install spro &&
 
-# For git
 conda install --channel conda-forge --yes git git-lfs bfg &&
 
-# For computing
 conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels &&
 
-# For plotting
 conda install --channel conda-forge --yes matplotlib seaborn plotly &&
 
-# For cryptography
 conda install --channel conda-forge --yes pycrypto bcrypt &&
 
-# For server
 conda install --channel conda-forge --yes click flask flask-cors requests &&
 
-# For R
 conda install --channel conda-forge --yes rpy2 r-mass &&
 
-# For bioinformatics
 conda install --channel conda-forge --yes biopython &&
 conda install --channel bioconda --yes pyfaidx &&
 conda install --channel makman09 --yes pytabix &&
 pip install pytabix geoparse &&
 
-# For sequencing process
-# conda create --name sequencing_process --yes &&
-
 conda install --channel bioconda --yes dwgsim skewer fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff &&
 pip install fastqp &&
 
-conda create --name sequencing_process_python2.7 --yes python=2.7 &&
+if [ "$(uname)" == "Darwin" ]; then :
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
-conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta &&  # canvas
+  conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
-# For node
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta &&  # canvas
+
+  echo 'Set up sequencing_process_python2.7 environment.'
+
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then :
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then :
+fi
+
 conda install --channel node --yes nodejs &&
 conda install --channel conda-forge --yes yarn &&
 
-# For
 conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
