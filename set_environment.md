@@ -107,6 +107,8 @@ jupyter notebook password
 
 -   Shotcut
 
+-   Etcher
+
 ## Get Atom packages
 
 -   atom-beautify
