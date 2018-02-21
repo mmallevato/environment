@@ -9,17 +9,15 @@
 -   Secure Boot = Disabled
 -   Legacy Mode = Enabled
 
-## Install Ubuntu 16.04 LTS
+## Install Ubuntu 16.04.3 LTS
 
 ## Trim launcher
-
-## Remove softwares
 
 ## Get softwares
 
 ```sh
 sudo apt update && sudo apt upgrade
-sudo apt install gparted exfat-fuse exfat-utils screen vim tree lm-sensors hddtemp
+sudo apt install gparted exfat-fuse exfat-utils screen vim tree
 sudo apt clean && sudo apt autoremove
 sudo reboot
 ```
