@@ -377,7 +377,6 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
   git clone --recursive https://github.com/KwatME/variant
-  git clone --recursive https://github.com/UCSD-CCAL/ccal
 }
 
 function git_clone_guardiome()
@@ -398,6 +397,11 @@ function git_clone_omics_apps()
   git clone --recursive https://github.com/KwatME/tumor_suppressor
   git clone --recursive https://github.com/KwatME/random_genome_peek
   git clone --recursive https://github.com/KwatME/hereditary-pancreatic-cancer
+}
+
+function git_clone_ccal()
+  git clone --recursive https://github.com/UCSD-CCAL/ccal
+  git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
 }
 
 function git_truncate_history()
