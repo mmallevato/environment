@@ -400,6 +400,7 @@ function git_clone_omics_apps()
 }
 
 function git_clone_ccal()
+{
   git clone --recursive https://github.com/UCSD-CCAL/ccal
   git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
 }
