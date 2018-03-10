@@ -4,7 +4,6 @@
 
 ```sh
 cp bashrc ~/.bashrc
-
 cp condarc ~/.condarc
 ```
 
@@ -22,9 +21,11 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ### Install stuff
 
 ```sh
+conda update --name base conda --yes &&
+
 conda update --all --yes &&
 
-conda install --channel conda-forge --yes jupyter jupyter_contrib_nbextensions nb_conda &&
+conda install --channel conda-forge --yes jupyterlab &&
 
 conda install --channel conda-forge --yes yapf isort pylama &&
 pip install beautysh &&
@@ -68,7 +69,6 @@ fi
 conda install --channel node --yes nodejs &&
 conda install --channel conda-forge --yes yarn &&
 
-conda install --channel conda-forge --yes markdown &&
 pip install genotype_to_phenotype
 ```
 
@@ -80,15 +80,11 @@ git config --global user.email kwatme8@gmail.com
 git config --global credential.helper 'cache --timeout=86400'
 ```
 
-## Set Jupyter password
+## Get Jupyter VIM binder
 
 ```sh
-jupyter notebook --generate-config
-ls -a ~/.jupyter
-jupyter notebook password
+jupyter labextension install jupyterlab_vim
 ```
-
-## Get Jupyter VIM binder from <https://github.com/lambdalisue/jupyter-vim-binding>
 
 ## Get other softwares
 
