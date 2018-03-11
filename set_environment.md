@@ -25,7 +25,7 @@ conda update --name base conda --yes &&
 
 conda update --all --yes &&
 
-conda install --channel conda-forge --yes jupyterlab &&
+conda install --channel conda-forge --yes jupyterlab jupyter_contrib_nbextensions nb_conda &&
 
 conda install --channel conda-forge --yes yapf isort pylama &&
 pip install beautysh &&
