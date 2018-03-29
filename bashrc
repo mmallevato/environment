@@ -140,7 +140,7 @@ if ! shopt -oq posix; then
 fi
 
 # ==============================================================================
-# Aliases and functions
+# Define aliases and functions
 # ==============================================================================
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -188,9 +188,6 @@ function ssh_port()
   ssh $1 -f -N -L localhost:$2:localhost:$2
 }
 
-# ==============================================================================
-# Sanitize
-# ==============================================================================
 function remove_ds_store()
 {
   find . -name .DS_Store -delete
@@ -207,9 +204,6 @@ function chmod_all()
   find . -not -path '*/.*' -type d -exec chmod 755 {} \;
 }
 
-# ==============================================================================
-# Compress
-# ==============================================================================
 function extract()
 {
   if [ -f $1 ] ; then
@@ -233,21 +227,16 @@ function extract()
   fi
 }
 
-# Creates an archive (*.tar.gz) from a directory.
 function make_tar()
 {
   tar cvzf "${1%%/}.tar.gz" "${1%%/}/"
 }
 
-# Create a ZIP archive of a file or directory.
 function make_zip()
 {
   zip -r "${1%%/}.zip" "$1"
 }
 
-# ==============================================================================
-# Git
-# ==============================================================================
 function git_cache()
 {
   git config --global credential.helper cache
