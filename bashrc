@@ -331,7 +331,7 @@ function git_update_repositories()
 
 function git_clone_kwatme()
 {
-  git clone --recursive https://github.com/KwatME/classfy
+  git clone --recursive https://github.com/KwatME/classify
   git clone --recursive https://github.com/KwatME/cluster
   git clone --recursive https://github.com/KwatME/context
   git clone --recursive https://github.com/KwatME/cross_validation
@@ -358,7 +358,7 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/nmf_map
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
-  git clone --recursive https://github.com/KwatME/regression
+  git clone --recursive https://github.com/KwatME/regress
   git clone --recursive https://github.com/KwatME/sequence
   git clone --recursive https://github.com/KwatME/sequencing_process
   git clone --recursive https://github.com/KwatME/simulated_annealing
