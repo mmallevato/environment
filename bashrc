@@ -331,7 +331,7 @@ function git_update_repositories()
 
 function git_clone_kwatme()
 {
-  git clone --recursive https://github.com/KwatME/classification
+  git clone --recursive https://github.com/KwatME/classfy
   git clone --recursive https://github.com/KwatME/cluster
   git clone --recursive https://github.com/KwatME/context
   git clone --recursive https://github.com/KwatME/cross_validation
