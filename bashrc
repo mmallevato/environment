@@ -334,9 +334,9 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/classify
   git clone --recursive https://github.com/KwatME/cluster
   git clone --recursive https://github.com/KwatME/context
-  git clone --recursive https://github.com/KwatME/cross_validation
+  git clone --recursive https://github.com/KwatME/cross_validate
   git clone --recursive https://github.com/KwatME/cryptograph
-  git clone --recursive https://github.com/KwatME/dimension_reduction
+  git clone --recursive https://github.com/KwatME/dimension_scale
   git clone --recursive https://github.com/KwatME/environment
   git clone --recursive https://github.com/KwatME/feature
   git clone --recursive https://github.com/KwatME/gct_gmt
@@ -354,7 +354,6 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/matrix_factorization
   git clone --recursive https://github.com/KwatME/mutational_signature
   git clone --recursive https://github.com/KwatME/nd_array
-  git clone --recursive https://github.com/KwatME/network
   git clone --recursive https://github.com/KwatME/nmf_map
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
