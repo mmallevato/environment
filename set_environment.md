@@ -86,6 +86,14 @@ git config --global credential.helper 'cache --timeout=86400'
 jupyter labextension install jupyterlab_vim
 ```
 
+## Set Jupyter password (for deploying notebook on server)
+
+```sh
+jupyter notebook --generate-config
+ls -a ~/.jupyter
+jupyter notebook password
+```
+
 ## Get other softwares
 
 -   macOS only
@@ -114,6 +122,6 @@ jupyter labextension install jupyterlab_vim
 -   git-time-machine
 -   linter-pylama
 
-    Ignore `C901,D100,D103,D104,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
+    Ignore 'C901,D100,D101,D102,D103,D104,D105,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741'
 
 -   vim-mode-plus
