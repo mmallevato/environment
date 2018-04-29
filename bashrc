@@ -295,10 +295,10 @@ function git_update_repositories()
         printf $NC
         git submodule update --init --remote --recursive
 
-        printf $Cyan
-        printf 'git diff --submodule\n'
-        printf $NC
-        git diff --submodule
+        # printf $Cyan
+        # printf 'git diff --submodule\n'
+        # printf $NC
+        # git diff --submodule
 
         printf $Yellow
         printf 'git add -A\n'

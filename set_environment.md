@@ -37,7 +37,7 @@ conda install --channel conda-forge --yes git git-lfs bfg &&
 
 conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels &&
 
-conda install --channel conda-forge --yes matplotlib seaborn plotly &&
+conda install --channel conda-forge --yes plotly matplotlib &&
 
 conda install --channel conda-forge --yes pycrypto bcrypt &&
 
