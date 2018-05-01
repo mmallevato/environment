@@ -175,7 +175,7 @@ alias du='du -hs'
 
 alias vi=vim
 
-function pip_publish()
+function pypi_publish()
 {
   rm -rf build/ *.egg-info dist
   python setup.py sdist
