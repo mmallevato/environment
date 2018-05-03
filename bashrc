@@ -390,6 +390,7 @@ function git_clone_ccal()
   git clone --recursive https://github.com/UCSD-CCAL/ccal
   git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
   git clone --recursive https://github.com/UCSD-CCAL/explore_tcga
+  git clone --recursive https://github.com/UCSD-CCAL/map
 }
 
 function git_truncate_history()
