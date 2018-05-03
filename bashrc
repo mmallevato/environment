@@ -406,7 +406,7 @@ function update_linux()
   sudo apt update &&
   sudo apt upgrade &&
   sudo apt autoremove &&
-  sudo apt reboot
+  sudo reboot
 }
 
 # ==============================================================================
