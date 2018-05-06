@@ -146,33 +146,19 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
 alias ll='ls -Fhl'
-# Show hidden files
 alias la='ls -Fhla'
-# Sort by extension
 alias lx='ls -FhlXB'
-# Sort by size
 alias lz='ls -FhlSr'
-# Sort by data
 alias lt='ls -Fhltr'
-# Sort by change time
 alias lc='ls -Fhltcr'
-# Sort by usage time
 alias lu='ls -Fhltur'
-
 alias rm='rm -i'
-
 alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
-
 alias cp='cp -i'
-
 alias mv='mv -i'
-
 alias mkdir='mkdir -vp'
-
 alias du='du -hs'
-
 alias vi=vim
 
 function release_to_pypi()
@@ -255,11 +241,10 @@ function git_update_repositories_n_times()
 
 function git_update_repositories()
 {
+  printf '\n\n\n\n\n\n\n\n'
   for d in *
     do
       if [ -d "$d/.git" ]; then
-        printf '\n\n\n\n\n\n\n\n'
-
         printf $Purple
         printf '================================================================================\n'
         printf $Blue
@@ -267,60 +252,65 @@ function git_update_repositories()
         printf $Purple
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
         printf $NC
-
         cd $d
-
         printf $Yellow
         printf 'git status\n'
         printf $NC
         git status
-
+        cd ..
+        printf $Purple
+        printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+        printf '================================================================================\n'
+        printf $NC
+      fi
+    done
+  for d in *
+    do
+      if [ -d "$d/.git" ]; then
+        printf $Purple
+        printf '================================================================================\n'
+        printf $Blue
+        printf "$d\n"
+        printf $Purple
+        printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
+        printf $NC
+        cd $d
+        printf $Yellow
+        printf 'git status\n'
+        printf $NC
+        git status
         printf $Cyan
         printf "git submodule foreach 'git stash'\n"
         printf $NC
         git submodule foreach 'git stash'
-
         printf $Yellow
         printf "git submodule foreach 'git reset --hard'\n"
         printf $NC
         git submodule foreach 'git reset --hard'
-
         printf $Cyan
         printf "git submodule foreach 'git clean -fd'\n"
         printf $NC
         git submodule foreach 'git clean -fd'
-
         printf $Yellow
         printf 'git submodule update --init --remote --recursive\n'
         printf $NC
         git submodule update --init --remote --recursive
-
-        # printf $Cyan
-        # printf 'git diff --submodule\n'
-        # printf $NC
-        # git diff --submodule
-
         printf $Yellow
         printf 'git add -A\n'
         printf $NC
         git add -A
-
         printf $Cyan printf 'git commit -m $1\n'
         printf $NC
         git commit -m "$1"
-
         printf $Yellow
         printf 'git pull\n'
         printf $NC
         git pull
-
         printf $Cyan
         printf 'git push\n'
         printf $NC
         git push
-
         cd ..
-
         printf $Purple
         printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
         printf '================================================================================\n'
