@@ -241,10 +241,10 @@ function git_update_repositories_n_times()
 
 function git_update_repositories()
 {
-  printf '\n\n\n\n\n\n\n\n'
   for d in *
     do
       if [ -d "$d/.git" ]; then
+        printf '\n\n\n\n\n\n\n\n'
         printf $Purple
         printf '================================================================================\n'
         printf $Blue
@@ -267,6 +267,7 @@ function git_update_repositories()
   for d in *
     do
       if [ -d "$d/.git" ]; then
+        printf '\n\n\n\n\n\n\n\n'
         printf $Purple
         printf '================================================================================\n'
         printf $Blue
