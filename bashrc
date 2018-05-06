@@ -239,7 +239,7 @@ function git_update_repositories_n_times()
     done
 }
 
-function git_update_repositories()
+function git_status_repositories()
 {
   for d in *
     do
@@ -253,9 +253,6 @@ function git_update_repositories()
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
         printf $NC
         cd $d
-        printf $Yellow
-        printf 'git status\n'
-        printf $NC
         git status
         cd ..
         printf $Purple
@@ -264,6 +261,10 @@ function git_update_repositories()
         printf $NC
       fi
     done
+}
+
+function git_update_repositories()
+{
   for d in *
     do
       if [ -d "$d/.git" ]; then
