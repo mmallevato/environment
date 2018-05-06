@@ -250,13 +250,11 @@ function git_status_repositories()
         printf $Blue
         printf "$d\n"
         printf $Purple
-        printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
         printf $NC
         cd $d
         git status
         cd ..
         printf $Purple
-        printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
         printf '================================================================================\n'
         printf $NC
       fi
