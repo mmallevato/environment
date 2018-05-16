@@ -4,6 +4,7 @@
 
 ```sh
 cp bashrc ~/.bashrc
+
 cp condarc ~/.condarc
 ```
 
@@ -11,6 +12,7 @@ cp condarc ~/.condarc
 
 ```sh
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
@@ -28,9 +30,11 @@ conda update --all --yes &&
 conda install --channel conda-forge --yes jupyterlab jupyter_contrib_nbextensions nb_conda &&
 
 conda install --channel conda-forge --yes yapf isort pylama &&
+
 pip install beautysh &&
 
 conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller &&
+
 pip install spro &&
 
 conda install --channel conda-forge --yes git git-lfs bfg &&
@@ -46,14 +50,19 @@ conda install --channel conda-forge --yes click flask flask-cors requests &&
 conda install --channel conda-forge --yes rpy2 r-mass &&
 
 conda install --channel conda-forge --yes biopython &&
+
 conda install --channel bioconda --yes pyfaidx &&
+
 conda install --channel makman09 --yes pytabix &&
+
 pip install pytabix geoparse &&
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff &&
+
 pip install fastqp &&
 
 if [ "$(uname)" == "Darwin" ]; then :
+
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
@@ -63,20 +72,27 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   echo 'Set up sequencing_process_python2.7 environment.'
 
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then :
+
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then :
+
 fi
 
 conda install --channel node --yes nodejs &&
+
 conda install --channel conda-forge --yes yarn &&
 
-pip install genotype_to_phenotype
+pip install genotype_to_phenotype &&
+
+conda update --all --yes
 ```
 
 ## Set up git
 
 ```sh
 git config --global user.name 'KwatME'
+
 git config --global user.email kwatme8@gmail.com
+
 git config --global credential.helper 'cache --timeout=86400'
 ```
 
@@ -90,7 +106,9 @@ jupyter labextension install jupyterlab_vim
 
 ```sh
 jupyter notebook --generate-config
+
 ls -a ~/.jupyter
+
 jupyter notebook password
 ```
 

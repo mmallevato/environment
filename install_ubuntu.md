@@ -17,8 +17,11 @@
 
 ```sh
 sudo apt update && sudo apt upgrade
+
 sudo apt install gparted exfat-fuse exfat-utils screen vim tree
+
 sudo apt clean && sudo apt autoremove
+
 sudo reboot
 ```
 
@@ -38,7 +41,10 @@ sudo update-alternatives --config editor
 
 ```sh
 sudo apt-get install openssh-server
+
 sudo service ssh status
+
 sudo vi /etc/ssh/sshd_config
+
 sudo service ssh restart
 ```
