@@ -51,9 +51,7 @@ conda install --channel conda-forge --yes rpy2 r-mass &&
 
 conda install --channel conda-forge --yes biopython &&
 
-conda install --channel bioconda --yes pyfaidx &&
-
-conda install --channel makman09 --yes pytabix &&
+conda install --channel Guardiome --yes pytabix &&
 
 pip install pytabix geoparse &&
 
@@ -124,10 +122,6 @@ jupyter notebook password
 -   Atom
 
 -   hugo
-
--   VLC media player
-
--   Shotcut
 
 -   Etcher
 
