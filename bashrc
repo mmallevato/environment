@@ -380,7 +380,7 @@ function git_clone_ccal()
   git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
   git clone --recursive https://github.com/UCSD-CCAL/explore_tcga
   git clone --recursive https://github.com/UCSD-CCAL/find_differential_expressions
-  git clone --recursive https://github.com/UCSD-CCAL/map
+  git clone --recursive https://github.com/UCSD-CCAL/make_context_map
 }
 
 function git_truncate_history()
