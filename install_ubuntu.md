@@ -2,25 +2,24 @@
 
 ## Update BIOS
 
-## Configure BIOS
+## Configure BIOS (as necessary)
 
 -   SATA Controller Mode = AHCI
 -   Boot Mode = UEFI
 -   Secure Boot = Disabled
 -   Legacy Mode = Enabled
+-   Graphics = Discreet
 
-## Install Ubuntu 16.04.3 LTS
-
-## Trim launcher
+## Install Ubuntu 18.04.3 LTS
 
 ## Get softwares
 
 ```sh
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade &&
 
-sudo apt install gparted exfat-fuse exfat-utils screen vim tree
+sudo apt install gparted exfat-fuse exfat-utils screen vim tree &&
 
-sudo apt clean && sudo apt autoremove
+sudo apt clean && sudo apt autoremove &&
 
 sudo reboot
 ```
