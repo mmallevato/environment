@@ -394,16 +394,16 @@ function git_truncate_history()
 
 function update_linux()
 {
-  sudo apt update &&
-  sudo apt upgrade &&
-  sudo apt autoremove &&
+  sudo apt update
+  sudo apt upgrade
+  sudo apt autoremove
   sudo reboot
 }
 
 # ==============================================================================
 # Make conda path visible
 # ==============================================================================
-export PATH="$HOME/Jumis/conda/bin:$PATH"
+export PATH="$HOME/Jumis/miniconda3/bin:$PATH"
 
 # ==============================================================================
 # Style shell prompt
