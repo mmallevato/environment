@@ -102,7 +102,7 @@ git config --global credential.helper 'cache --timeout=86400'
 jupyter labextension install jupyterlab_vim
 ```
 
-## Get other softwares
+## Get other software
 
 -   macOS
 
@@ -113,7 +113,13 @@ jupyter labextension install jupyterlab_vim
 
 -   Atom
 
-## Get Atom packages
+## Get browser extension
+
+-   LastPass
+-   Addblock plus
+-   Vimium
+
+## Get Atom package
 
 -   atom-beautify
 -   autocomplete-python
