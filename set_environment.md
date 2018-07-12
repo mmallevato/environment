@@ -1,26 +1,22 @@
 # Set up environment
 
-## Get `~/.*rc`
+## Get profile
 
 ```sh
+# Linux
 cp bashrc ~/.bashrc
+
+# macOS
+cp bashrc ~/.bach_profile
 
 cp condarc ~/.condarc
 ```
 
-## Set up vim
+## Set up conda root environment
 
-```sh
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+### Get conda from <https://conda.io/miniconda.html> and install
 
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-```
-
-## Set up conda root environments
-
-### Get miniconda from <https://conda.io/miniconda.html> and install
-
-### Install stuff
+### Install stuff using conda
 
 ```sh
 conda update --name base conda --yes &&
@@ -84,12 +80,20 @@ pip install genotype_to_phenotype &&
 conda update --all --yes
 ```
 
+## Set up vim
+
+```sh
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+
 ## Set up git
 
 ```sh
-git config --global user.name 'KwatME'
+git config --global user.name 'abc'
 
-git config --global user.email kwatme8@gmail.com
+git config --global user.email a@b.c
 
 git config --global credential.helper 'cache --timeout=86400'
 ```
@@ -100,19 +104,9 @@ git config --global credential.helper 'cache --timeout=86400'
 jupyter labextension install jupyterlab_vim
 ```
 
-## Set Jupyter password (for deploying notebook on server)
-
-```sh
-jupyter notebook --generate-config
-
-ls -a ~/.jupyter
-
-jupyter notebook password
-```
-
 ## Get other softwares
 
--   macOS only
+-   macOS
 
     -   Get xCode
     -   Get brew
@@ -121,15 +115,10 @@ jupyter notebook password
 
 -   Atom
 
--   hugo
-
--   Etcher
-
 ## Get Atom packages
 
 -   atom-beautify
 -   autocomplete-python
--   ex-mode
 -   git-plus
 -   git-time-machine
 -   linter-pylama
