@@ -15,11 +15,15 @@
 ## Get softwares
 
 ```sh
-sudo apt update && sudo apt upgrade &&
+sudo apt update
 
-sudo apt install gparted exfat-fuse exfat-utils screen vim tree &&
+sudo apt upgrade
 
-sudo apt clean && sudo apt autoremove &&
+sudo apt install gparted exfat-fuse exfat-utils screen vim tree
+
+sudo apt clean
+
+sudo apt autoremove
 
 sudo reboot
 ```
