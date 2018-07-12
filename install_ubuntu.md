@@ -15,11 +15,13 @@
 ## Get software
 
 ```sh
+sudo add-apt-repository 'deb http://archive.canonical.com/ $(lsb_release -sc) partner'
+
 sudo apt update
 
 sudo apt upgrade
 
-sudo apt install gparted exfat-fuse exfat-utils screen vim tree
+sudo apt install vim screen tree adobe-flashplugin browser-plugin-freshplayer-pepperflash gparted exfat-fuse exfat-utils
 
 sudo apt clean
 

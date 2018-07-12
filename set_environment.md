@@ -19,47 +19,45 @@ cp condarc ~/.condarc
 ### Install stuff using conda
 
 ```sh
-conda update --name base conda --yes &&
+conda update --all --yes
 
-conda update --all --yes &&
+pip install --upgrade pip
 
-conda install --channel conda-forge --yes jupyterlab jupyter_contrib_nbextensions nb_conda &&
+conda install --channel conda-forge --yes jupyterlab
 
-conda install --channel conda-forge --yes yapf isort pylama &&
+conda install --channel conda-forge --yes yapf isort pylama
 
-conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller &&
+conda install --channel conda-forge --yes pyinstaller
 
-pip install spro &&
+conda install --channel conda-forge --yes git git-lfs bfg
 
-conda install --channel conda-forge --yes git git-lfs bfg &&
+conda install --channel conda-forge --yes numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels
 
-conda install --channel conda-forge --yes numpy xlrd pandas hdf5 pytables scikit-learn scipy statsmodels &&
+conda install --channel conda-forge --yes matplotlib plotly
 
-conda install --channel conda-forge --yes plotly matplotlib &&
+conda install --channel conda-forge --yes pycrypto bcrypt
 
-conda install --channel conda-forge --yes pycrypto bcrypt &&
+conda install --channel conda-forge --yes click flask flask-cors requests
 
-conda install --channel conda-forge --yes click flask flask-cors requests &&
+conda install --channel conda-forge --yes rpy2 r-mass
 
-conda install --channel conda-forge --yes rpy2 r-mass &&
+conda install --channel conda-forge --yes biopython
 
-conda install --channel conda-forge --yes biopython &&
+conda install --channel Guardiome --yes pytabix
 
-conda install --channel Guardiome --yes pytabix &&
+pip install geoparse
 
-pip install pytabix geoparse &&
+conda install --channel conda-forge --yes cython pefile
 
-conda install --channel bioconda --yes dwgsim skewer fastqc picard gatk4 seqtk htslib samtools bwa hisat2 kallisto freebayes bcftools snpeff &&
-
-pip install fastqp &&
+conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
 if [ "$(uname)" == "Darwin" ]; then :
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
-  conda create --name sequencing_process_python2.7 --yes python=2.7 &&
+  conda create --name sequencing_process_python2.7 --yes python=2.7
 
-  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta &&  # canvas
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta  # canvas
 
   echo 'Set up sequencing_process_python2.7 environment.'
 
@@ -69,11 +67,9 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then :
 
 fi
 
-conda install --channel node --yes nodejs &&
+conda install --channel conda-forge --yes nodejs yarn
 
-conda install --channel conda-forge --yes yarn &&
-
-pip install genotype_to_phenotype &&
+pip install genotype_to_phenotype
 
 conda update --all --yes
 ```
@@ -89,17 +85,19 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ## Set up git
 
 ```sh
-git config --global user.name 'abc'
+git config --global user.name 'username'
 
-git config --global user.email a@b.c
+git config --global user.email email
 
 git config --global credential.helper 'cache --timeout=86400'
 ```
 
-## Get Jupyter VIM binder
+## Get Jupyter extension
 
 ```sh
 jupyter labextension install jupyterlab_vim
+
+jupyter labextension install @jupyterlab/plotly-extension
 ```
 
 ## Get other software
