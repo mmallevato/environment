@@ -119,6 +119,7 @@ jupyter labextension install jupyterlab_vim
 
 -   atom-beautify
 -   autocomplete-python
+-   ex-mode
 -   git-plus
 -   git-time-machine
 -   linter-pylama

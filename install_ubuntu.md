@@ -12,7 +12,7 @@
 
 ## Install Ubuntu 18.04.3 LTS
 
-## Get softwares
+## Get software
 
 ```sh
 sudo apt update
