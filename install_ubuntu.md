@@ -10,7 +10,7 @@
 -   Legacy Mode = Enabled
 -   Graphics = Discreet
 
-## Install Ubuntu 18.04.3 LTS
+## Install Ubuntu 18.04
 
 ## Get software
 
