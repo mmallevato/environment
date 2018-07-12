@@ -27,8 +27,6 @@ conda install --channel conda-forge --yes jupyterlab jupyter_contrib_nbextension
 
 conda install --channel conda-forge --yes yapf isort pylama &&
 
-pip install beautysh &&
-
 conda install --channel conda-forge --yes twine conda-build anaconda-client pyinstaller &&
 
 pip install spro &&
