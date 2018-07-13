@@ -41,9 +41,9 @@ conda install --channel conda-forge --yes biopython
 
 conda install --channel Guardiome --yes pytabix
 
-pip install geoparse
-
 conda install --channel conda-forge --yes cython pefile
+
+pip install geoparse
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
