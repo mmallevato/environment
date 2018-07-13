@@ -17,8 +17,6 @@ cp condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-pip install --upgrade pip
-
 conda install --channel conda-forge --yes jupyterlab
 
 conda install --channel conda-forge --yes yapf isort pylama
