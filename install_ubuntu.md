@@ -9,25 +9,23 @@
 -   Boot Mode = UEFI
 -   SATA Controller Mode = AHCI
 
-## Install Ubuntu 18.04
+## Minimal install Ubuntu 18.04
 
 ## Get software
+
+Check Software Updater > Settings > Other Software > Canonical Partners
 
 ```sh
 sudo apt update
 
-sudo apt upgrade
+sudo apt full-upgrade
 
 sudo apt install vim screen tree adobe-flashplugin browser-plugin-freshplayer-pepperflash gparted exfat-fuse exfat-utils
 
-sudo apt clean
-
-sudo apt autoremove
+sudo apt full-upgrade
 
 sudo reboot
 ```
-
-## Configure System Settings
 
 ## Set vi as the default text editor
 
@@ -35,7 +33,13 @@ sudo reboot
 sudo update-alternatives --config editor
 ```
 
-## Configure File view (Edit --> Preferences)
+## Configure Settings
+
+## Configure Files preferences
+
+## Delete default directories
+
+## Configure Firefox preferences
 
 ## [set_environment.md](set_environment.md)
 
