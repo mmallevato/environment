@@ -3,11 +3,7 @@
 ## Get profile
 
 ```sh
-# Linux
 cp bashrc ~/.bashrc
-
-# macOS
-cp bashrc ~/.bach_profile
 
 cp condarc ~/.condarc
 ```
@@ -85,7 +81,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ## Set up git
 
 ```sh
-git config --global user.name 'username'
+git config --global user.name username
 
 git config --global user.email email
 
