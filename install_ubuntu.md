@@ -9,7 +9,7 @@
 -   Boot Mode = UEFI
 -   SATA Controller Mode = AHCI
 
-## Install Ubuntu 18.04
+## Install Ubuntu 18.04 (Minimal install)
 
 ## Get software
 
