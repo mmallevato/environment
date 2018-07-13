@@ -4,19 +4,16 @@
 
 ## Configure BIOS (as necessary)
 
--   SATA Controller Mode = AHCI
--   Boot Mode = UEFI
 -   Secure Boot = Disabled
--   Legacy Mode = Enabled
 -   Graphics = Discreet
+-   Boot Mode = UEFI
+-   SATA Controller Mode = AHCI
 
 ## Install Ubuntu 18.04
 
 ## Get software
 
 ```sh
-sudo add-apt-repository 'deb http://archive.canonical.com/ $(lsb_release -sc) partner'
-
 sudo apt update
 
 sudo apt upgrade
