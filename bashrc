@@ -348,7 +348,7 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/linear_algebra
   git clone --recursive https://github.com/KwatME/linear_model
   git clone --recursive https://github.com/KwatME/match
-  git clone --recursive https://github.com/KwatME/matrix_factorization
+  git clone --recursive https://github.com/KwatME/matrix_factorize
   git clone --recursive https://github.com/KwatME/nd_array
   git clone --recursive https://github.com/KwatME/nmf_map
   git clone --recursive https://github.com/KwatME/plot
