@@ -114,12 +114,15 @@ jupyter labextension install @jupyterlab/plotly-extension
 ## Get Atom package
 
 -   atom-beautify
+
+    Set `Python` beautifier to be `yapf`
+
 -   autocomplete-python
 -   ex-mode
 -   git-plus
 -   git-time-machine
 -   linter-pylama
 
-    Ignore C901,D100,D101,D102,D103,D104,D105,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
+    Ignore C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
 
 -   vim-mode-plus

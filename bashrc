@@ -152,8 +152,6 @@ fi
 # ==============================================================================
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
 alias ll='ls -Fhl'
 alias la='ls -Fhla'
 alias lx='ls -FhlXB'
@@ -162,12 +160,11 @@ alias lt='ls -Fhltr'
 alias lc='ls -Fhltcr'
 alias lu='ls -Fhltur'
 alias rm='rm -i'
-alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -vp'
 alias du='du -hs'
-alias vi=vim
+alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
 function release_to_pypi()
 {
@@ -377,9 +374,8 @@ function git_clone_guardiome()
 function git_clone_omics_apps()
 {
   git clone --recursive https://github.com/KwatME/muscle_type
-  git clone --recursive https://github.com/KwatME/tumor_suppressor
   git clone --recursive https://github.com/KwatME/random_genome_peek
-  git clone --recursive https://github.com/KwatME/hereditary-pancreatic-cancer
+  git clone --recursive https://github.com/KwatME/tumor_suppressor
 }
 
 function git_clone_ccal()
