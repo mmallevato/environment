@@ -65,6 +65,8 @@ conda install --channel conda-forge --yes nodejs yarn
 
 pip install genotype_to_phenotype
 
+pip install ccal
+
 conda update --all --yes
 ```
 
