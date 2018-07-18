@@ -21,9 +21,9 @@ conda install --channel conda-forge --yes jupyterlab
 
 conda install --channel conda-forge --yes yapf isort pylama
 
-conda install --channel conda-forge --yes pyinstaller
-
 conda install --channel conda-forge --yes git git-lfs bfg
+
+conda install --channel conda-forge --yes pyinstaller twine
 
 conda install --channel conda-forge --yes numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels
 
