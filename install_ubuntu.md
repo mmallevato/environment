@@ -20,7 +20,7 @@ sudo apt update
 
 sudo apt full-upgrade
 
-sudo apt install vim screen tree adobe-flashplugin browser-plugin-freshplayer-pepperflash gparted exfat-fuse exfat-utils
+sudo apt install vim screen tree adobe-flashplugin browser-plugin-freshplayer-pepperflash gparted exfat-fuse exfat-utils default-jre default-jdk netmap
 
 sudo apt full-upgrade
 
