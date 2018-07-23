@@ -46,11 +46,15 @@ sudo update-alternatives --config editor
 ## Set up SSH
 
 ```sh
-sudo apt-get install openssh-server
+sudo apt install openssh-server
 
 sudo service ssh status
+```
 
-sudo vi /etc/ssh/sshd_config
+## Serve from UCSD
 
-sudo service ssh restart
+```sh
+sudo apt install openconnect
+sudo openconnect vpn-2.ucsd.edu  # Choose 'allthruucsd'
+ssh user@<public IP>
 ```
