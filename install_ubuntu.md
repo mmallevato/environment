@@ -9,7 +9,7 @@
 -   Boot Mode = UEFI
 -   SATA Controller Mode = AHCI
 
-## Minimal install Ubuntu 18.04.01
+## Minimal install Ubuntu 18.04.1
 
 ## Configure browser
 
