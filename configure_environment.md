@@ -17,7 +17,7 @@ cp condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass
+conda install --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg awscli yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass
 
 conda install --channel Guardiome --yes pytabix
 
