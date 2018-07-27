@@ -11,9 +11,13 @@
 
 ## Minimal install Ubuntu 18.04
 
+## Configure browser
+
 ## Get software
 
 Check Software Updater > Settings > Other Software > Canonical Partners
+
+Check Software Updater > Settings > Additional Drivers > (as necessary)
 
 ```sh
 sudo apt update
