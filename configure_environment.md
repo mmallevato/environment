@@ -1,4 +1,4 @@
-# Set up environment
+# Configure environment
 
 ## Get profile
 
@@ -8,7 +8,7 @@ cp bashrc ~/.bashrc
 cp condarc ~/.condarc
 ```
 
-## Set up conda root environment
+## Configure conda root environment
 
 ### Get conda from <https://conda.io/miniconda.html> and install
 
@@ -17,31 +17,11 @@ cp condarc ~/.condarc
 ```sh
 conda update --all --yes
 
-conda install --channel conda-forge --yes jupyterlab
-
-conda install --channel conda-forge --yes yapf isort pylama
-
-conda install --channel conda-forge --yes git git-lfs bfg
-
-conda install --channel conda-forge --yes pyinstaller twine
-
-conda install --channel conda-forge --yes numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels
-
-conda install --channel conda-forge --yes matplotlib plotly
-
-conda install --channel conda-forge --yes pycrypto bcrypt
-
-conda install --channel conda-forge --yes click flask flask-cors requests
-
-conda install --channel conda-forge --yes rpy2 r-mass
-
-conda install --channel conda-forge --yes biopython
+conda install --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass
 
 conda install --channel Guardiome --yes pytabix
 
-conda install --channel conda-forge --yes cython pefile
-
-pip install geoparse
+pip install geoparse ccal
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
@@ -61,16 +41,10 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then :
 
 fi
 
-conda install --channel conda-forge --yes nodejs yarn
-
-pip install genotype_to_phenotype
-
-pip install ccal
-
 conda update --all --yes
 ```
 
-## Set up vim
+## Configure vim
 
 ```sh
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -78,7 +52,7 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
-## Set up git
+## Configure git
 
 ```sh
 git config --global user.name username
