@@ -31,7 +31,7 @@ sudo apt full-upgrade
 sudo reboot
 ```
 
-## Set vi as the default text editor
+## Set vim as the default text editor
 
 ```sh
 sudo update-alternatives --config editor
