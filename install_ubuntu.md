@@ -24,7 +24,7 @@ sudo apt update
 
 sudo apt full-upgrade
 
-sudo apt install vim screen tree adobe-flashplugin browser-plugin-freshplayer-pepperflash gparted exfat-fuse exfat-utils default-jre default-jdk netmap
+sudo apt install vim screen tree gparted exfat-fuse exfat-utils default-jdk adobe-flashplugin browser-plugin-freshplayer-pepperflash
 
 sudo apt full-upgrade
 
@@ -42,8 +42,6 @@ sudo update-alternatives --config editor
 ## Configure Files preferences
 
 ## Delete default directories
-
-## Configure Firefox preferences
 
 ## [set_environment.md](set_environment.md)
 
