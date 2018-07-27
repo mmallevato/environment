@@ -8,7 +8,7 @@ cp bashrc ~/.bashrc
 cp condarc ~/.condarc
 ```
 
-## Configure conda root environment
+## Configure conda environment
 
 ### Get conda from <https://conda.io/miniconda.html> and install
 
@@ -70,24 +70,11 @@ jupyter labextension install jupyterlab_vim
 jupyter labextension install @jupyterlab/plotly-extension
 ```
 
-## Get other software
+## Configure Atom
 
--   macOS
+### Install Atom
 
-    -   Get xCode
-    -   Get brew
-
--   Chrome
-
--   Atom
-
-## Get browser extension
-
--   LastPass
--   Addblock plus
--   Vimium
-
-## Get Atom package
+### Install Atom packages
 
 -   atom-beautify
 
@@ -102,3 +89,9 @@ jupyter labextension install @jupyterlab/plotly-extension
     Ignore C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
 
 -   vim-mode-plus
+
+## Get browser stuff
+
+-   LastPass
+-   Addblock plus
+-   Vimium
