@@ -41,7 +41,7 @@ sudo update-alternatives --config editor
 
 ## Configure Files preferences
 
-## Delete default directories
+Delete default directories
 
 ## [set_environment.md](set_environment.md)
 
