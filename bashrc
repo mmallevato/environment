@@ -357,6 +357,8 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
   git clone --recursive https://github.com/KwatME/variant
+  git clone --recursive https://github.com/Guardiome/cellularcontext.com
+  git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
 }
 
 function git_clone_guardiome()
