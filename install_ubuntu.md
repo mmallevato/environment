@@ -15,9 +15,9 @@
 
 ## Get software
 
-Check Software Updater > Settings > Other Software > Canonical Partners
+Check `Software Updater > Settings > Other Software > Canonical Partners`
 
-Check Software Updater > Settings > Additional Drivers >
+Check `Software Updater > Settings > Additional Drivers > `
 
 ```sh
 sudo apt update
