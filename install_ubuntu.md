@@ -39,15 +39,15 @@ sudo update-alternatives --config editor
 
 ## Configure Settings
 
-## Configure Files preferences
+## Configure Files
 
 Delete default directories
 
-## [set_environment.md](set_environment.md)
+## [configure_environment.md](configure_environment.md)
 
 ## Configure dock
 
-## Set up SSH
+## Configure SSH
 
 ```sh
 sudo apt install openssh-server
