@@ -1,8 +1,10 @@
 # Install Ubuntu
 
-## Update BIOS
-
 ## Configure BIOS
+
+Update BIOS
+
+Configure BIOS
 
 -   Secure Boot = Disabled
 -   Graphics = Discreet
@@ -15,9 +17,8 @@
 
 ## Get software
 
-Check `Software Updater > Settings > Other Software > Canonical Partners`
-
-Check `Software Updater > Settings > Additional Drivers > `
+Check `Software Updater` > `Settings` > `Other Software` > `Canonical Partners`
+Check `Software Updater` > `Settings` > `Additional Drivers` >
 
 ```sh
 sudo apt update
@@ -31,7 +32,7 @@ sudo apt full-upgrade
 sudo reboot
 ```
 
-## Configure default text editor
+## Configure text editor
 
 ```sh
 sudo update-alternatives --config editor

@@ -10,9 +10,7 @@ cp condarc ~/.condarc
 
 ## Configure conda environment
 
-### Get conda from <https://conda.io/miniconda.html> and install
-
-### Install stuff using conda
+Get conda from <https://conda.io/miniconda.html> and install
 
 ```sh
 conda update --all --yes
@@ -72,9 +70,9 @@ jupyter labextension install @jupyterlab/plotly-extension
 
 ## Configure Atom
 
-### Install Atom
+Install Atom
 
-### Install Atom packages
+Install Atom packages
 
 -   atom-beautify
 
