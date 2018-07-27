@@ -29,11 +29,11 @@ if [ "$(uname)" == "Darwin" ]; then :
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
+  echo 'Configuring sequencing_process_python2.7 environment ...'
+
   conda create --name sequencing_process_python2.7 --yes python=2.7
 
   conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta  # canvas
-
-  echo 'Set up sequencing_process_python2.7 environment.'
 
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then :
 
