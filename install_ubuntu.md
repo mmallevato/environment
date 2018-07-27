@@ -2,14 +2,14 @@
 
 ## Update BIOS
 
-## Configure BIOS (as necessary)
+## Configure BIOS
 
 -   Secure Boot = Disabled
 -   Graphics = Discreet
 -   Boot Mode = UEFI
 -   SATA Controller Mode = AHCI
 
-## Minimal install Ubuntu 18.04
+## Minimal install Ubuntu 18.04.01
 
 ## Configure browser
 
@@ -17,7 +17,7 @@
 
 Check Software Updater > Settings > Other Software > Canonical Partners
 
-Check Software Updater > Settings > Additional Drivers > (as necessary)
+Check Software Updater > Settings > Additional Drivers >
 
 ```sh
 sudo apt update
@@ -44,6 +44,8 @@ sudo update-alternatives --config editor
 ## Delete default directories
 
 ## [set_environment.md](set_environment.md)
+
+## Configure dock
 
 ## Set up SSH
 
