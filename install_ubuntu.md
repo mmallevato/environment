@@ -13,11 +13,16 @@ Configure BIOS
 
 ## Minimal install Ubuntu 18.04.1
 
+Check `Install third-party software for graphics and Wi-Fi hardware and additional media formats`
+
+Check `Erase disk and install Ubuntu`
+
 ## Configure browser
 
 ## Get software
 
 Check `Software Updater` > `Settings` > `Other Software` > `Canonical Partners`
+
 Check `Software Updater` > `Settings` > `Additional Drivers` >
 
 ```sh

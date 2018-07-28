@@ -398,14 +398,6 @@ function git_truncate_history()
   git branch -D temp
 }
 
-function update_linux()
-{
-  sudo apt update
-  sudo apt upgrade
-  sudo apt autoremove
-  sudo reboot
-}
-
 # ==============================================================================
 # Make conda path visible
 # ==============================================================================
