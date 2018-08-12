@@ -19,7 +19,7 @@ conda install --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstall
 
 conda install --channel Guardiome --yes pytabix
 
-pip install geoparse ccal
+pip install geoparse
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
@@ -77,6 +77,7 @@ Install Atom packages
 -   atom-beautify
 
     Set `Python` beautifier to be `yapf`
+    Set `Python` formatter to be `yapf`
 
 -   autocomplete-python
 -   ex-mode
