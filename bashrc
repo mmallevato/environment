@@ -399,6 +399,11 @@ function git_truncate_history()
   git branch -D temp
 }
 
+function clear_notebooks()
+{
+  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+}
+
 # ==============================================================================
 # Make conda path visible
 # ==============================================================================
