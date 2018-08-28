@@ -335,6 +335,7 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/environment
   git clone --recursive https://github.com/KwatME/feature
   git clone --recursive https://github.com/KwatME/gct_gmt
+  git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/genome
   git clone --recursive https://github.com/KwatME/geo
   git clone --recursive https://github.com/KwatME/gsea
@@ -347,7 +348,6 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/match
   git clone --recursive https://github.com/KwatME/matrix_factorize
   git clone --recursive https://github.com/KwatME/nd_array
-  git clone --recursive https://github.com/KwatME/nmf_map
   git clone --recursive https://github.com/KwatME/neural_network
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
