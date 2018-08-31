@@ -324,7 +324,7 @@ function git_update_repositories()
     done
 }
 
-function git_clone_kwatme()
+function git_clone_kwatme_libary()
 {
   git clone --recursive https://github.com/KwatME/classify
   git clone --recursive https://github.com/KwatME/cluster
@@ -342,7 +342,6 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/hdf5
   git clone --recursive https://github.com/KwatME/information
   git clone --recursive https://github.com/KwatME/kernel_density
-  git clone --recursive https://github.com/KwatME/kwatme.com
   git clone --recursive https://github.com/KwatME/linear_algebra
   git clone --recursive https://github.com/KwatME/linear_model
   git clone --recursive https://github.com/KwatME/match
@@ -358,6 +357,25 @@ function git_clone_kwatme()
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
   git clone --recursive https://github.com/KwatME/variant
+}
+
+function git_clone_kwatme_workflow()
+{
+  git clone --recursive https://github.com/KwatME/explore_tcga
+  git clone --recursive https://github.com/KwatME/find_differential_expression
+  git clone --recursive https://github.com/KwatME/model_and_infer
+}
+
+function git_clone_kwatme_omics_apps()
+{
+  git clone --recursive https://github.com/KwatME/muscle_type
+  git clone --recursive https://github.com/KwatME/random_genome_peek
+  git clone --recursive https://github.com/KwatME/tumor_suppressor
+}
+
+function git_clone_kwatme_website()
+{
+  git clone --recursive https://github.com/KwatME/kwatme.com
   git clone --recursive https://github.com/Guardiome/cellularcontext.com
   git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
 }
@@ -374,19 +392,10 @@ function git_clone_guardiome()
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
 }
 
-function git_clone_omics_apps()
-{
-  git clone --recursive https://github.com/KwatME/muscle_type
-  git clone --recursive https://github.com/KwatME/random_genome_peek
-  git clone --recursive https://github.com/KwatME/tumor_suppressor
-}
-
 function git_clone_ccal()
 {
   git clone --recursive https://github.com/UCSD-CCAL/ccal
   git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
-  git clone --recursive https://github.com/UCSD-CCAL/explore_tcga
-  git clone --recursive https://github.com/UCSD-CCAL/find_differential_expression
 }
 
 function git_truncate_history()
@@ -398,7 +407,7 @@ function git_truncate_history()
   git branch -D temp
 }
 
-function clear_notebooks()
+function clear_notebook()
 {
   jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 }
