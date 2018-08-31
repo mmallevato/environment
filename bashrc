@@ -326,14 +326,14 @@ function git_update_repositories()
 
 function git_clone_kwatme_libary()
 {
-  git clone --recursive https://github.com/KwatME/classify
-  git clone --recursive https://github.com/KwatME/cluster
+  git clone --recursive https://github.com/KwatME/classification
+  git clone --recursive https://github.com/KwatME/clustering
   git clone --recursive https://github.com/KwatME/context
-  git clone --recursive https://github.com/KwatME/cross_validate
-  git clone --recursive https://github.com/KwatME/cryptograph
-  git clone --recursive https://github.com/KwatME/dimension_scale
-  git clone --recursive https://github.com/KwatME/environment
+  git clone --recursive https://github.com/KwatME/cross_validation
+  git clone --recursive https://github.com/KwatME/cryptography
+  git clone --recursive https://github.com/KwatME/dimension_scaling
   git clone --recursive https://github.com/KwatME/feature
+  git clone --recursive https://github.com/KwatME/feature_x_sample
   git clone --recursive https://github.com/KwatME/gct_gmt
   git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/genome
@@ -345,12 +345,12 @@ function git_clone_kwatme_libary()
   git clone --recursive https://github.com/KwatME/linear_algebra
   git clone --recursive https://github.com/KwatME/linear_model
   git clone --recursive https://github.com/KwatME/match
-  git clone --recursive https://github.com/KwatME/matrix_factorize
+  git clone --recursive https://github.com/KwatME/matrix_factorization
   git clone --recursive https://github.com/KwatME/nd_array
   git clone --recursive https://github.com/KwatME/neural_network
   git clone --recursive https://github.com/KwatME/plot
   git clone --recursive https://github.com/KwatME/probability
-  git clone --recursive https://github.com/KwatME/regress
+  git clone --recursive https://github.com/KwatME/regression
   git clone --recursive https://github.com/KwatME/sequence
   git clone --recursive https://github.com/KwatME/sequencing_process
   git clone --recursive https://github.com/KwatME/spro
