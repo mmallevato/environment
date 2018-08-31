@@ -7,7 +7,7 @@ case $- in
 esac
 
 # ==============================================================================
-# Define colors
+# Define color
 # ==============================================================================
 # Reset
 Color_Off="\x1B[0m"      # Text Reset
@@ -89,7 +89,7 @@ On_IWhite="\x1B[0;107m"  # White
 screen -ls
 
 # ==============================================================================
-# Don't put duplicate lines or lines starting with space in the history
+# Do not put duplicate lines or lines starting with space in the history
 # ==============================================================================
 HISTCONTROL=ignoreboth
 
@@ -101,9 +101,9 @@ shopt -s histappend
 # ==============================================================================
 # Set history length
 # ==============================================================================
-HISTSIZE=1000
+HISTSIZE=8000
 
-HISTFILESIZE=2000
+HISTFILESIZE=8000
 
 # ==============================================================================
 # Check the window size after each command and, if necessary, update the values
