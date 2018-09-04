@@ -13,7 +13,7 @@ esac
 Color_Off="\x1B[0m"      # Text Reset
 NC="\x1B[m"              # Color Reset
 
-# Regular Colors
+# Regular
 Black="\x1B[0;30m"       # Black
 Red="\x1B[0;31m"         # Red
 Green="\x1B[0;32m"       # Green
@@ -73,7 +73,7 @@ On_Purple="\x1B[45m"     # Purple
 On_Cyan="\x1B[46m"       # Cyan
 On_White="\x1B[47m"      # White
 
-# High Intensity backgrounds
+# High Intensity Background
 On_IBlack="\x1B[0;100m"  # Black
 On_IRed="\x1B[0;101m"    # Red
 On_IGreen="\x1B[0;102m"  # Green
@@ -82,11 +82,6 @@ On_IBlue="\x1B[0;104m"   # Blue
 On_IPurple="\x1B[0;105m" # Purple
 On_ICyan="\x1B[0;106m"   # Cyan
 On_IWhite="\x1B[0;107m"  # White
-
-# ==============================================================================
-# Greet
-# ==============================================================================
-screen -ls
 
 # ==============================================================================
 # Do not put duplicate lines or lines starting with space in the history
@@ -101,9 +96,9 @@ shopt -s histappend
 # ==============================================================================
 # Set history length
 # ==============================================================================
-HISTSIZE=8000
+HISTSIZE=88888888
 
-HISTFILESIZE=8000
+HISTFILESIZE=88888888
 
 # ==============================================================================
 # Check the window size after each command and, if necessary, update the values
@@ -112,12 +107,28 @@ HISTFILESIZE=8000
 shopt -s checkwinsize
 
 # ==============================================================================
-# Make less more friendly for non-text input files
+# Make less more friendly for non-text input file
 # ==============================================================================
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # ==============================================================================
-# Enable color support of ls and also add handy aliases
+# Enable colored GCC warning and error
+# ==============================================================================
+export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+
+# ==============================================================================
+# Enable programmable completion feature
+# ==============================================================================
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# ==============================================================================
+# Enable color support of ls and also add handy alias
 # ==============================================================================
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -132,33 +143,13 @@ else
 fi
 
 # ==============================================================================
-# Enable colored GCC warnings and errors
-# ==============================================================================
-export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
-
-# ==============================================================================
-# Enable programmable completion features
-# ==============================================================================
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-# ==============================================================================
-# Define aliases and functions
+# Define aliase
 # ==============================================================================
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ll='ls -Fhl'
-alias la='ls -Fhla'
-alias lx='ls -FhlXB'
-alias lz='ls -FhlSr'
-alias lt='ls -Fhltr'
-alias lc='ls -Fhltcr'
-alias lu='ls -Fhltur'
+alias ll='ls -hFl'
+alias la='ls -hFla'
+alias lt='ls -hFltr'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -166,22 +157,18 @@ alias mkdir='mkdir -vp'
 alias du='du -hs'
 alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
-function release_to_pypi()
-{
-  rm -rf build/ *.egg-info dist
-  python setup.py sdist
-  python setup.py bdist_wheel
-  twine upload dist/*
-}
-
+# ==============================================================================
+# Define function
+# ==============================================================================
 function ssh_port()
 {
   ssh $1 -f -N -L localhost:$2:localhost:$2
 }
 
-function remove_ds_store()
+function chmod_all()
 {
-  find . -name .DS_Store -delete
+  find . -not -path '*/.*' -type f -exec chmod 644 {} \;
+  find . -not -path '*/.*' -type d -exec chmod 755 {} \;
 }
 
 function remove_pyc()
@@ -189,10 +176,9 @@ function remove_pyc()
   find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf
 }
 
-function chmod_all()
+function remove_ds_store()
 {
-  find . -not -path '*/.*' -type f -exec chmod 644 {} \;
-  find . -not -path '*/.*' -type d -exec chmod 755 {} \;
+  find . -name .DS_Store -delete
 }
 
 function extract()
@@ -228,20 +214,23 @@ function make_zip()
   zip -r "${1%%/}.zip" "$1"
 }
 
+function release_to_pypi()
+{
+  rm -rf build/ *.egg-info dist
+  python setup.py sdist
+  python setup.py bdist_wheel
+  twine upload dist/*
+}
+
+function clear_notebook()
+{
+  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+}
+
 function git_cache()
 {
   git config --global credential.helper cache
   git config --global credential.helper "cache --timeout=$1"
-}
-
-function git_update_repositories_n_times()
-{
-  for i in $(seq $1);
-    do
-      i=$((i-1))
-      printf "$Yellow$i\n$NC"
-      git_update_repositories $i
-    done
 }
 
 function git_status_repositories()
@@ -324,20 +313,29 @@ function git_update_repositories()
     done
 }
 
+function git_update_repositories_n_times()
+{
+  for i in $(seq $1);
+    do
+      i=$((i-1))
+      printf "$Yellow$i\n$NC"
+      git_update_repositories $i
+    done
+}
+
 function git_clone_kwatme_libary()
 {
   git clone --recursive https://github.com/KwatME/classification
   git clone --recursive https://github.com/KwatME/clustering
   git clone --recursive https://github.com/KwatME/context
   git clone --recursive https://github.com/KwatME/cross_validation
-  git clone --recursive https://github.com/KwatME/cryptography
   git clone --recursive https://github.com/KwatME/dimension_scaling
   git clone --recursive https://github.com/KwatME/feature
   git clone --recursive https://github.com/KwatME/feature_x_sample
   git clone --recursive https://github.com/KwatME/gct_gmt
-  git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/genome
   git clone --recursive https://github.com/KwatME/geo
+  git clone --recursive https://github.com/KwatME/gps_map
   git clone --recursive https://github.com/KwatME/gsea
   git clone --recursive https://github.com/KwatME/hdf5
   git clone --recursive https://github.com/KwatME/information
@@ -366,18 +364,18 @@ function git_clone_kwatme_workflow()
   git clone --recursive https://github.com/KwatME/model_and_infer
 }
 
+function git_clone_kwatme_website()
+{
+  git clone --recursive https://github.com/Guardiome/cellularcontext.com
+  git clone --recursive https://github.com/KwatME/kwatme.com
+  git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
+}
+
 function git_clone_kwatme_omics_apps()
 {
   git clone --recursive https://github.com/KwatME/muscle_type
   git clone --recursive https://github.com/KwatME/random_genome_peek
   git clone --recursive https://github.com/KwatME/tumor_suppressor
-}
-
-function git_clone_kwatme_website()
-{
-  git clone --recursive https://github.com/KwatME/kwatme.com
-  git clone --recursive https://github.com/Guardiome/cellularcontext.com
-  git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
 }
 
 function git_clone_guardiome()
@@ -405,11 +403,6 @@ function git_truncate_history()
   git rebase --onto temp $1 master
   git checkout master
   git branch -D temp
-}
-
-function clear_notebook()
-{
-  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 }
 
 # ==============================================================================
