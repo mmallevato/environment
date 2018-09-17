@@ -222,9 +222,9 @@ function release_to_pypi()
   twine upload dist/*
 }
 
-function clear_notebook()
+function clear_ipynb_output()
 {
-  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb
 }
 
 function git_cache()
