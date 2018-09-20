@@ -76,8 +76,13 @@ Install Atom packages
 
 -   atom-beautify
 
-    Set `Python` beautifier to be `yapf`
-    Set `Python` formatter to be `yapf`
+    Set Python beautifier to be yapf
+
+    Set Python formatter to be yapf
+
+    Check Python Beautify on Save
+
+    Check Markdown Beautiy on Save
 
 -   autocomplete-python
 -   ex-mode
@@ -85,7 +90,7 @@ Install Atom packages
 -   git-time-machine
 -   linter-pylama
 
-    Ignore C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
+    Add to Ignore Errors and Warnings C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
 
 -   vim-mode-plus
 
