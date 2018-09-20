@@ -171,14 +171,9 @@ function chmod_all()
   find . -not -path '*/.*' -type d -exec chmod 755 {} \;
 }
 
-function remove_pyc()
+function remove_junk()
 {
-  find . | grep -E '(__pycache__|\.pyc$)' | xargs rm -rf
-}
-
-function remove_ds_store()
-{
-  find . -name .DS_Store -delete
+  find . | grep -E '(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)' | xargs rm -rf
 }
 
 function extract()
@@ -393,7 +388,6 @@ function git_clone_guardiome()
 function git_clone_ccal()
 {
   git clone --recursive https://github.com/UCSD-CCAL/ccal
-  git clone --recursive https://github.com/UCSD-CCAL/ccal_spro_template
 }
 
 function git_truncate_history()
