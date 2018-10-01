@@ -13,13 +13,38 @@ cp condarc ~/.condarc
 Get conda from <https://conda.io/miniconda.html> and install
 
 ```sh
-conda update --all --yes
-
-conda install --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg awscli yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass
-
+conda install --channel conda-forge --yes numpy
+conda install --channel conda-forge --yes pandas
+conda install --channel conda-forge --yes scipy
+conda install --channel conda-forge --yes plotly
+conda install --channel conda-forge --yes matplotlib
+conda install --channel conda-forge --yes scikit-learn
+conda install --channel conda-forge --yes rpy2
+conda install --channel conda-forge --yes r-mass
+conda install --channel conda-forge --yes statsmodels
+pip install pyfaidx
+pip install GEOparse
+conda install --channel conda-forge --yes pytables
+conda install --channel conda-forge --yes pytabix
 conda install --channel Guardiome --yes pytabix
+conda install --channel conda-forge --yes click
+pip install ccal
 
-pip install geoparse
+conda install --channel conda-forge --yes pyinstaller
+conda install --channel conda-forge --yes yapf
+conda install --channel conda-forge --yes isort
+conda install --channel conda-forge --yes pylama
+conda install --channel conda-forge --yes jupyterlab
+
+conda install --channel conda-forge --yes nodejs
+conda install --channel conda-forge --yes yarn
+conda install --channel conda-forge --yes twine
+
+conda install --channel conda-forge --yes git
+conda install --channel conda-forge --yes git-lfs
+conda install --channel conda-forge --yes bfg
+
+conda install --channel conda-forge --yes awscli
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
