@@ -2,49 +2,24 @@
 
 ## Get profile
 
-```sh
-cp bashrc ~/.bashrc
+Get .bashrc
 
-cp condarc ~/.condarc
-```
+Get .condarc
 
 ## Configure conda environment
 
 Get conda from <https://conda.io/miniconda.html> and install
 
 ```sh
-conda install --channel conda-forge --yes numpy
-conda install --channel conda-forge --yes pandas
-conda install --channel conda-forge --yes scipy
-conda install --channel conda-forge --yes plotly
-conda install --channel conda-forge --yes matplotlib
-conda install --channel conda-forge --yes scikit-learn
-conda install --channel conda-forge --yes rpy2
-conda install --channel conda-forge --yes r-mass
-conda install --channel conda-forge --yes statsmodels
-pip install pyfaidx
-pip install GEOparse
-conda install --channel conda-forge --yes pytables
-conda install --channel conda-forge --yes pytabix
+conda install --channel conda-forge --yes numpy pandas scipy plotly matplotlib scikit-learn rpy2 r-mass statsmodels pytables click
+
 conda install --channel Guardiome --yes pytabix
-conda install --channel conda-forge --yes click
+
+pip install pyfaidx GEOparse
+
 pip install ccal
 
-conda install --channel conda-forge --yes pyinstaller
-conda install --channel conda-forge --yes yapf
-conda install --channel conda-forge --yes isort
-conda install --channel conda-forge --yes pylama
-conda install --channel conda-forge --yes jupyterlab
-
-conda install --channel conda-forge --yes nodejs
-conda install --channel conda-forge --yes yarn
-conda install --channel conda-forge --yes twine
-
-conda install --channel conda-forge --yes git
-conda install --channel conda-forge --yes git-lfs
-conda install --channel conda-forge --yes bfg
-
-conda install --channel conda-forge --yes awscli
+conda install --channel conda-forge --yes pyinstaller yapf isort pylama jupyterlab nodejs yarn twine git git-lfs bfg awscli
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
 
@@ -67,7 +42,7 @@ fi
 conda update --all --yes
 ```
 
-## Configure vim
+## Configure vi
 
 ```sh
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -118,6 +93,8 @@ Install Atom packages
     Add to Ignore Errors and Warnings C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
 
 -   vim-mode-plus
+
+Install GIMP
 
 ## Get browser stuff
 
