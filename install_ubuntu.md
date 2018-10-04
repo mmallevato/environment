@@ -43,7 +43,7 @@ sudo reboot
 sudo update-alternatives --config editor
 ```
 
-## Configure Synaptics
+## [Configure Synaptics](80-synaptics.conf)
 
 ## Configure Settings
 
