@@ -33,7 +33,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta # canvas
 
-fi
+fi &&
 
 conda update --all --yes
 ```
