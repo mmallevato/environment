@@ -51,6 +51,8 @@ sudo update-alternatives --config editor
 
 ## Configure dock
 
+[Put Trash on dock](trash.sh)
+
 ## [Configure environment](configure_environment.md)
 
 ## Configure SSH
