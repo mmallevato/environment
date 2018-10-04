@@ -30,7 +30,7 @@ sudo apt update &&
 
 sudo apt full-upgrade --yes &&
 
-sudo apt install --yes vim screen tree rename gparted exfat-fuse exfat-utils xserver-xorg-input-synaptics default-jdk adobe-flashplugin browser-plugin-freshplayer-pepperflash &&
+sudo apt install --yes vim screen tree rename gparted exfat-fuse exfat-utils dconf-editor xserver-xorg-input-synaptics default-jdk adobe-flashplugin browser-plugin-freshplayer-pepperflash &&
 
 sudo apt full-upgrade --yes &&
 
