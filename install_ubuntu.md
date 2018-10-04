@@ -26,13 +26,13 @@ Check `Software Updater` > `Settings` > `Other Software` > `Canonical Partners`
 Check `Software Updater` > `Settings` > `Additional Drivers` >
 
 ```sh
-sudo apt update
+sudo apt update &&
 
-sudo apt full-upgrade --yes
+sudo apt full-upgrade --yes &&
 
-sudo apt install --yes vim screen tree rename gparted exfat-fuse exfat-utils xserver-xorg-input-synaptics default-jdk adobe-flashplugin browser-plugin-freshplayer-pepperflash
+sudo apt install --yes vim screen tree rename gparted exfat-fuse exfat-utils xserver-xorg-input-synaptics default-jdk adobe-flashplugin browser-plugin-freshplayer-pepperflash &&
 
-sudo apt full-upgrade --yes
+sudo apt full-upgrade --yes &&
 
 sudo reboot
 ```
@@ -56,7 +56,7 @@ sudo update-alternatives --config editor
 ## Configure SSH
 
 ```sh
-sudo apt install openssh-server
+sudo apt install --yes openssh-server &&
 
 sudo service ssh status
 ```
@@ -64,7 +64,6 @@ sudo service ssh status
 ## Serve from UCSD
 
 ```sh
-sudo apt install openconnect
+sudo apt install --yes openconnect &&
 sudo openconnect vpn-2.ucsd.edu  # Choose 'allthruucsd'
-ssh user@<public IP>
 ```
