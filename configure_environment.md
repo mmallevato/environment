@@ -17,7 +17,7 @@ conda install --channel Guardiome --yes pytabix &&
 
 pip install pyfaidx GEOparse &&
 
-conda install --channel conda-forge --yes pyinstaller yapf isort pylama jupyterlab nodejs yarn twine git git-lfs bfg awscli &&
+conda install --channel conda-forge --yes pyinstaller yapf isort pylama beautysh jupyterlab nodejs yarn twine git git-lfs bfg awscli &&
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff &&
 
@@ -53,7 +53,9 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```sh
 git config --global user.name KwatME &&
 
-git config --global user.email kwatme8@gmail.com
+git config --global user.email kwatme8@gmail.com &&
+
+git config --global credential.helper 'cache --timeout=691200'
 ```
 
 ## Get Jupyter extension
