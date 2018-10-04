@@ -21,6 +21,8 @@ conda install --channel conda-forge --yes pyinstaller yapf isort pylama jupyterl
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff &&
 
+conda-env remove --yes --name sequencing_process_python2.7 &&
+
 if [ "$(uname)" == "Darwin" ]; then :
 
   echo 'Darwin'
@@ -31,7 +33,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
-  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta # canvas
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta canvas
 
 fi &&
 
