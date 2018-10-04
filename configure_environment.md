@@ -23,7 +23,7 @@ conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib 
 
 if [ "$(uname)" == "Darwin" ]; then :
 
-  echo 'Darwin' &&
+  echo 'Darwin'
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
@@ -31,7 +31,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
-  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta && # canvas
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta # canvas
 
 fi
 
