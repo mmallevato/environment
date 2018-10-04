@@ -43,15 +43,15 @@ sudo reboot
 sudo update-alternatives --config editor
 ```
 
-## Update Synaptics
+## Configure Synaptics
 
 ## Configure Settings
 
 ## Configure Files
 
-## [configure_environment.md](configure_environment.md)
-
 ## Configure dock
+
+## [Configure environment](configure_environment.md)
 
 ## Configure SSH
 
