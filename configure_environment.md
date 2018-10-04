@@ -92,8 +92,6 @@ Install GIMP
 
 ## Get browser stuff
 
-LastPass
-
-Addblock plus
-
-Vimium
+-   LastPass
+-   Addblock plus
+-   Vimium
