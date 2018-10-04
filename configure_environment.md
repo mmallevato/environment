@@ -66,9 +66,7 @@ jupyter labextension install @jupyterlab/plotly-extension
 
 ## Configure Atom
 
-Install Atom
-
-Install Atom packages
+Install Atom and its package
 
 -   atom-beautify
 
