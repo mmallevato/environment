@@ -43,11 +43,11 @@ sudo reboot
 sudo update-alternatives --config editor
 ```
 
+## Update Synaptics
+
 ## Configure Settings
 
 ## Configure Files
-
-Delete default directories
 
 ## [configure_environment.md](configure_environment.md)
 
