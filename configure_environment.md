@@ -17,8 +17,6 @@ conda install --channel Guardiome --yes pytabix
 
 pip install pyfaidx GEOparse
 
-pip install ccal
-
 conda install --channel conda-forge --yes pyinstaller yapf isort pylama jupyterlab nodejs yarn twine git git-lfs bfg awscli
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff
