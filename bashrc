@@ -385,11 +385,6 @@ function git_clone_guardiome()
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
 }
 
-function git_clone_ccal()
-{
-  git clone --recursive https://github.com/UCSD-CCAL/ccal
-}
-
 function git_truncate_history()
 {
   git checkout --orphan temp $1
