@@ -318,7 +318,7 @@ function git_update_repositories_n_times()
     done
 }
 
-function git_clone_kwatme_libary()
+function git_clone_kwatme_library()
 {
   git clone --recursive https://github.com/KwatME/classification
   git clone --recursive https://github.com/KwatME/clustering
