@@ -228,28 +228,6 @@ function git_cache()
   git config --global credential.helper "cache --timeout=$1"
 }
 
-function git_status_repositories()
-{
-  for d in *
-    do
-      if [ -d "$d/.git" ]; then
-        printf '\n\n\n\n\n\n\n\n'
-        printf $Purple
-        printf '================================================================================\n'
-        printf $Blue
-        printf "$d\n"
-        printf $Purple
-        printf $NC
-        cd $d
-        git status
-        cd ..
-        printf $Purple
-        printf '================================================================================\n'
-        printf $NC
-      fi
-    done
-}
-
 function git_update_repositories()
 {
   for d in *
@@ -318,8 +296,15 @@ function git_update_repositories_n_times()
     done
 }
 
-function git_clone_kwatme_libary()
+function git_clone()
 {
+  mkdir github
+  cd github
+
+  git clone --recursive https://github.com/KwatME/environment
+
+  mkdir library
+  cd library
   git clone --recursive https://github.com/KwatME/classification
   git clone --recursive https://github.com/KwatME/clustering
   git clone --recursive https://github.com/KwatME/context
@@ -350,31 +335,24 @@ function git_clone_kwatme_libary()
   git clone --recursive https://github.com/KwatME/support
   git clone --recursive https://github.com/KwatME/tcga
   git clone --recursive https://github.com/KwatME/variant
-}
+  cd ..
 
-function git_clone_kwatme_workflow()
-{
+  mkdir workflow
+  cd workflow
   git clone --recursive https://github.com/KwatME/explore_tcga
   git clone --recursive https://github.com/KwatME/find_differential_expression
   git clone --recursive https://github.com/KwatME/model_and_infer
-}
+  cd ..
 
-function git_clone_kwatme_website()
-{
+  mkdir website
+  cd website
   git clone --recursive https://github.com/Guardiome/cellularcontext.com
   git clone --recursive https://github.com/KwatME/kwatme.com
   git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
-}
+  cd ..
 
-function git_clone_kwatme_omics_apps()
-{
-  git clone --recursive https://github.com/KwatME/muscle_type
-  git clone --recursive https://github.com/KwatME/random_genome_peek
-  git clone --recursive https://github.com/KwatME/tumor_suppressor
-}
-
-function git_clone_guardiome()
-{
+  mkdir guardiome
+  cd guardiome
   git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
   git clone --recursive https://github.com/Guardiome/omics_ai
   git clone --recursive https://github.com/Guardiome/omics_ai_server
@@ -383,15 +361,16 @@ function git_clone_guardiome()
   git clone --recursive https://github.com/Guardiome/omics_app_template
   git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
-}
+  cd ..
 
-function git_truncate_history()
-{
-  git checkout --orphan temp $1
-  git commit -m 'Truncated history'
-  git rebase --onto temp $1 master
-  git checkout master
-  git branch -D temp
+  mkdir omics_app
+  cd omics_app
+  git clone --recursive https://github.com/KwatME/muscle_type
+  git clone --recursive https://github.com/KwatME/random_genome_peek
+  git clone --recursive https://github.com/KwatME/tumor_suppressor
+  cd ..
+
+  git clone --recursive https://github.com/CCAL/ccal
 }
 
 # ==============================================================================
