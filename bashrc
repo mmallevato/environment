@@ -370,7 +370,7 @@ function git_clone()
   git clone --recursive https://github.com/KwatME/tumor_suppressor
   cd ..
 
-  git clone --recursive https://github.com/CCAL/ccal
+  git clone --recursive https://github.com/UCSD-CCAL/ccal
 }
 
 # ==============================================================================
