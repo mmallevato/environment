@@ -21,7 +21,7 @@ conda install --channel conda-forge --yes pyinstaller yapf isort pylama beautysh
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff &&
 
-conda-env remove --yes --name sequencing_process_python2.7 &&
+# conda-env remove --yes --name sequencing_process_python2.7 &&
 
 if [ "$(uname)" == "Darwin" ]; then :
 
