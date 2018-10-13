@@ -24,7 +24,7 @@ while getopts "red" opt; do
 
     d)
 
-      while sleep 1; do ($HOME/.trash.sh -r &) ; done
+      while sleep 2; do ($HOME/.trash.sh -r &) ; done
 
       ;;
 
@@ -33,4 +33,4 @@ while getopts "red" opt; do
 done
 
 # $ ./.trash.sh -e
-# Add to 'Starup Applications'
+# Add to 'Starup Applications' '.trash.sh -d'
