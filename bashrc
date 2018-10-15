@@ -301,6 +301,9 @@ function git_clone()
   mkdir github
   cd github
 
+  mkdir kwatme
+  cd kwatme
+
   git clone --recursive https://github.com/KwatME/environment
 
   mkdir library
@@ -351,6 +354,15 @@ function git_clone()
   git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
   cd ..
 
+  mkdir omics_app
+  cd omics_app
+  git clone --recursive https://github.com/KwatME/muscle_type
+  git clone --recursive https://github.com/KwatME/random_genome_peek
+  git clone --recursive https://github.com/KwatME/tumor_suppressor
+  cd ..
+
+  cd ..
+
   mkdir guardiome
   cd guardiome
   git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
@@ -363,14 +375,10 @@ function git_clone()
   git clone --recursive https://github.com/Guardiome/simple_omics_app_template
   cd ..
 
-  mkdir omics_app
-  cd omics_app
-  git clone --recursive https://github.com/KwatME/muscle_type
-  git clone --recursive https://github.com/KwatME/random_genome_peek
-  git clone --recursive https://github.com/KwatME/tumor_suppressor
-  cd ..
-
+  mkdir ccal
+  cd ccal
   git clone --recursive https://github.com/UCSD-CCAL/ccal
+  cd ..
 }
 
 # ==============================================================================
