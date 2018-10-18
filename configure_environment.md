@@ -11,7 +11,7 @@ Get .condarc
 Get conda from <https://conda.io/miniconda.html> and install
 
 ```sh
-conda install --channel conda-forge --yes numpy pandas scipy plotly matplotlib scikit-learn rpy2 r-mass statsmodels pytables click &&
+conda install --channel conda-forge --yes numpy pandas xlrd scipy plotly matplotlib scikit-learn rpy2 r-mass statsmodels pytables click &&
 
 conda install --channel Guardiome --yes pytabix &&
 
