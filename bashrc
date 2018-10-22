@@ -219,7 +219,7 @@ function release_to_pypi()
 
 function clear_ipynb_output()
 {
-  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb
+  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace $@
 }
 
 function git_cache()
