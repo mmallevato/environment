@@ -155,7 +155,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -vp'
 alias du='du -hs'
-alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --delete --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
+alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
 # ==============================================================================
 # Define function
