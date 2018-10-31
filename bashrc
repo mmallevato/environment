@@ -343,24 +343,25 @@ function get_github()
 
   mkdir workflow
   cd workflow
+  git clone --recursive https://github.com/KwatME/combine_models_and_infer
   git clone --recursive https://github.com/KwatME/explore_tcga
   git clone --recursive https://github.com/KwatME/find_differential_expression
   git clone --recursive https://github.com/KwatME/model_and_infer
   cd ..
 
-  mkdir website
-  cd website
-  git clone --recursive https://github.com/Guardiome/cellularcontext.com
-  git clone --recursive https://github.com/KwatME/kwatme.com
-  git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
-  cd ..
+  # mkdir website
+  # cd website
+  # git clone --recursive https://github.com/Guardiome/cellularcontext.com
+  # git clone --recursive https://github.com/KwatME/kwatme.com
+  # git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
+  # cd ..
 
-  mkdir omics_app
-  cd omics_app
-  git clone --recursive https://github.com/KwatME/muscle_type
-  git clone --recursive https://github.com/KwatME/random_genome_peek
-  git clone --recursive https://github.com/KwatME/tumor_suppressor
-  cd ..
+  # mkdir omics_app
+  # cd omics_app
+  # git clone --recursive https://github.com/KwatME/muscle_type
+  # git clone --recursive https://github.com/KwatME/random_genome_peek
+  # git clone --recursive https://github.com/KwatME/tumor_suppressor
+  # cd ..
 
   cd ..
 
