@@ -292,7 +292,7 @@ function git_update_repositories_n_times()
     do
       i=$((i-1))
       printf "$Yellow$i\n$NC"
-      git_update_repositories $i
+      git_update_repositories "Git sync ($i)"
     done
 }
 
