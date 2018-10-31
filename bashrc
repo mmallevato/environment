@@ -365,17 +365,17 @@ function get_github()
 
   cd ..
 
-  mkdir guardiome
-  cd guardiome
-  git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
-  git clone --recursive https://github.com/Guardiome/omics_ai
-  git clone --recursive https://github.com/Guardiome/omics_ai_server
-  git clone --recursive https://github.com/Guardiome/omics_ai_ui
-  git clone --recursive https://github.com/Guardiome/omics_app
-  git clone --recursive https://github.com/Guardiome/omics_app_template
-  git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
-  git clone --recursive https://github.com/Guardiome/simple_omics_app_template
-  cd ..
+  # mkdir guardiome
+  # cd guardiome
+  # git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
+  # git clone --recursive https://github.com/Guardiome/omics_ai
+  # git clone --recursive https://github.com/Guardiome/omics_ai_server
+  # git clone --recursive https://github.com/Guardiome/omics_ai_ui
+  # git clone --recursive https://github.com/Guardiome/omics_app
+  # git clone --recursive https://github.com/Guardiome/omics_app_template
+  # git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
+  # git clone --recursive https://github.com/Guardiome/simple_omics_app_template
+  # cd ..
 
   mkdir ccal
   cd ccal
