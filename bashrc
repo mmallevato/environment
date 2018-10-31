@@ -296,7 +296,7 @@ function git_update_repositories_n_times()
     done
 }
 
-function git_clone()
+function get_github()
 {
   mkdir github
   cd github
@@ -316,6 +316,7 @@ function git_clone()
   git clone --recursive https://github.com/KwatME/feature
   git clone --recursive https://github.com/KwatME/feature_x_sample
   git clone --recursive https://github.com/KwatME/gct_gmt
+  git clone --recursive https://github.com/KwatME/gene
   git clone --recursive https://github.com/KwatME/genome
   git clone --recursive https://github.com/KwatME/geo
   git clone --recursive https://github.com/KwatME/gps_map
