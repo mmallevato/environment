@@ -2,13 +2,15 @@
 
 ## Get profile
 
-Get .bashrc
+Save [bashrc](bashrc) as `~/.bashrc` (for Linux) or `~/.bash_profile` (for macOS)
 
-Get .condarc
+Save [condarc](condarc) as `~/.condarc`
 
-## Configure conda environment
+## Configure `conda` environment
 
-Get conda from <https://conda.io/miniconda.html> and install
+Install [conda](https://conda.io/miniconda.html)
+
+Install `conda` stuff:
 
 ```sh
 conda install --channel conda-forge --yes numpy pandas xlrd scipy plotly matplotlib scikit-learn rpy2 r-mass statsmodels pytables click &&
@@ -40,7 +42,7 @@ fi &&
 conda update --all --yes
 ```
 
-## Configure vi
+## Configure `vi`
 
 ```sh
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime &&
@@ -48,37 +50,21 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime &&
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
-## Configure git
+## Configure `atom`
 
-```sh
-git config --global user.name KwatME &&
+Install [atom](https://atom.io/)
 
-git config --global user.email kwatme8@gmail.com &&
-
-git config --global credential.helper 'cache --timeout=691200'
-```
-
-## Get Jupyter extension
-
-```sh
-jupyter labextension install jupyterlab_vim &&
-
-jupyter labextension install @jupyterlab/plotly-extension
-```
-
-## Configure Atom
-
-Install Atom and its package
+Install `atom` stuff:
 
 -   atom-beautify
 
-    Set Python beautifier to be yapf
+    Set `Python beautifier` to be `yapf`
 
-    Set Python formatter to be yapf
+    Set `Python formatter` to be `yapf`
 
-    Check Python Beautify on Save
+    Check `Python Beautify on Save`
 
-    Check Markdown Beautiy on Save
+    Check `Markdown Beautiy on Save`
 
 -   autocomplete-python
 -   ex-mode
@@ -86,11 +72,22 @@ Install Atom and its package
 -   git-time-machine
 -   linter-pylama
 
-    Add to Ignore Errors and Warnings C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
+    Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
 
 -   vim-mode-plus
 
-Install GIMP
+## Get `jupyter` extension
+
+```sh
+jupyter labextension install jupyterlab_vim &&
+
+jupyter labextension install @jupyterlab/plotly-extension
+```
+
+## Get other software
+
+-   Chrome
+-   GIMP
 
 ## Get browser stuff
 
