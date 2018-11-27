@@ -554,7 +554,7 @@ function get_github() {
 
   cd workflow
 
-  git clone --recursive https://github.com/KwatME/combine_models_and_infer
+  # git clone --recursive https://github.com/KwatME/combine_models_and_infer
 
   git clone --recursive https://github.com/KwatME/explore_tcga
 
