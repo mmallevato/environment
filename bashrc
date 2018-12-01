@@ -9,6 +9,7 @@ case $- in
 
 esac
 
+
 # ==============================================================================
 # Define color
 # ==============================================================================
@@ -128,15 +129,18 @@ On_ICyan="\x1B[0;106m"
 
 On_IWhite="\x1B[0;107m"
 
+
 # ==============================================================================
 # Do not put duplicate lines or lines starting with space in the history
 # ==============================================================================
 HISTCONTROL=ignoreboth
 
+
 # ==============================================================================
 # Append to the history file instead of overwriting it
 # ==============================================================================
 shopt -s histappend
+
 
 # ==============================================================================
 # Set history length
@@ -145,21 +149,25 @@ HISTSIZE=88888888
 
 HISTFILESIZE=88888888
 
+
 # ==============================================================================
 # Check the window size after each command and, if necessary, update the values
 # of LINES and COLUMNS
 # ==============================================================================
 shopt -s checkwinsize
 
+
 # ==============================================================================
 # Make less more friendly for non-text input file
 # ==============================================================================
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+
 # ==============================================================================
 # Enable colored GCC warning and error
 # ==============================================================================
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+
 
 # ==============================================================================
 # Enable programmable completion feature
@@ -177,6 +185,7 @@ if ! shopt -oq posix; then
   fi
 
 fi
+
 
 # ==============================================================================
 # Enable color support of ls and also add handy alias
@@ -203,6 +212,7 @@ else
 
 fi
 
+
 # ==============================================================================
 # Define alias
 # ==============================================================================
@@ -228,17 +238,18 @@ alias du='du -hs'
 
 alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
 
-# ==============================================================================
-# Define function
-# ==============================================================================
-function ssh_port() {
 
-  ssh $1 -f -N -L localhost:$2:localhost:$3
+# ==============================================================================
+# Define cleaning function
+# ==============================================================================
+function find_and_remove_junk() {
+
+  find . | grep -E '(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)' | xargs rm -rf
 
 }
 
 
-function chmod_reset() {
+function find_and_reset_mode() {
 
   find . -not -path '*/.*' -type f -exec chmod 644 {} \;
 
@@ -247,13 +258,16 @@ function chmod_reset() {
 }
 
 
-function remove_junk() {
+function find_and_reset_ipynb() {
 
-  find . | grep -E '(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)' | xargs rm -rf
+  find . -name '*.ipynb' -exec jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {} \;
 
 }
 
 
+# ==============================================================================
+# Define compression function
+# ==============================================================================
 function extract() {
 
   if [ -f $1 ] ; then
@@ -311,26 +325,9 @@ function make_zip() {
 }
 
 
-function release_to_pypi() {
-
-  rm -rf build/ *.egg-info dist
-
-  python setup.py sdist
-
-  python setup.py bdist_wheel
-
-  twine upload dist/*
-
-}
-
-
-function clear_ipynb_output() {
-
-  jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace $@
-
-}
-
-
+# ==============================================================================
+# Define git function
+# ==============================================================================
 function git_cache() {
 
   git config --global credential.helper cache
@@ -620,9 +617,32 @@ function get_github() {
 
 
 # ==============================================================================
+# Define other function
+# ==============================================================================
+function release_to_pypi() {
+
+  rm -rf build/ *.egg-info dist
+
+  python setup.py sdist
+
+  python setup.py bdist_wheel
+
+  twine upload dist/*
+
+}
+
+function ssh_port() {
+
+  ssh $1 -f -N -L localhost:$2:localhost:$3
+
+}
+
+
+# ==============================================================================
 # Make conda path visible
 # ==============================================================================
 export PATH="$HOME/miniconda3/bin:$PATH"
+
 
 # ==============================================================================
 # Style shell prompt

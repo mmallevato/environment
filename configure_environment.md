@@ -58,13 +58,9 @@ Install `atom` stuff:
 
 -   atom-beautify
 
-    Set `Python beautifier` to be `yapf`
+    Check `Bash` > `Beautify on Save`
 
-    Set `Python formatter` to be `yapf`
-
-    Check `Python Beautify on Save`
-
-    Check `Markdown Beautiy on Save`
+    Check `Markdown` > `Beautify on Save`
 
 -   autocomplete-python
 -   ex-mode
