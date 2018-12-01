@@ -364,7 +364,7 @@ function git_update_repositories() {
 
         cd $d
 
-        printf $BIPurple
+        printf $BIYellow
 
         printf 'git status\n'
 
@@ -372,7 +372,7 @@ function git_update_repositories() {
 
         git status
 
-        printf $BIYellow
+        printf $BIPurple
 
         printf "git submodule foreach --recursive git reset --hard\n"
 
@@ -380,7 +380,7 @@ function git_update_repositories() {
 
         git submodule foreach --recursive git reset --hard
 
-        printf $BIPurple
+        printf $BIYellow
 
         printf "git submodule foreach --recursive git clean -d --force\n"
 
@@ -388,7 +388,7 @@ function git_update_repositories() {
 
         git submodule foreach --recursive git clean -fd
 
-        printf $BIYellow
+        printf $BIPurple
 
         printf 'git submodule update --init --remote --recursive\n'
 
@@ -396,7 +396,7 @@ function git_update_repositories() {
 
         git submodule update --init --remote --recursive
 
-        printf $BIPurple
+        printf $BIYellow
 
         printf 'git add -A\n'
 
@@ -404,7 +404,7 @@ function git_update_repositories() {
 
         git add -A
 
-        printf $BIYellow
+        printf $BIPurple
 
         printf 'git commit -m $1\n'
 
@@ -412,7 +412,7 @@ function git_update_repositories() {
 
         git commit -m "$1"
 
-        printf $BIPurple
+        printf $BIYellow
 
         printf 'git pull\n'
 
@@ -420,7 +420,7 @@ function git_update_repositories() {
 
         git pull
 
-        printf $BIYellow
+        printf $BIPurple
 
         printf 'git push\n'
 
