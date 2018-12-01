@@ -350,23 +350,21 @@ function git_update_repositories() {
 
         printf '\n\n\n\n\n\n\n\n'
 
-        printf $Purple
+        printf $On_IGreen
 
         printf '================================================================================\n'
 
-        printf $Blue
+        printf $IGreen
 
         printf "$d\n"
 
-        printf $Purple
+        printf $On_IGreen
 
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
 
-        printf $NC
-
         cd $d
 
-        printf $Yellow
+        printf $IPurple
 
         printf 'git status\n'
 
@@ -374,31 +372,23 @@ function git_update_repositories() {
 
         git status
 
-        printf $Cyan
+        printf $IYellow
 
-        printf "git submodule foreach 'git stash'\n"
-
-        printf $NC
-
-        git submodule foreach 'git stash'
-
-        printf $Yellow
-
-        printf "git submodule foreach 'git reset --hard'\n"
+        printf "git submodule foreach --recursive git reset --hard\n"
 
         printf $NC
 
-        git submodule foreach 'git reset --hard'
+        git submodule foreach --recursive git reset --hard
 
-        printf $Cyan
+        printf $IPurple
 
-        printf "git submodule foreach 'git clean -fd'\n"
+        printf "git submodule foreach --recursive git clean -d --force\n"
 
         printf $NC
 
-        git submodule foreach 'git clean -fd'
+        git submodule foreach --recursive git clean -fd
 
-        printf $Yellow
+        printf $IYellow
 
         printf 'git submodule update --init --remote --recursive\n'
 
@@ -406,7 +396,7 @@ function git_update_repositories() {
 
         git submodule update --init --remote --recursive
 
-        printf $Yellow
+        printf $IPurple
 
         printf 'git add -A\n'
 
@@ -414,13 +404,15 @@ function git_update_repositories() {
 
         git add -A
 
-        printf $Cyan printf 'git commit -m $1\n'
+        printf $IYellow
+
+        printf 'git commit -m $1\n'
 
         printf $NC
 
         git commit -m "$1"
 
-        printf $Yellow
+        printf $IPurple
 
         printf 'git pull\n'
 
@@ -428,7 +420,7 @@ function git_update_repositories() {
 
         git pull
 
-        printf $Cyan
+        printf $IYellow
 
         printf 'git push\n'
 
@@ -438,7 +430,7 @@ function git_update_repositories() {
 
         cd ..
 
-        printf $Purple
+        printf $IPurple
 
         printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
 
@@ -461,7 +453,11 @@ function git_update_repositories_n_times() {
 
       i=$((i-1))
 
-      printf "$Yellow$i\n$NC"
+      printf $On_Green
+
+      printf "$i\n"
+
+      printf $NC
 
       git_update_repositories "Git sync ($i)"
 

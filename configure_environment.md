@@ -79,9 +79,13 @@ Install `atom` stuff:
 ## Get `jupyter` extension
 
 ```sh
-jupyter labextension install jupyterlab_vim &&
+jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip
 
-jupyter labextension install @jupyterlab/plotly-extension
+jupyter nbextension enable vim_binding/vim_binding
+
+jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip
+
+jupyter nbextension enable jupyter-black-master/jupyter-black
 ```
 
 ## Get other software
