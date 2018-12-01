@@ -350,7 +350,7 @@ function git_update_repositories() {
 
         printf '\n\n\n\n\n\n\n\n'
 
-        printf $On_Green
+        printf $Green
 
         printf '================================================================================\n'
 
@@ -358,7 +358,7 @@ function git_update_repositories() {
 
         printf "$d\n"
 
-        printf $On_Green
+        printf $Green
 
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
 
