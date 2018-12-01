@@ -350,7 +350,7 @@ function git_update_repositories() {
 
         printf '\n\n\n\n\n\n\n\n'
 
-        printf $Green
+        printf $Black
 
         printf '================================================================================\n'
 
@@ -358,7 +358,7 @@ function git_update_repositories() {
 
         printf "$d\n"
 
-        printf $Green
+        printf $Black
 
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
 
@@ -430,7 +430,9 @@ function git_update_repositories() {
 
         cd ..
 
-        printf $Green
+        printf $Black
+
+        printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
 
         printf '================================================================================\n'
 
@@ -451,7 +453,7 @@ function git_update_repositories_n_times() {
 
       i=$((i-1))
 
-      printf $On_Green
+      printf $BICyan
 
       printf "$i\n"
 
