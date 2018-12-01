@@ -430,7 +430,7 @@ function git_update_repositories() {
 
         cd ..
 
-        printf $Blue
+        printf $Green
 
         printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
 
