@@ -350,7 +350,7 @@ function git_update_repositories() {
 
         printf '\n\n\n\n\n\n\n\n'
 
-        printf $Black
+        printf $BIBlack
 
         printf '================================================================================\n'
 
@@ -358,7 +358,7 @@ function git_update_repositories() {
 
         printf "$d\n"
 
-        printf $Black
+        printf $BIBlack
 
         printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
 
@@ -430,7 +430,7 @@ function git_update_repositories() {
 
         cd ..
 
-        printf $Black
+        printf $BIBlack
 
         printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
 
