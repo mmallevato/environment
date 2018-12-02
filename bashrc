@@ -521,6 +521,8 @@ function get_github() {
 
   git clone --recursive https://github.com/KwatME/matrix_factorization
 
+  git clone --recursive https://github.com/KwatME/mutational_signature
+
   git clone --recursive https://github.com/KwatME/nd_array
 
   git clone --recursive https://github.com/KwatME/neural_network
