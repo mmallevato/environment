@@ -194,21 +194,21 @@ if [ -x /usr/bin/dircolors ]; then
 
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-  alias ls='ls -Fh --color=auto'
+  alias ls="ls -Fh --color=auto"
 
-  alias dir='dir --color=auto'
+  alias dir="dir --color=auto"
 
-  alias vdir='vdir --color=auto'
+  alias vdir="vdir --color=auto"
 
-  alias grep='grep --color=auto'
+  alias grep="grep --color=auto"
 
-  alias fgrep='fgrep --color=auto'
+  alias fgrep="fgrep --color=auto"
 
-  alias egrep='egrep --color=auto'
+  alias egrep="egrep --color=auto"
 
 else
 
-  alias ls='ls -FhG'
+  alias ls="ls -FhG"
 
 fi
 
@@ -216,27 +216,27 @@ fi
 # ==============================================================================
 # Define alias
 # ==============================================================================
-alias ..='cd ..'
+alias ..="cd .."
 
-alias ...='cd ../..'
+alias ...="cd ../.."
 
-alias ll='ls -hFl'
+alias ll="ls -hFl"
 
-alias la='ls -hFla'
+alias la="ls -hFla"
 
-alias lt='ls -hFltr'
+alias lt="ls -hFltr"
 
-alias rm='rm -i'
+alias rm="rm -i"
 
-alias cp='cp -i'
+alias cp="cp -i"
 
-alias mv='mv -i'
+alias mv="mv -i"
 
-alias mkdir='mkdir -vp'
+alias mkdir="mkdir -vp"
 
-alias du='du -hs'
+alias du="du -hs"
 
-alias rsync='rsync --verbose --recursive --update --links --perms --executability --times --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*'
+alias rsync="rsync --verbose --recursive --update --links --perms --executability --times --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*"
 
 
 # ==============================================================================
@@ -244,23 +244,23 @@ alias rsync='rsync --verbose --recursive --update --links --perms --executabilit
 # ==============================================================================
 function find_and_remove_junk() {
 
-  find . | grep -E '(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)' | xargs rm -rf
+  find . | grep -E "(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)" | xargs rm -rf
 
 }
 
 
 function find_and_reset_mode() {
 
-  find . -not -path '*/.*' -type f -exec chmod 644 {} \;
+  find . -not -path "*/.*" -type f -exec chmod 644 {} \;
 
-  find . -not -path '*/.*' -type d -exec chmod 755 {} \;
+  find . -not -path "*/.*" -type d -exec chmod 755 {} \;
 
 }
 
 
-function find_and_reset_ipynb() {
+function find_and_clean_ipynb() {
 
-  find . -name '*.ipynb' -exec jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {} \;
+  find . -name "*.ipynb" -exec clean_ipynb {} \;
 
 }
 
@@ -345,11 +345,11 @@ function git_update_repositories() {
 
       if [ -d "$d/.git" ]; then
 
-        printf '\n\n\n\n\n\n\n\n'
+        printf "\n\n\n\n\n\n\n\n"
 
         printf $BIBlack
 
-        printf '================================================================================\n'
+        printf "================================================================================\n"
 
         printf $BIGreen
 
@@ -357,13 +357,13 @@ function git_update_repositories() {
 
         printf $BIBlack
 
-        printf 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n'
+        printf "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\n"
 
         cd $d
 
         printf $BIYellow
 
-        printf 'git status\n'
+        printf "git status\n"
 
         printf $NC
 
@@ -387,7 +387,7 @@ function git_update_repositories() {
 
         printf $BIPurple
 
-        printf 'git submodule update --init --remote --recursive\n'
+        printf "git submodule update --init --remote --recursive\n"
 
         printf $NC
 
@@ -395,7 +395,7 @@ function git_update_repositories() {
 
         printf $BIYellow
 
-        printf 'git add -A\n'
+        printf "git add -A\n"
 
         printf $NC
 
@@ -403,7 +403,7 @@ function git_update_repositories() {
 
         printf $BIPurple
 
-        printf 'git commit -m $1\n'
+        printf "git commit -m $1\n"
 
         printf $NC
 
@@ -411,7 +411,7 @@ function git_update_repositories() {
 
         printf $BIYellow
 
-        printf 'git pull\n'
+        printf "git pull\n"
 
         printf $NC
 
@@ -419,7 +419,7 @@ function git_update_repositories() {
 
         printf $BIPurple
 
-        printf 'git push\n'
+        printf "git push\n"
 
         printf $NC
 
@@ -429,9 +429,9 @@ function git_update_repositories() {
 
         printf $BIBlack
 
-        printf '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+        printf "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
 
-        printf '================================================================================\n'
+        printf "================================================================================\n"
 
         printf $NC
 
@@ -480,6 +480,8 @@ function get_github() {
   cd library
 
   git clone --recursive https://github.com/KwatME/classification
+
+  git clone --recursive https://github.com/KwatME/clean_ipynb
 
   git clone --recursive https://github.com/KwatME/clustering
 
@@ -647,4 +649,4 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 # ==============================================================================
 # Style shell prompt
 # ==============================================================================
-PS1='[\h] \W $ '
+PS1="[\h] \W $ "

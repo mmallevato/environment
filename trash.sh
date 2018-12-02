@@ -10,7 +10,7 @@ while getopts "red" opt; do
 
       if [ "$(gio list trash://)" ]; then
 
-        echo -e '[Desktop Entry]\nType=Application\nName=Trash\nComment=Trash\nIcon=user-trash-full\nExec=nautilus trash://\nCategories=Utility;\nActions=trash;\n\n[Desktop Action trash]\nName=Empty Trash\nExec='$HOME/.trash.sh -e'\n' > $icon
+        echo -e "[Desktop Entry]\nType=Application\nName=Trash\nComment=Trash\nIcon=user-trash-full\nExec=nautilus trash://\nCategories=Utility;\nActions=trash;\n\n[Desktop Action trash]\nName=Empty Trash\nExec="$HOME/.trash.sh -e"\n" > $icon
 
       fi
 
@@ -18,7 +18,7 @@ while getopts "red" opt; do
 
     e)
 
-      gio trash --empty && echo -e '[Desktop Entry]\nType=Application\nName=Trash\nComment=Trash\nIcon=user-trash\nExec=nautilus trash://\nCategories=Utility;\nActions=trash;\n\n[Desktop Action trash]\nName=Empty Trash\nExec='$HOME/.trash.sh -e'\n' > $icon
+      gio trash --empty && echo -e "[Desktop Entry]\nType=Application\nName=Trash\nComment=Trash\nIcon=user-trash\nExec=nautilus trash://\nCategories=Utility;\nActions=trash;\n\n[Desktop Action trash]\nName=Empty Trash\nExec="$HOME/.trash.sh -e"\n" > $icon
 
       ;;
 
@@ -33,4 +33,4 @@ while getopts "red" opt; do
 done
 
 # $ ./.trash.sh -e
-# Add to 'Starup Applications' '.trash.sh -d'
+# Add to "Starup Applications" ".trash.sh -d"

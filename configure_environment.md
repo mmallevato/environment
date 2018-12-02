@@ -19,7 +19,7 @@ conda install --channel Guardiome --yes pytabix &&
 
 pip install pyfaidx GEOparse &&
 
-conda install --channel conda-forge --yes pyinstaller yapf isort pylama beautysh jupyterlab nodejs yarn twine git git-lfs bfg awscli &&
+conda install --channel conda-forge --yes pyinstaller isort black pylama beautysh jupyterlab nodejs yarn twine git git-lfs bfg awscli &&
 
 conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff &&
 
@@ -27,11 +27,11 @@ conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib 
 
 if [ "$(uname)" == "Darwin" ]; then :
 
-  echo 'Darwin'
+  echo "Darwin"
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
-  echo 'Configuring sequencing_process_python2.7 environment ...' &&
+  echo "Configuring sequencing_process_python2.7 environment ..." &&
 
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
@@ -77,11 +77,11 @@ Install `atom` stuff:
 ```sh
 jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip
 
-jupyter nbextension enable vim_binding/vim_binding
+jupyter nbextension enable jupyter-black-master/jupyter-black
 
 jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip
 
-jupyter nbextension enable jupyter-black-master/jupyter-black
+jupyter nbextension enable vim_binding/vim_binding
 ```
 
 ## Get other software

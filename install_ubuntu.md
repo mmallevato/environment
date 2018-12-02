@@ -11,7 +11,7 @@ Configure BIOS
 -   Boot Mode = UEFI
 -   SATA Controller Mode = AHCI
 
-## Minimal install Ubuntu 18.04.1
+## Minimal install Ubuntu 18.10
 
 Check `Install third-party software for graphics and Wi-Fi hardware and additional media formats`
 
@@ -67,5 +67,5 @@ sudo service ssh status
 
 ```sh
 sudo apt install --yes openconnect &&
-sudo openconnect vpn-2.ucsd.edu  # Choose 'allthruucsd'
+sudo openconnect vpn-2.ucsd.edu
 ```
