@@ -135,9 +135,11 @@ Install `atom` stuff:
     -   Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
 
 
--   linter-python
-
 -   python-isort
+
+    -   Check `Sort On Save`
+
+
 -   python-black
 
 -   beautysh
