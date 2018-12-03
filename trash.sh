@@ -32,5 +32,7 @@ while getopts "red" opt; do
 
 done
 
-# $ ./.trash.sh -e
-# Add to "Starup Applications" ".trash.sh -d"
+# chmod +x trash.sh
+# mv trash.sh ~/.trash.sh
+# $ ~/.trash.sh -e
+# Add to "Starup Applications" "$HOME/.trash.sh -d"

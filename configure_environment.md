@@ -2,7 +2,7 @@
 
 ## Get profile
 
-Save [bashrc](bashrc) as `~/.bashrc` (for Linux) or `~/.bash_profile` (for macOS)
+Save [bashrc](bashrc) as `~/.bashrc` (for Linux) or as `~/.bash_profile` (for macOS)
 
 Save [condarc](condarc) as `~/.condarc`
 
@@ -13,17 +13,62 @@ Install [conda](https://conda.io/miniconda.html)
 Install `conda` stuff:
 
 ```sh
-conda install --channel conda-forge --yes numpy pandas xlrd scipy plotly matplotlib scikit-learn rpy2 r-mass statsmodels pytables click &&
+conda install --channel conda-forge --yes git &&
+conda install --channel conda-forge --yes git-lfs &&
+conda install --channel conda-forge --yes bfg &&
 
-conda install --channel Guardiome --yes pytabix &&
+conda install --channel conda-forge --yes awscli &&
 
-pip install pyfaidx GEOparse &&
+conda install --channel conda-forge --yes nodejs &&
+conda install --channel conda-forge --yes yarn &&
 
-conda install --channel conda-forge --yes pyinstaller isort black pylama beautysh jupyterlab nodejs yarn twine git git-lfs bfg awscli &&
+conda install --channel conda-forge --yes jupyterlab &&
+conda install --channel conda-forge --yes jupyter_contrib_nbextensions &&
 
-conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff &&
+conda install --channel conda-forge --yes isort &&
+conda install --channel conda-forge --yes black &&
+pip install clean_ipynb &&
+conda install --channel conda-forge --yes pylama &&
 
-# conda-env remove --yes --name sequencing_process_python2.7 &&
+conda install --channel conda-forge --yes click &&
+
+conda install --channel conda-forge --yes twine &&
+
+conda install --channel conda-forge --yes pyinstaller &&
+
+conda install --channel conda-forge --yes numpy &&
+conda install --channel conda-forge --yes pandas &&
+conda install --channel conda-forge --yes xlrd &&
+
+conda install --channel conda-forge --yes pytables &&
+
+conda install --channel conda-forge --yes scipy &&
+
+conda install --channel conda-forge --yes scikit-learn &&
+conda install --channel conda-forge --yes statsmodels &&
+
+conda install --channel conda-forge --yes plotly &&
+conda install --channel conda-forge --yes matplotlib &&
+
+conda install --channel conda-forge --yes rpy2 &&
+conda install --channel conda-forge --yes r-mass &&
+
+conda install --channel bcbio --yes pytabix &&
+pip install pyfaidx &&
+pip install GEOparse &&
+
+conda install --channel bioconda --yes dwgsim &&
+conda install --channel bioconda --yes skewer &&
+conda install --channel bioconda --yes fastqc &&
+conda install --channel bioconda --yes picard &&
+conda install --channel bioconda --yes seqtk &&
+conda install --channel bioconda --yes htslib &&
+conda install --channel bioconda --yes samtools &&
+conda install --channel bioconda --yes bwa &&
+conda install --channel bioconda --yes kallisto &&
+conda install --channel bioconda --yes freebayes &&
+conda install --channel bioconda --yes bcftools &&
+conda install --channel bioconda --yes snpeff &&
 
 if [ "$(uname)" == "Darwin" ]; then :
 
@@ -35,7 +80,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
-  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka manta canvas
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka &&
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes manta &&
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes canvas &&
 
 fi &&
 
@@ -58,38 +105,46 @@ Install `atom` stuff:
 
 -   atom-beautify
 
-    Check `Bash` > `Beautify on Save`
+    -   Check `Bash` > `Beautify on Save`
+    -   Check `Markdown` > `Beautify on Save`
 
-    Check `Markdown` > `Beautify on Save`
-
--   autocomplete-python
--   ex-mode
--   git-plus
--   git-time-machine
--   linter-pylama
-
-    Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
 
 -   vim-mode-plus
+-   ex-mode
+
+-   git-plus
+
+-   sort-lines
+
+-   autocomplete-python
+
+-   linter-pylama
+
+    -   Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
+
+
+-   linter-python
+
+-   python-isort
+-   python-black
 
 ## Get `jupyter` extension
 
 ```sh
-jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip
+jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip &&
 
-jupyter nbextension enable jupyter-black-master/jupyter-black
+jupyter nbextension enable jupyter-black-master/jupyter-black &&
 
-jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip
+jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip &&
 
 jupyter nbextension enable vim_binding/vim_binding
 ```
 
-## Get other software
+## Configure web browser
 
--   Chrome
--   GIMP
+Install [Chorme](https://www.google.com/chrome/)
 
-## Get browser stuff
+Get extension:
 
 -   LastPass
 -   Addblock Plus

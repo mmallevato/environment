@@ -465,19 +465,13 @@ function git_update_repositories_n_times() {
 
 function get_github() {
 
-  mkdir github
+  mkdir github && cd github
 
-  cd github
-
-  mkdir kwatme
-
-  cd kwatme
+  mkdir kwatme && cd kwatme
 
   git clone --recursive https://github.com/KwatME/environment
 
-  mkdir library
-
-  cd library
+  mkdir library && cd library
 
   git clone --recursive https://github.com/KwatME/classification
 
@@ -547,9 +541,7 @@ function get_github() {
 
   cd ..
 
-  mkdir workflow
-
-  cd workflow
+  mkdir workflow && cd workflow
 
   # git clone --recursive https://github.com/KwatME/combine_models_and_infer
 
@@ -559,23 +551,16 @@ function get_github() {
 
   git clone --recursive https://github.com/KwatME/model_and_infer
 
+
   cd ..
 
-  # mkdir website
+  mkdir website && cd website
 
-  # cd website
+  git clone --recursive https://github.com/KwatME/kwatme.com
 
-  # git clone --recursive https://github.com/Guardiome/cellularcontext.com
+  cd ..
 
-  # git clone --recursive https://github.com/KwatME/kwatme.com
-
-  # git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
-
-  # cd ..
-
-  # mkdir omics_app
-
-  # cd omics_app
+  mkdir omics_app && cd omics_app
 
   # git clone --recursive https://github.com/KwatME/muscle_type
 
@@ -583,13 +568,13 @@ function get_github() {
 
   # git clone --recursive https://github.com/KwatME/tumor_suppressor
 
-  # cd ..
+  cd ..
 
   cd ..
 
-  # mkdir guardiome
+  mkdir guardiome && cd guardiome
 
-  # cd guardiome
+  mkdir omics && cd omics
 
   # git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
 
@@ -605,13 +590,23 @@ function get_github() {
 
   # git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
 
+  # git clone --recursive https://github.com/Guardiome/omicsapps.com
+
   # git clone --recursive https://github.com/Guardiome/simple_omics_app_template
 
-  # cd ..
+  cd ..
 
-  mkdir ccal
+  mkdir website && cd website
 
-  cd ccal
+  # git clone --recursive https://github.com/Guardiome/cellularcontext.com
+
+  # git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
+
+  cd ..
+
+  cd ..
+
+  mkdir ccal && cd ccal
 
   git clone --recursive https://github.com/UCSD-CCAL/ccal
 
