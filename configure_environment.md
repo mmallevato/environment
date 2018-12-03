@@ -55,7 +55,7 @@ conda install --channel conda-forge --yes matplotlib &&
 conda install --channel conda-forge --yes rpy2 &&
 conda install --channel conda-forge --yes r-mass &&
 
-conda install --channel bcbio --yes pytabix &&
+pip install pytabix &&
 pip install pyfaidx &&
 pip install GEOparse &&
 
@@ -84,7 +84,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka &&
   conda install --name sequencing_process_python2.7 --channel bioconda --yes manta &&
-  conda install --name sequencing_process_python2.7 --channel bioconda --yes canvas &&
+  conda install --name sequencing_process_python2.7 --channel bioconda --yes canvas
 
 fi &&
 
