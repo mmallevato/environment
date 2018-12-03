@@ -2,7 +2,7 @@
 
 ## Get profile
 
-Save [bashrc](bashrc) as `~/.bashrc` (for Linux) or as `~/.bash_profile` (for macOS)
+Save [bashrc](bashrc) as `~/.bash_aliases` (for Linux) or as `~/.bash_profile` (for macOS)
 
 Save [condarc](condarc) as `~/.condarc`
 
