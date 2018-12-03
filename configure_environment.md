@@ -97,6 +97,15 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime &&
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
+## Configure `git`
+
+```sh
+git config --global user.name KwatME
+git config --global user.email kwatme8@gmail.com
+git config --global credential.helper cache
+git config --global credential.helper "cache --timeout=691200"
+```
+
 ## Configure `atom`
 
 Install [atom](https://atom.io/)
@@ -127,6 +136,8 @@ Install `atom` stuff:
 
 -   python-isort
 -   python-black
+
+-   beautysh
 
 ## Get `jupyter` extension
 

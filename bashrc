@@ -328,15 +328,6 @@ function make_zip() {
 # ==============================================================================
 # Define git function
 # ==============================================================================
-function git_cache() {
-
-  git config --global credential.helper cache
-
-  git config --global credential.helper "cache --timeout=${1-691200}"
-
-}
-
-
 function git_update_repositories() {
 
   for d in *
