@@ -151,7 +151,9 @@ jupyter nbextension enable jupyter-black-master/jupyter-black &&
 
 jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip &&
 
-jupyter nbextension enable vim_binding/vim_binding
+jupyter nbextension enable jupyter-vim-binding-master/vim_binding &&
+
+jupyter nbextension list
 ```
 
 ## Configure web browser
