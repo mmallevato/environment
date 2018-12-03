@@ -30,6 +30,8 @@ conda install --channel conda-forge --yes black &&
 pip install clean_ipynb &&
 conda install --channel conda-forge --yes pylama &&
 
+conda install --channel conda-forge --yes beautysh &&
+
 conda install --channel conda-forge --yes click &&
 
 conda install --channel conda-forge --yes twine &&
