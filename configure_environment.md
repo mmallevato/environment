@@ -100,10 +100,11 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ## Configure `git`
 
 ```sh
-git config --global user.name KwatME
-git config --global user.email kwatme8@gmail.com
-git config --global credential.helper cache
-git config --global credential.helper "cache --timeout=691200"
+git config --global user.name KwatME &&
+git config --global user.email kwatme8@gmail.com &&
+git config --global credential.helper cache &&
+git config --global credential.helper "cache --timeout=691200" &&
+git config --list
 ```
 
 ## Configure `atom`
