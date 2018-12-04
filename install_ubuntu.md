@@ -78,7 +78,7 @@ mv trash.sh ~/.trash.sh
 ~/.trash.sh -e
 ```
 
-Add to `Starup Applications` `~/.trash.sh -d`
+Add to `Starup Applications` `/home/kwatme/.trash.sh -d`
 
 Uncheck `dconf-editor` > `trash-icon-visible`
 
