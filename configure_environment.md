@@ -55,7 +55,7 @@ conda install --channel conda-forge --yes matplotlib &&
 conda install --channel conda-forge --yes rpy2 &&
 conda install --channel conda-forge --yes r-mass &&
 
-pip install pytabix &&
+conda install --channel Guardiome --yes pytabix &&
 pip install pyfaidx &&
 pip install GEOparse &&
 
