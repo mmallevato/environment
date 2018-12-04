@@ -2,14 +2,14 @@
 
 ## Get `bash` profile
 
-[bashrc](bashrc)
+[bash_profile](bash_profile)
 
 ```sh
 # Linux
-mv bashrc ~/.bash_aliases
+mv bash_profile ~/.bash_aliases
 
 # macOS
-mv bashrc ~/.bash_profile
+mv bash_profile ~/.bash_profile
 ```
 
 ## Install [conda](https://conda.io/miniconda.html) for `Python 3.7`
