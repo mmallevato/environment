@@ -1,32 +1,28 @@
 # Configure environment
 
-## Get profile
+## Get `bash` profile
 
-Get [bashrc](bashrc)
-
-For Linux
+[bashrc](bashrc)
 
 ```sh
+# Linux
 mv bashrc ~/.bash_aliases
-```
 
-For macOS
-
-```sh
+# macOS
 mv bashrc ~/.bash_profile
 ```
 
-Get [condarc](condarc)
+## Install [conda](https://conda.io/miniconda.html) for `Python 3.7`
+
+## Get `conda` profile
+
+[condarc](condarc)
 
 ```sh
 mv condarc ~/.condarc
 ```
 
 ## Configure `conda` environment
-
-Install [conda](https://conda.io/miniconda.html) for `Python` 3.7
-
-Install `conda` stuff:
 
 ```sh
 conda install --channel conda-forge --yes git &&
@@ -129,42 +125,37 @@ git config --global credential.helper "cache --timeout=691200" &&
 git config --list
 ```
 
-## Configure `atom`
+## Install [atom](https://atom.io/)
 
-Install [atom](https://atom.io/)
+## Install `atom` package
 
-Install `atom` stuff:
+atom-beautify
 
--   atom-beautify
+-   Check `Bash` > `Beautify on Save`
 
-    -   Check `Bash` > `Beautify on Save`
-    -   Check `Markdown` > `Beautify on Save`
+-   Check `Markdown` > `Beautify on Save`
 
+vim-mode-plus
 
--   vim-mode-plus
--   ex-mode
+ex-mode
 
--   git-plus
+git-plus
 
--   sort-lines
+sort-lines
 
--   autocomplete-python
+autocomplete-python
 
--   linter-pylama
+linter-pylama
 
-    -   Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
+-   Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
 
+python-isort
 
--   python-isort
+-   Check `Sort On Save`
 
-    -   Check `Sort On Save`
+python-black
 
-
--   python-black
-
--   beautysh
-
-## Get `jupyter` extension
+## Install `jupyter` extension
 
 ```sh
 jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip &&
@@ -178,18 +169,20 @@ jupyter nbextension enable jupyter-vim-binding-master/vim_binding &&
 jupyter nbextension list
 ```
 
-## Configure web browser
+## Install [Chorme](https://www.google.com/chrome/)
 
-Install [Chorme](https://www.google.com/chrome/)
+## Install Chrome extension
 
-Get extension:
+LastPass
 
--   LastPass
--   Addblock Plus
--   Vimium
+Addblock Plus
 
-## Get software
+Vimium
 
--   Caffein
--   GIMP
--   VLC Media Player
+## Install software
+
+Caffein
+
+GIMP
+
+VLC Media Player
