@@ -2,13 +2,29 @@
 
 ## Get profile
 
-Save [bashrc](bashrc) as `~/.bash_aliases` (for Linux) or as `~/.bash_profile` (for macOS)
+Get [bashrc](bashrc)
 
-Save [condarc](condarc) as `~/.condarc`
+For Linux
+
+```sh
+mv bashrc ~/.bash_aliases
+```
+
+For macOS
+
+```sh
+mv bashrc ~/.bash_profile
+```
+
+Get [condarc](condarc)
+
+```sh
+mv condarc ~/.condarc
+```
 
 ## Configure `conda` environment
 
-Install [conda](https://conda.io/miniconda.html)
+Install [conda](https://conda.io/miniconda.html) for `Python` 3.7
 
 Install `conda` stuff:
 
@@ -103,9 +119,13 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 ```sh
 git config --global user.name KwatME &&
+
 git config --global user.email kwatme8@gmail.com &&
+
 git config --global credential.helper cache &&
+
 git config --global credential.helper "cache --timeout=691200" &&
+
 git config --list
 ```
 

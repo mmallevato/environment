@@ -1,29 +1,36 @@
 # Install Ubuntu
 
+## Burn [Ubuntu 18.10](https://www.ubuntu.com/download/desktop) onto a USB using [Etcher](https://www.balena.io/etcher/)
+
+## Update BIOS
+
 ## Configure BIOS
 
-Update BIOS
+Secure Boot = Disabled
 
-Configure BIOS
+Graphics = Discreet
 
--   Secure Boot = Disabled
--   Graphics = Discreet
--   Boot Mode = UEFI
--   SATA Controller Mode = AHCI
+Boot Mode = UEFI
 
-## Minimal install Ubuntu 18.10
+SATA Controller Mode = AHCI
+
+## Boot from the USB and install Ubuntu
+
+Check `Minimal installation`
 
 Check `Install third-party software for graphics and Wi-Fi hardware and additional media formats`
 
 Check `Erase disk and install Ubuntu`
 
-## Connect to Internet
+## Update software
+
+Check `Software & Updates` > `Other Software` > `Canonical Partners`
+
+Check `Software & Updates` > `Additional Drivers` > (if any) Driver(s) >  `Apply`
+
+Run `Software Updater`
 
 ## Get software
-
-Check `Software Updater` > `Settings` > `Other Software` > `Canonical Partners`
-
-Check `Software Updater` > `Settings` > `Additional Drivers` >
 
 ```sh
 sudo apt update &&
@@ -43,7 +50,9 @@ sudo reboot
 sudo update-alternatives --config editor
 ```
 
-## [Configure Synaptics](80-synaptics.conf)
+## Configure Synaptics
+
+[80-synaptics.conf](80-synaptics.conf)
 
 ```sh
 sudo mkdir /etc/X11/xorg.conf.d
@@ -57,15 +66,21 @@ sudo cp 80-synaptics.conf /etc/X11/xorg.conf.d
 
 ## Configure dock
 
-## [Put Trash on dock](trash.sh)
+## Put Trash on dock
+
+[trash.sh](trash.sh)
 
 ```sh
 chmod +x trash.sh
+
 mv trash.sh ~/.trash.sh
-$ ~/.trash.sh -e
+
+~/.trash.sh -e
 ```
 
-Add to `Starup Applications` `$HOME/.trash.sh -d`
+Add to `Starup Applications` `~/.trash.sh -d`
+
+Uncheck `dconf-editor` > `trash-icon-visible`
 
 ## [Configure environment](configure_environment.md)
 
