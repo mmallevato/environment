@@ -5,10 +5,10 @@
 [bash_profile](bash_profile)
 
 ```sh
-# Linux
+# For Linux
 mv bash_profile ~/.bash_aliases
 
-# macOS
+# For macOS
 mv bash_profile ~/.bash_profile
 ```
 
