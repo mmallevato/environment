@@ -17,7 +17,7 @@ Check `Install third-party software for graphics and Wi-Fi hardware and addition
 
 Check `Erase disk and install Ubuntu`
 
-## Configure browser
+## Connect to Internet
 
 ## Get software
 
@@ -45,13 +45,27 @@ sudo update-alternatives --config editor
 
 ## [Configure Synaptics](80-synaptics.conf)
 
+```sh
+sudo mkdir /etc/X11/xorg.conf.d
+
+sudo cp 80-synaptics.conf /etc/X11/xorg.conf.d
+```
+
 ## Configure Settings
 
 ## Configure Files
 
 ## Configure dock
 
-[Put Trash on dock](trash.sh)
+## [Put Trash on dock](trash.sh)
+
+```sh
+chmod +x trash.sh
+mv trash.sh ~/.trash.sh
+$ ~/.trash.sh -e
+```
+
+Add to `Starup Applications` `$HOME/.trash.sh -d`
 
 ## [Configure environment](configure_environment.md)
 
@@ -67,5 +81,6 @@ sudo service ssh status
 
 ```sh
 sudo apt install --yes openconnect &&
+
 sudo openconnect vpn-2.ucsd.edu
 ```

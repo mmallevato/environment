@@ -31,8 +31,3 @@ while getopts "red" opt; do
   esac
 
 done
-
-# chmod +x trash.sh
-# mv trash.sh ~/.trash.sh
-# $ ~/.trash.sh -e
-# Add to "Starup Applications" "$HOME/.trash.sh -d"

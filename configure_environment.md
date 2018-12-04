@@ -167,3 +167,9 @@ Get extension:
 -   LastPass
 -   Addblock Plus
 -   Vimium
+
+## Get software
+
+-   Caffein
+-   GIMP
+-   VLC Media Player
