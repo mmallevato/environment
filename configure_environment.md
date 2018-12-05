@@ -61,8 +61,9 @@ conda install --channel conda-forge --yes scipy &&
 conda install --channel conda-forge --yes scikit-learn &&
 conda install --channel conda-forge --yes statsmodels &&
 
-conda install --channel conda-forge --yes plotly &&
 conda install --channel conda-forge --yes matplotlib &&
+conda install --channel conda-forge --yes seaborn &&
+conda install --channel conda-forge --yes plotly &&
 
 conda install --channel conda-forge --yes rpy2 &&
 conda install --channel conda-forge --yes r-mass &&
