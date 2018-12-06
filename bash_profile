@@ -244,23 +244,30 @@ alias rsync="rsync --verbose --recursive --update --links --perms --executabilit
 # ==============================================================================
 function find_and_remove_junk() {
 
-  find . | grep -E "(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)" | xargs rm -rf
+  find | grep -E "(__pycache__|\.pyc$|\.DS_Store|\.ipynb_checkpoints)" | xargs rm -rf
 
 }
 
 
 function find_and_reset_mode() {
 
-  find . -not -path "*/.*" -type f -exec chmod 644 {} \;
+  find -not -path "*/.*" -type f -exec chmod 644 {} \;
 
-  find . -not -path "*/.*" -type d -exec chmod 755 {} \;
+  find -not -path "*/.*" -type d -exec chmod 755 {} \;
+
+}
+
+
+function find_and_clean_py() {
+
+  find -name "*.py" -exec isort {} \; -exec black {} \;
 
 }
 
 
 function find_and_clean_ipynb() {
 
-  find . -name "*.ipynb" -exec clean_ipynb {} \;
+  find -name "*.ipynb" -exec clean_ipynb {} \;
 
 }
 
