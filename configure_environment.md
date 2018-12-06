@@ -152,8 +152,6 @@ linter-pylama
 
 python-isort
 
--   Check `Sort On Save`
-
 python-black
 
 ## Install `jupyter` extension
