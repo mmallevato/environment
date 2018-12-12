@@ -41,6 +41,8 @@ sudo apt install --yes vim screen tree rename gparted exfat-fuse exfat-utils dco
 
 sudo apt full-upgrade --yes &&
 
+sudo apt autoremove --yes &&
+
 sudo reboot
 ```
 
