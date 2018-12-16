@@ -85,6 +85,10 @@ conda install --channel bioconda --yes freebayes &&
 conda install --channel bioconda --yes bcftools &&
 conda install --channel bioconda --yes snpeff &&
 
+# Get sra-tools
+# Get gdc-client
+# Get firehose_get
+
 if [ "$(uname)" == "Darwin" ]; then :
 
   echo "Darwin"
@@ -165,7 +169,13 @@ jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-bi
 
 jupyter nbextension enable jupyter-vim-binding-master/vim_binding &&
 
-jupyter nbextension list
+jupyter nbextension list &&
+
+jupyter labextension install jupyterlab_vim &&
+
+jupyter labextension install @jupyterlab/plotly-extension &&
+
+jupyter labextension list
 ```
 
 ## Install [Chorme](https://www.google.com/chrome/)
