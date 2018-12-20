@@ -178,7 +178,7 @@ jupyter labextension install @jupyterlab/plotly-extension &&
 jupyter labextension list
 ```
 
-## Install [Chorme](https://www.google.com/chrome/)
+## Install [Chrome](https://www.google.com/chrome/)
 
 ## Install Chrome extension
 
@@ -190,7 +190,7 @@ Vimium
 
 ## Install software
 
-Caffein
+Caffeine
 
 GIMP
 
