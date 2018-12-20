@@ -34,6 +34,8 @@ conda install --channel conda-forge --yes awscli &&
 conda install --channel conda-forge --yes nodejs &&
 conda install --channel conda-forge --yes yarn &&
 
+conda install --channel conda-forge --yes pyyaml &&
+
 conda install --channel conda-forge --yes jupyterlab &&
 conda install --channel conda-forge --yes jupyter_contrib_nbextensions &&
 
@@ -157,6 +159,8 @@ linter-pylama
 python-isort
 
 python-black
+
+linter-js-yaml
 
 ## Install `jupyter` extension
 
