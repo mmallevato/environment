@@ -199,3 +199,15 @@ Caffeine
 GIMP
 
 VLC Media Player
+
+## Configure Razer Blade
+
+```sh
+sudo vim /etc/default/grub
+```
+
+Set `GRUB_CMDLINE_LINUX_DEFAULT="button.lid_init_state=open"`
+
+```sh
+sudo reboot
+```
