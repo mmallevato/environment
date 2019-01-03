@@ -188,13 +188,13 @@ fi
 
 
 # ==============================================================================
-# Enable color support of ls and also add handy alias
+# Enable color support
 # ==============================================================================
 if [ -x /usr/bin/dircolors ]; then
 
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-  alias ls="ls -Fh --color=auto"
+  alias ls="ls --color=auto"
 
   alias dir="dir --color=auto"
 
@@ -206,10 +206,6 @@ if [ -x /usr/bin/dircolors ]; then
 
   alias egrep="egrep --color=auto"
 
-else
-
-  alias ls="ls -FhG"
-
 fi
 
 
@@ -220,21 +216,29 @@ alias ..="cd .."
 
 alias ...="cd ../.."
 
-alias ll="ls -hFl"
+alias ....="cd ../../.."
 
-alias la="ls -hFla"
+alias .....="cd ../../../.."
 
-alias lt="ls -hFltr"
+alias ls="ls --human-readable --classify --no-group"
 
-alias rm="rm -i"
+alias ll="ls -l"
 
-alias cp="cp -i"
+alias la="ls -l --almost-all"
 
-alias mv="mv -i"
+alias lt="ls -lt"
 
-alias mkdir="mkdir -vp"
+alias rm="rm --interactive"
 
-alias du="du -hs"
+alias cp="cp --interactive"
+
+alias mv="mv --interactive"
+
+alias mkdir="mkdir --verbose --parents"
+
+alias du="du --human-readable --total --summarize"
+
+alias df="df --human-readable --total"
 
 alias rsync="rsync --verbose --recursive --update --links --perms --executability --times --human-readable --progress --exclude=*.DS_Store* --exclude=*.ipynb_checkpoints* --exclude=*._*"
 
@@ -440,175 +444,55 @@ function git_update_repositories() {
 }
 
 
-function git_update_repositories_n_times() {
-
-  for i in $(seq $1);
-
-    do
-
-      i=$((i-1))
-
-      printf $BICyan
-
-      printf "$i\n"
-
-      printf $NC
-
-      git_update_repositories "Git sync ($i)"
-
-    done
-
-}
-
-
 function get_github() {
 
   mkdir github && cd github
 
-  mkdir kwatme && cd kwatme
+  git clone https://github.com/KwatME/environment
 
-  git clone --recursive https://github.com/KwatME/environment
+  git clone https://github.com/KwatME/ccal
 
-  mkdir library && cd library
+  git clone https://github.com/KwatME/clean_ipynb
 
-  git clone --recursive https://github.com/KwatME/classification
+  git clone https://github.com/KwatME/spro
 
-  git clone --recursive https://github.com/KwatME/clean_ipynb
+  # git clone https://github.com/KwatME/combine_models_and_infer
 
-  git clone --recursive https://github.com/KwatME/clustering
+  git clone https://github.com/KwatME/explore_tcga
 
-  git clone --recursive https://github.com/KwatME/context
+  git clone https://github.com/KwatME/find_differential_expression
 
-  git clone --recursive https://github.com/KwatME/cross_validation
+  git clone https://github.com/KwatME/model_and_infer
 
-  git clone --recursive https://github.com/KwatME/dimension_scaling
+  # git clone https://github.com/KwatME/kwatme.com
 
-  git clone --recursive https://github.com/KwatME/feature
+  # git clone https://github.com/KwatME/muscle_type
 
-  git clone --recursive https://github.com/KwatME/feature_x_sample
+  # git clone https://github.com/KwatME/random_genome_peek
 
-  git clone --recursive https://github.com/KwatME/gct_gmt
+  # git clone https://github.com/KwatME/tumor_suppressor
 
-  git clone --recursive https://github.com/KwatME/gene
+  # git clone https://github.com/Guardiome/genotype_to_phenotype
 
-  git clone --recursive https://github.com/KwatME/genome
+  # git clone https://github.com/Guardiome/omics_ai
 
-  git clone --recursive https://github.com/KwatME/geo
+  # git clone https://github.com/Guardiome/omics_ai_server
 
-  git clone --recursive https://github.com/KwatME/gps_map
+  # git clone https://github.com/Guardiome/omics_ai_ui
 
-  git clone --recursive https://github.com/KwatME/gsea
+  # git clone https://github.com/Guardiome/omics_app
 
-  git clone --recursive https://github.com/KwatME/hdf5
+  # git clone https://github.com/Guardiome/omics_app_template
 
-  git clone --recursive https://github.com/KwatME/information
+  # git clone https://github.com/Guardiome/omics_apps_for_omics_ai
 
-  git clone --recursive https://github.com/KwatME/kernel_density
+  # git clone https://github.com/Guardiome/omicsapps.com
 
-  git clone --recursive https://github.com/KwatME/linear_algebra
+  # git clone https://github.com/Guardiome/simple_omics_app_template
 
-  git clone --recursive https://github.com/KwatME/linear_model
+  # git clone https://github.com/Guardiome/cellularcontext.com
 
-  git clone --recursive https://github.com/KwatME/match
-
-  git clone --recursive https://github.com/KwatME/matrix_factorization
-
-  git clone --recursive https://github.com/KwatME/mutational_signature
-
-  git clone --recursive https://github.com/KwatME/nd_array
-
-  git clone --recursive https://github.com/KwatME/neural_network
-
-  git clone --recursive https://github.com/KwatME/plot
-
-  git clone --recursive https://github.com/KwatME/probability
-
-  git clone --recursive https://github.com/KwatME/regression
-
-  git clone --recursive https://github.com/KwatME/sequence
-
-  git clone --recursive https://github.com/KwatME/sequencing_process
-
-  git clone --recursive https://github.com/KwatME/spro
-
-  git clone --recursive https://github.com/KwatME/support
-
-  git clone --recursive https://github.com/KwatME/tcga
-
-  git clone --recursive https://github.com/KwatME/variant
-
-  cd ..
-
-  mkdir workflow && cd workflow
-
-  # git clone --recursive https://github.com/KwatME/combine_models_and_infer
-
-  git clone --recursive https://github.com/KwatME/explore_tcga
-
-  git clone --recursive https://github.com/KwatME/find_differential_expression
-
-  git clone --recursive https://github.com/KwatME/model_and_infer
-
-
-  cd ..
-
-  mkdir website && cd website
-
-  git clone --recursive https://github.com/KwatME/kwatme.com
-
-  cd ..
-
-  mkdir omics_app && cd omics_app
-
-  # git clone --recursive https://github.com/KwatME/muscle_type
-
-  # git clone --recursive https://github.com/KwatME/random_genome_peek
-
-  # git clone --recursive https://github.com/KwatME/tumor_suppressor
-
-  cd ..
-
-  cd ..
-
-  mkdir guardiome && cd guardiome
-
-  mkdir omics && cd omics
-
-  # git clone --recursive https://github.com/Guardiome/genotype_to_phenotype
-
-  # git clone --recursive https://github.com/Guardiome/omics_ai
-
-  # git clone --recursive https://github.com/Guardiome/omics_ai_server
-
-  # git clone --recursive https://github.com/Guardiome/omics_ai_ui
-
-  # git clone --recursive https://github.com/Guardiome/omics_app
-
-  # git clone --recursive https://github.com/Guardiome/omics_app_template
-
-  # git clone --recursive https://github.com/Guardiome/omics_apps_for_omics_ai
-
-  # git clone --recursive https://github.com/Guardiome/omicsapps.com
-
-  # git clone --recursive https://github.com/Guardiome/simple_omics_app_template
-
-  cd ..
-
-  mkdir website && cd website
-
-  # git clone --recursive https://github.com/Guardiome/cellularcontext.com
-
-  # git clone --recursive https://github.com/Guardiome/update_cellularcontext.com
-
-  cd ..
-
-  cd ..
-
-  mkdir ccal && cd ccal
-
-  git clone --recursive https://github.com/UCSD-CCAL/ccal
-
-  cd ..
+  # git clone https://github.com/Guardiome/update_cellularcontext.com
 
 }
 
