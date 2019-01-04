@@ -194,8 +194,6 @@ if [ -x /usr/bin/dircolors ]; then
 
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-  alias ls="ls --color=auto"
-
   alias dir="dir --color=auto"
 
   alias vdir="vdir --color=auto"
@@ -220,7 +218,7 @@ alias ....="cd ../../.."
 
 alias .....="cd ../../../.."
 
-alias ls="ls --human-readable --classify --no-group"
+alias ls="ls --human-readable --classify --no-group --color=auto"
 
 alias ll="ls -l"
 
