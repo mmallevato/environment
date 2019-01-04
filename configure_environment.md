@@ -39,7 +39,6 @@ conda install --channel conda-forge --yes pyyaml &&
 conda install --channel conda-forge --yes jupyterlab &&
 conda install --channel conda-forge --yes jupyter_contrib_nbextensions &&
 
-conda install --channel conda-forge --yes autoflake &&
 conda install --channel conda-forge --yes isort &&
 conda install --channel conda-forge --yes black &&
 pip install clean_ipynb &&
