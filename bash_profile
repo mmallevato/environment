@@ -264,7 +264,7 @@ function find_and_reset_mode() {
 
 function find_and_clean_py() {
 
-  find -name "*.py" -exec isort {} \; -exec black {} \;
+  find -name "*.py" -exec autoflake --in-place --remove-all-unused-imports {} \; -exec isort {} \; -exec black {} \;
 
 }
 
