@@ -1,20 +1,18 @@
 # Configure environment
 
-## Get `bash` profile
+## Set bash profile
 
 [bash_profile](bash_profile)
 
 ```sh
-# For Linux
-mv bash_profile ~/.bash_aliases
+mv bash_profile ~/.bash_aliases # Linux
 
-# For macOS
-mv bash_profile ~/.bash_profile
+mv bash_profile ~/.bash_profile # macOS
 ```
 
-## Install [conda](https://conda.io/miniconda.html) for `Python 3.7`
+## Install miniconda for python 3.7
 
-## Get `conda` profile
+## Set conda profile
 
 [condarc](condarc)
 
@@ -22,74 +20,88 @@ mv bash_profile ~/.bash_profile
 mv condarc ~/.condarc
 ```
 
-## Configure `conda` environment
+## Configure conda environment
 
 ```sh
-conda install --channel conda-forge --yes git &&
-conda install --channel conda-forge --yes git-lfs &&
-conda install --channel conda-forge --yes bfg &&
+conda install --yes git &&
 
-conda install --channel conda-forge --yes awscli &&
+conda install --yes awscli &&
 
-conda install --channel conda-forge --yes nodejs &&
-conda install --channel conda-forge --yes yarn &&
+conda install --yes nodejs &&
 
-conda install --channel conda-forge --yes pyyaml &&
+conda install --yes jupyterlab &&
 
-conda install --channel conda-forge --yes jupyterlab &&
-conda install --channel conda-forge --yes jupyter_contrib_nbextensions &&
+conda install --yes isort &&
 
-conda install --channel conda-forge --yes isort &&
-conda install --channel conda-forge --yes black &&
+conda install --yes black &&
+
 pip install clean_ipynb &&
-conda install --channel conda-forge --yes pylama &&
 
-conda install --channel conda-forge --yes beautysh &&
+conda install --yes pylama &&
 
-conda install --channel conda-forge --yes click &&
+conda install --yes beautysh &&
 
-conda install --channel conda-forge --yes twine &&
+conda install --yes click &&
 
-conda install --channel conda-forge --yes pyinstaller &&
+conda install --yes pyyaml &&
 
-conda install --channel conda-forge --yes numpy &&
-conda install --channel conda-forge --yes pandas &&
-conda install --channel conda-forge --yes xlrd &&
+conda install --yes twine &&
 
-conda install --channel conda-forge --yes pytables &&
+conda install --yes pyinstaller &&
 
-conda install --channel conda-forge --yes scipy &&
+conda install --yes numpy &&
 
-conda install --channel conda-forge --yes scikit-learn &&
-conda install --channel conda-forge --yes statsmodels &&
+conda install --yes pandas &&
 
-conda install --channel conda-forge --yes matplotlib &&
-conda install --channel conda-forge --yes seaborn &&
-conda install --channel conda-forge --yes plotly &&
+conda install --yes xlrd &&
 
-conda install --channel conda-forge --yes rpy2 &&
-conda install --channel conda-forge --yes r-mass &&
+conda install --yes pytables &&
+
+conda install --yes scipy &&
+
+conda install --yes scikit-learn &&
+
+conda install --yes statsmodels &&
+
+conda install --yes matplotlib &&
+
+conda install --yes seaborn &&
+
+conda install --yes plotly &&
+
+conda install --yes rpy2 &&
+
+conda install --yes r-mass &&
 
 conda install --channel Guardiome --yes pytabix &&
+
 pip install pyfaidx &&
+
 pip install GEOparse &&
 
 conda install --channel bioconda --yes dwgsim &&
-conda install --channel bioconda --yes skewer &&
-conda install --channel bioconda --yes fastqc &&
-conda install --channel bioconda --yes picard &&
-conda install --channel bioconda --yes seqtk &&
-conda install --channel bioconda --yes htslib &&
-conda install --channel bioconda --yes samtools &&
-conda install --channel bioconda --yes bwa &&
-conda install --channel bioconda --yes kallisto &&
-conda install --channel bioconda --yes freebayes &&
-conda install --channel bioconda --yes bcftools &&
-conda install --channel bioconda --yes snpeff &&
 
-# Get sra-tools
-# Get gdc-client
-# Get firehose_get
+conda install --channel bioconda --yes skewer &&
+
+conda install --channel bioconda --yes fastqc &&
+
+conda install --channel bioconda --yes picard &&
+
+conda install --channel bioconda --yes seqtk &&
+
+conda install --channel bioconda --yes htslib &&
+
+conda install --channel bioconda --yes samtools &&
+
+conda install --channel bioconda --yes bwa &&
+
+conda install --channel bioconda --yes kallisto &&
+
+conda install --channel bioconda --yes freebayes &&
+
+conda install --channel bioconda --yes bcftools &&
+
+conda install --channel bioconda --yes snpeff &&
 
 if [ "$(uname)" == "Darwin" ]; then :
 
@@ -102,7 +114,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   conda create --name sequencing_process_python2.7 --yes python=2.7 &&
 
   conda install --name sequencing_process_python2.7 --channel bioconda --yes strelka &&
+
   conda install --name sequencing_process_python2.7 --channel bioconda --yes manta &&
+
   conda install --name sequencing_process_python2.7 --channel bioconda --yes canvas
 
 fi &&
@@ -110,7 +124,15 @@ fi &&
 conda update --all --yes
 ```
 
-## Configure `vi`
+## Install non-conda command line program
+
+sra-tools
+
+gdc-client
+
+firehose_get
+
+## Configure vi
 
 ```sh
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime &&
@@ -118,7 +140,7 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime &&
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
-## Configure `git`
+## Configure git
 
 ```sh
 git config --global user.name KwatME &&
@@ -132,15 +154,31 @@ git config --global credential.helper "cache --timeout=691200" &&
 git config --list
 ```
 
-## Install [atom](https://atom.io/)
+## Install program
 
-## Install `atom` package
+Chrome
+
+Atom
+
+GIMP
+
+Caffeine
+
+## Install chrome extension
+
+LastPass
+
+Addblock Plus
+
+Vimium
+
+## Install atom package
 
 atom-beautify
 
--   Check `Bash` > `Beautify on Save`
+-   Check Bash > Beautify on Save
 
--   Check `Markdown` > `Beautify on Save`
+-   Check Markdown > Beautify on Save
 
 vim-mode-plus
 
@@ -154,7 +192,7 @@ autocomplete-python
 
 linter-pylama
 
--   Add to `Ignore Errors and Warnings` `C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741`
+-   Ignore Errors and Warnings > C901,D100,D101,D102,D103,D104,D105,D107,D202,D203,D205,D212,D301,D400,E50,E125,E251,E741
 
 python-isort
 
@@ -162,13 +200,9 @@ python-black
 
 linter-js-yaml
 
-## Install `jupyter` extension
+## Install jupyter extension
 
 ```sh
-jupyter nbextension install --user https://github.com/drillan/jupyter-black/archive/master.zip &&
-
-jupyter nbextension enable jupyter-black-master/jupyter-black &&
-
 jupyter nbextension install --user https://github.com/lambdalisue/jupyter-vim-binding/archive/master.zip &&
 
 jupyter nbextension enable jupyter-vim-binding-master/vim_binding &&
@@ -182,25 +216,7 @@ jupyter labextension install @jupyterlab/plotly-extension &&
 jupyter labextension list
 ```
 
-## Install [Chrome](https://www.google.com/chrome/)
-
-## Install Chrome extension
-
-LastPass
-
-Addblock Plus
-
-Vimium
-
-## Install software
-
-Caffeine
-
-GIMP
-
-VLC Media Player
-
-## Configure Razer Blade
+## Configure razer blade stealth
 
 ```sh
 sudo vim /etc/default/grub
